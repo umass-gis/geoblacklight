@@ -1,0 +1,31 @@
+{
+    "dcidentifiers": "http://credo.library.umass.edu/view/full/mufs190-1951-dpl2k5-i001",
+    "dctitles": "1:20k Aerial Photograph (B/W): Barnstable County (Mass.), 1951 (dpl-2k-5)",
+    "dcdescriptions": "Georeferenced black-and-white aerial photograph captured in 1951 of Barnstable County, Massachusetts, with a 8 1/4 inch focal length camera at a scale of 1:20,000. This image is part of a larger series covering the entire state that was undertaken in 1951-1952 by William P. MacConnell (Class of 1943) in the Department of Forestry and Wildlife Management, University of Massachusetts Amherst. The purpose of the program was to capture photography that could be used to map forests, agricultural fields, wetlands, and other land cover across Massachusetts. The photograph was scanned and manually georeferenced in ArcMap 10.8 against 2019 color orthoimagery from the U.S. Geological Survey.",
+    "dcrightss": "Public",
+    "dctrightssm": "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries.",
+    "dctprovenances": "UMass",
+    "dctreferencess": "\"{\"http://schema.org/url\":\"http://credo.library.umass.edu/view/full/mufs190-1951-dpl2k5-i001\",\"http://schema.org/downloadUrl\":\"http://credo.library.umass.edu/media/mufs190-1951-dpl2k5-i001.reference.tif\",\"http://iiif.io/api/image\":\"http://credo.library.umass.edu/view/zoom/mufs190-1951-dpl2k5-i001\"}\"",
+    "layerslugs": "umass-mufs190-1951-dpl2k5-i001",
+    "layergeomtypes": "Raster",
+    "layermodifieddt": "2021-03-11T18:00:00Z",
+    "dcformats": "GeoTIFF",
+    "dclanguagesm": "English",
+    "dctypes": "Image",
+    "dcpublishers": "University of Massachusetts at Amherst. Department of Forestry and Wildlife Management",
+    "dccreatorsm": "MacConnell, William Preston, 1918-\r",
+    "dcsubjectsm": [
+      "Environment",
+      "Imagery and Base Maps",
+      "Land Cover",
+      "Planning and Cadastral",
+      "Structure"
+    ],
+    "dctissueds": "1951-10-22",
+    "dcttemporalsm": "1951-10-22",
+    "dctspatialsm": "West Barnstable, City of Barnstable Town, Barnstable County, Massachusetts, United States",
+    "solrgeom": "ENVELOPE(-70.418717, -70.358038, 41.729528, 41.683920)",
+    "solryeari": 1951,
+    "dctispartofsm": "William P. MacConnell Aerial Photograph Collection",
+    "geoblacklightversion": "1.0"
+}
