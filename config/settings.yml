@@ -40,7 +40,7 @@ FIELDS:
   :SUPPRESSED: 'gbl_suppressed_b'
   :TEMPORAL: 'dct_temporal_sm'
   :TITLE: 'dct_title_s'
-  :UNIQUE_KEY: 'uuid'
+  :UNIQUE_KEY: 'id'
   :WXS_IDENTIFIER: 'dcat_servesDataset_s'
   :YEAR: 'gbl_indexYear_im'
 

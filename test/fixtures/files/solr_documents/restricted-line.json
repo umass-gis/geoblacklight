@@ -32,6 +32,6 @@
     "2002"
   ],
   "dcat_servesDataset_s": "druid:cg357zz0321",
-  "uuid": "stanford-cg357zz0321",
+  "id": "stanford-cg357zz0321",
   "locn_Geometry_s": "Line"
 }

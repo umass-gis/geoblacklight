@@ -44,6 +44,6 @@
     "2015"
   ],
   "dcat_servesDataset_s": "sdr:nyu_2451_34502",
-  "uuid": "nyu_2451_34502",
+  "id": "nyu_2451_34502",
   "locn_Geometry_s": "Point"
 }

@@ -17,6 +17,6 @@
     "2010"
   ],
   "dcat_servesDataset_s": "test-soil-survey_map",
-  "uuid": "nyu-test-soil-survey-map",
+  "id": "nyu-test-soil-survey-map",
   "locn_Geometry_s": "Raster"
 }

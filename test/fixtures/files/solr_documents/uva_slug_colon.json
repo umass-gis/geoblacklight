@@ -20,6 +20,6 @@
     "2005-2005"
   ],
   "dcat_servesDataset_s": "Norfolk:police_point",
-  "uuid": "uva-Norfolk:police_point",
+  "id": "uva-Norfolk:police_point",
   "locn_Geometry_s": "MultiPoint"
 }

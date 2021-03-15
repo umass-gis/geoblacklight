@@ -29,6 +29,6 @@
     "2005"
   ],
   "dcat_servesDataset_s": "druid:cz128vq0535",
-  "uuid": "stanford-cz128vq0535",
+  "id": "stanford-cz128vq0535",
   "locn_Geometry_s": "Polygon"
 }

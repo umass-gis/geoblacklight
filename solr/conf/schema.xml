@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema name="geoblacklight-schema" version="4.0">
-  <uniqueKey>uuid</uniqueKey>
+  <uniqueKey>id</uniqueKey>
   <fields>
     <field name="_version_" type="long"   stored="true" indexed="true"/>
     <field name="timestamp" type="date"   stored="true" indexed="true" default="NOW"/>
     <field name="geoblacklight_version" type="string" stored="true" indexed="true"/>
-    <field name="uuid"      type="string" stored="true" indexed="true" required="true"/><!-- deprecated -->
+    <field name="id"      type="string" stored="true" indexed="true" required="true"/><!-- deprecated -->
 
     <!-- core generated fields -->
     <field name="text" type="text_en" stored="false" indexed="true" multiValued="true"
@@ -165,7 +165,7 @@
   <copyField source="dct_title_s"         dest="dc_title_ti"         maxChars="1000"/>
   <copyField source="dct_isPartOf_sm"    dest="dct_isPartOf_tmi"    maxChars="1000"/>
   <copyField source="locn_geometry_s"  dest="layer_geom_type_ti"  maxChars="100"/>
-  <copyField source="uuid"       dest="layer_slug_ti"       maxChars="100"/>
+  <copyField source="id"       dest="layer_slug_ti"       maxChars="100"/>
 
   <!-- core text search -->
   <copyField source="*_s"                dest="text" />

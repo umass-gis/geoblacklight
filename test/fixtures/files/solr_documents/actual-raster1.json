@@ -33,6 +33,6 @@
     "2005"
   ],
   "dcat_servesDataset_s": "druid:dp018hs9766",
-  "uuid": "stanford-dp018hs9766",
+  "id": "stanford-dp018hs9766",
   "locn_Geometry_s": "Raster"
 }

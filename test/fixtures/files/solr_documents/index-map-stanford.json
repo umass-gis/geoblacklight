@@ -32,6 +32,6 @@
     "1944"
   ],
   "dcat_servesDataset_s": "druid:fb897vt9938",
-  "uuid": "stanford-fb897vt9938",
+  "id": "stanford-fb897vt9938",
   "locn_Geometry_s": "Polygon"
 }

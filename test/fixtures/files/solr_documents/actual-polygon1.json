@@ -18,6 +18,6 @@
     "2004"
   ],
   "dcat_servesDataset_s": "sde:GISPORTAL.GISOWNER01.CAMBRIDGEGRID100_04",
-  "uuid": "tufts-cambridgegrid100-04",
+  "id": "tufts-cambridgegrid100-04",
   "locn_Geometry_s": "Polygon"
 }
