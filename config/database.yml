@@ -13,8 +13,11 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  host: <%= ENV['MYSQL_SERVER'] %>
+  port: <%= ENV['MYSQL_PORT'] || 3306 %>
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
   socket: /tmp/mysql.sock
 
 development:
@@ -50,6 +53,6 @@ test:
 #
 production:
   <<: *default
-  database: umass_geoblacklight_production
-  username: example_app
-  password: <%= ENV['EXAMPLE_APP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
