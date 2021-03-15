@@ -24,8 +24,7 @@ Duplicate the .example files in the project and remove the .example string from 
 
 ```bash
 cp .example.env.development .env.development  
-cp .example.env.test .env.test  
-cp config/database.yml.example config/database.yml
+cp .example.env.test .env.test
 ```
 
 ### Bundle RubyGems
@@ -51,7 +50,7 @@ bundle exec rake umass:server
 ```
 
 * View the application at [http://localhost:3000](http://localhost:3000)
-* View the Solr admin panel at [http://localhost:8983](http://localhost:8983
+* View the Solr admin panel at [http://localhost:8983](http://localhost:8983)
 
 ### Run the Test Suite
 
