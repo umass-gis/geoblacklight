@@ -1,6 +1,6 @@
 {
-  "geoblacklight_version": "1.0",
-  "dc_publisher_sm": [
+  "gbl_mdVersion_s": "4.0",
+  "dct_publisher_sm": [
     "University of Minnesota"
   ],
   "dc_type_sm": [
@@ -11,7 +11,7 @@
   "dct_accessRights_s": "Public",
   "dct_title_s": "Ames Library of South Asia Maps",
   "gbl_mdModified_dt": "2020-01-23T14:01:19Z",
-  "dct_provenance_s": "Minnesota",
+  "schema_provider_s": "Minnesota",
   "dct_references_s": "{\"http://schema.org/url\":\"https://umedia.lib.umn.edu/search?facets[collection_name_s][]=Ames+Library+of+South+Asia+Maps\"}",
   "dct_spatial_sm": [
     "Asia",
@@ -19,5 +19,5 @@
     "Afghanistan"
   ],
   "id": "05d-p16022coll246-noGeo",
-  "locn_Geometry_s": "Table"
+  "locn_geometry_s": "Table"
 }

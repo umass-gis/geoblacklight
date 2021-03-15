@@ -1,9 +1,9 @@
 {
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dc_type_sm": [
     "Interactive Resource"
   ],
-  "dc_publisher_sm": [
+  "dct_publisher_sm": [
     "Social Explorer"
   ],
   "dct_creator_sm": [
@@ -26,5 +26,5 @@
     "1790-present"
   ],
   "id": "99-0001-noProvenance",
-  "locn_Geometry_s": "Table"
+  "locn_geometry_s": "Table"
 }

@@ -1,15 +1,15 @@
 {
-  "dc_language_sm": "English",
+  "dct_language_sm": "English",
   "dc_type_sm": [
     "Dataset"
   ],
-  "dc_publisher_sm": [
+  "dct_publisher_sm": [
     "Minnesota Department of Natural Resources (DNR)"
   ],
   "dct_isPartOf_sm": [
     "Minnesota Geospatial Commons"
   ],
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dct_creator_sm": [
     "U.S. Geological Survey and Minnesota DNR"
   ],
@@ -22,7 +22,7 @@
   "dcat_bbox_geom": "ENVELOPE(-97.991522, -87.177541, 49.892443, 42.891013)",
   "gbl_indexYear_im": 1998,
   "dct_issued_s": "2015-11-18T11:02:15.187331",
-  "dct_provenance_s": "Minnesota",
+  "schema_provider_s": "Minnesota",
   "dct_references_s": "{\"http://schema.org/url\":\"https://gisdata.mn.gov/dataset/e9c71086-6b25-4950-8e1c-84c2794e3382\",\"http://schema.org/downloadUrl\":\"ftp://ftp.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_dnr/base_usgs_scanned_topo_250k_drg/fgdb_base_usgs_scanned_topo_250k_drg.zip\",\"http://schema.org/image\":\"https://btaagdp.org/thumbnails/05a-01/pub/gdrs/data/pub/us_mn_state_dnr/base_usgs_scanned_topo_250k_drg/metadata/preview.jpg\",\"http://www.opengis.net/cat/csw/csdgm\":\"https://btaagdp.org/metadata/05a-01/pub/gdrs/data/pub/us_mn_state_dnr/base_usgs_scanned_topo_250k_drg/metadata/metadata.xml\"}",
   "dct_spatial_sm": [
     "Minnesota, United States"
@@ -34,5 +34,5 @@
     "1998"
   ],
   "id": "e9c71086-6b25-4950-8e1c-84c2794e3382",
-  "locn_Geometry_s": "Raster"
+  "locn_geometry_s": "Raster"
 }

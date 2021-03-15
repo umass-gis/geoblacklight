@@ -1,5 +1,5 @@
 {
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dct_creator_sm": [
     "United States. Bureau of the Census"
   ],
@@ -10,7 +10,7 @@
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2018-05-15T20:00:25Z",
   "dcat_bbox_geom": "ENVELOPE(-73.533237, -69.898565, 42.888068, 41.230345)",
-  "dct_provenance_s": "MIT",
+  "schema_provider_s": "MIT",
   "dct_references_s": "{\"http://www.opengis.net/def/serviceType/ogc/wms\": \"https://geodata.mit.edu/geoserver/wms\", \"http://www.opengis.net/def/serviceType/ogc/wfs\": \"https://geodata.mit.edu/geoserver/wfs\"}",
   "dct_spatial_sm": [
     "Massachusetts"
@@ -23,5 +23,5 @@
   ],
   "dcat_servesDataset_s": "mit:SDE_DATA_US_MA_E25ZCTA5DCT_2000",
   "id": "mit-f6rqs4ucovjk2",
-  "locn_Geometry_s": "Polygon"
+  "locn_geometry_s": "Polygon"
 }

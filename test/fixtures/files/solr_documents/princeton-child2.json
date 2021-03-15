@@ -1,6 +1,6 @@
 {
   "call_number_s": "HMC04 (Princeton)",
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "id": "princeton-jq085m62x",
   "dct_creator_sm": [
     "Sanborn Map Company"
@@ -18,12 +18,12 @@
   "gbl_mdModified_dt": "2018-06-20T22:24:29Z",
   "dcat_bbox_geom": "ENVELOPE(-74.68, -74.63, 40.37, 40.33)",
   "gbl_suppressed_b": true,
-  "dct_provenance_s": "Princeton",
+  "schema_provider_s": "Princeton",
   "dct_references_s": "{\"http://schema.org/url\":\"https://catalog.princeton.edu/catalog/4266648\",\"http://schema.org/downloadUrl\":\"https://figgy.princeton.edu/downloads/db890be9-02bf-43c1-85c8-69c0684e25f6/file/dc08e083-5044-4949-bdd1-9d16a1fef818\",\"http://schema.org/thumbnailUrl\":\"https://figgy.princeton.edu/downloads/db890be9-02bf-43c1-85c8-69c0684e25f6/file/342e2f50-c9ff-4f86-9317-f5ce331e766e\",\"http://iiif.io/api/image\":\"https://libimages1.princeton.edu/loris/figgy_prod/a6%2Fb9%2Ff9%2Fa6b9f96251724546ae37ea3fa37a5e57%2Fintermediate_file.jp2/info.json\",\"http://iiif.io/api/presentation#manifest\":\"https://figgy.princeton.edu/concern/scanned_maps/68e90289-74ce-4f21-89e5-852f3e96ce35/manifest\"}",
   "dct_subject_sm": [
     "Real property-New Jersey-Princeton-Maps",
     "Princeton (N.J.)-Maps"
   ],
   "dcat_servesDataset_s": "public-figgy:p-db890be9-02bf-43c1-85c8-69c0684e25f6",
-  "locn_Geometry_s": "Image"
+  "locn_geometry_s": "Image"
 }

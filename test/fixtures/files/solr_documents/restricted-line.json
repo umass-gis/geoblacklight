@@ -1,6 +1,6 @@
 {
   "stanford_rights_metadata_s": "<?xml version=\"1.0\"?>\n<rightsMetadata>\n  <access type=\"discover\">\n    <machine>\n      <world/>\n    </machine>\n  </access>\n  <access type=\"read\">\n    <machine>\n      <group>Stanford</group>\n    </machine>\n  </access>\n  <use>\n    <human type=\"useAndReproduction\">These data are licensed by Stanford Libraries and are available to Stanford University affiliates only. Affiliates are limited to current faculty, staff and students. These data may not be reproduced or used for any purpose without permission. For more information please contact brannerlibrary@stanford.edu.</human>\n    <human type=\"creativeCommons\"/>\n    <machine type=\"creativeCommons\"/>\n  </use>\n  <copyright>\n    <human>Copyright ownership resides with the originator.</human>\n  </copyright>\n</rightsMetadata>\n",
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dct_creator_sm": [
     "United States. National Oceanic and Atmospheric Administration",
     "Circuit Rider Productions"
@@ -17,7 +17,7 @@
   "dcat_bbox_geom": "ENVELOPE(-123.387366, -122.52958, 39.398403, 38.302994)",
   "gbl_indexYear_im": 2002,
   "dct_issued_s": "2002",
-  "dct_provenance_s": "Stanford",
+  "schema_provider_s": "Stanford",
   "dct_references_s": "{\"http://schema.org/url\":\"http://purl.stanford.edu/cg357zz0321\",\"http://schema.org/downloadUrl\":\"http://stacks.stanford.edu/file/druid:cg357zz0321/data.zip\",\"http://www.loc.gov/mods/v3\":\"http://purl.stanford.edu/cg357zz0321.mods\",\"http://www.isotc211.org/schemas/2005/gmd/\":\"https://raw.githubusercontent.com/OpenGeoMetadata/edu.stanford.purl/master/cg/357/zz/0321/iso19139.xml\",\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"https://geowebservices-restricted.stanford.edu/geoserver/wfs\",\"http://www.opengis.net/def/serviceType/ogc/wms\":\"https://geowebservices-restricted.stanford.edu/geoserver/wms\"}",
   "dct_spatial_sm": [
     "Sonoma County (Calif.)",
@@ -33,5 +33,5 @@
   ],
   "dcat_servesDataset_s": "druid:cg357zz0321",
   "id": "stanford-cg357zz0321",
-  "locn_Geometry_s": "Line"
+  "locn_geometry_s": "Line"
 }

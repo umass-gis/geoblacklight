@@ -1,6 +1,6 @@
 {
-  "geoblacklight_version": "1.0",
-  "dc_publisher_sm": [
+  "gbl_mdVersion_s": "4.0",
+  "dct_publisher_sm": [
     "U.S. Geological Survey"
   ],
   "dct_creator_sm": [
@@ -15,7 +15,7 @@
   "gbl_mdModified_dt": "2018-12-20T00:00:00Z",
   "dcat_bbox_geom": "ENVELOPE(-79.750232, -71.750494, 44.999963, 40.499893)",
   "gbl_indexYear_im": 1995,
-  "dct_provenance_s": "Cornell",
+  "schema_provider_s": "Cornell",
   "dct_references_s": "{\"https://openindexmaps.org\":\"https://s3.amazonaws.com/cugir-data/00/81/86/cugir-008186-index.geojson\",\"http://www.opengis.net/cat/csw/csdgm\":\"https://s3.amazonaws.com/cugir-data/00/81/86/fgdc.xml\",\"http://www.w3.org/1999/xhtml\":\"https://s3.amazonaws.com/cugir-data/00/81/86/fgdc.html\"}",
   "dct_spatial_sm": [
     "New York"
@@ -33,5 +33,5 @@
   ],
   "dcat_servesDataset_s": "cugir008186",
   "id": "cugir-008186-no-downloadurl",
-  "locn_Geometry_s": "Raster"
+  "locn_geometry_s": "Raster"
 }

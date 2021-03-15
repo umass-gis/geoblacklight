@@ -63,6 +63,7 @@
     <dynamicField name="*_pt"   type="location"     stored="true" indexed="true"/>
     <dynamicField name="*_bbox" type="location_rpt" stored="true" indexed="true"/><!-- deprecated -->
     <dynamicField name="*_geom" type="location_rpt" stored="true" indexed="true"/>
+    <dynamicField name="*_geometry" type="location_rpt" stored="true" indexed="true"/>
     <dynamicField name="*_bboxtype" type="bbox" stored="true" indexed="true"/>
 
   </fields>

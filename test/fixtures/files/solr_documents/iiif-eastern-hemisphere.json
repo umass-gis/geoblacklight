@@ -1,5 +1,5 @@
 {
-  "dc_language_sm": [
+  "dct_language_sm": [
     "English"
   ],
   "dc_type_sm": [
@@ -8,7 +8,7 @@
   "dct_isPartOf_sm": [
     "John R. Borchert Map Library"
   ],
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dct_creator_sm": [
     "Bowen, Emanuel (-1767)"
   ],
@@ -20,11 +20,11 @@
   "gbl_mdModified_dt": "2018-08-02T16:28:36Z",
   "dcat_bbox_geom": "ENVELOPE(25, -168.35, 81.66, -12.93)",
   "gbl_indexYear_im": 1750,
-  "dct_provenance_s": "Minnesota",
+  "schema_provider_s": "Minnesota",
   "dct_references_s": "{\"http://schema.org/url\":\"http://purl.umn.edu/200804\",\"http://iiif.io/api/image\":\"https://cdm16022.contentdm.oclc.org/digital/iiif/p16022coll246/224/info.json\"}",
   "dct_temporal_sm": [
     "1750"
   ],
   "id": "57f0f116-b64e-4773-8684-96ba09afb549",
-  "locn_Geometry_s": "Image"
+  "locn_geometry_s": "Image"
 }

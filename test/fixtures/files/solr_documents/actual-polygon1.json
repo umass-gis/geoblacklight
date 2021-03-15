@@ -1,5 +1,5 @@
 {
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dct_description_sm": "This polygon dataset is a 100 foot grid overlay for Cambridge, MA.",
   "dct_format_s": "Shapefile",
   "dct_identifier_sm": "urn:geodata.tufts.edu:Tufts.CambridgeGrid100_04",
@@ -12,12 +12,12 @@
   "dcat_bbox_geom": "ENVELOPE(-71.163984, -71.052581, 42.408316, 42.34757)",
   "gbl_indexYear_im": 2004,
   "dct_issued_s": "2005",
-  "dct_provenance_s": "Tufts",
+  "schema_provider_s": "Tufts",
   "dct_references_s": "{\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"http://geoserver01.uit.tufts.edu/wfs\",\"http://www.opengis.net/def/serviceType/ogc/wms\":\"http://geoserver01.uit.tufts.edu/wms\",\"http://www.opengis.net/cat/csw/csdgm\":\"https://raw.githubusercontent.com/OpenGeoMetadata/edu.tufts/master/165/242/110/132/fgdc.xml\"}",
   "dct_temporal_sm": [
     "2004"
   ],
   "dcat_servesDataset_s": "sde:GISPORTAL.GISOWNER01.CAMBRIDGEGRID100_04",
   "id": "tufts-cambridgegrid100-04",
-  "locn_Geometry_s": "Polygon"
+  "locn_geometry_s": "Polygon"
 }

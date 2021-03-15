@@ -1,5 +1,5 @@
 {
-  "geoblacklight_version": "1.0",
+  "gbl_mdVersion_s": "4.0",
   "dct_isPartOf_sm": [
     "Agricultural Districts (NYS Ag and Markets)"
   ],
@@ -17,7 +17,7 @@
   "dcat_bbox_geom": "ENVELOPE(-76.12987, -75.42034, 42.414648, 41.997963)",
   "gbl_indexYear_im": 2011,
   "dct_issued_s": "2011-02-28",
-  "dct_provenance_s": "Cornell",
+  "schema_provider_s": "Cornell",
   "dct_references_s": "{\"http://schema.org/downloadUrl\":[{\"url\":\"https://cugir-data.s3.amazonaws.com/00/79/50/cugir-007950.zip\",\"label\":\"Shapefile\"},{\"url\":\"https://cugir-data.s3.amazonaws.com/00/79/50/agBROO.pdf\",\"label\":\"PDF\"},{\"url\":\"https://cugir-data.s3.amazonaws.com/00/79/50/agBROO2011.kmz\",\"label\":\"KMZ\"}],\"http://www.opengis.net/cat/csw/csdgm\":\"https://cugir-data.s3.amazonaws.com/00/79/50/fgdc.xml\",\"http://www.w3.org/1999/xhtml\":\"https://cugir-data.s3.amazonaws.com/00/79/50/fgdc.html\",\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"https://cugir.library.cornell.edu/geoserver/cugir/wfs\",\"http://www.opengis.net/def/serviceType/ogc/wms\":\"https://cugir.library.cornell.edu/geoserver/cugir/wms\"}",
   "dct_spatial_sm": [
     "Broome County NY"
@@ -32,5 +32,5 @@
   ],
   "dcat_servesDataset_s": "cugir007950",
   "id": "cugir-007950",
-  "locn_Geometry_s": "Polygon"
+  "locn_geometry_s": "Polygon"
 }
