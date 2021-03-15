@@ -47,7 +47,7 @@ bin/rails db:migrate RAILS_ENV=development
 The rake task below will spin up Solr, index the test fixture documents, and start the default Rails web server.
 
 ```bash
-bundle exec rake jhu:server
+bundle exec rake umass:server
 ```
 
 * View the application at [http://localhost:3000](http://localhost:3000)
