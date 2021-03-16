@@ -1,3 +1,11 @@
 // Local UMass Modules
-@import 'modules/umass_defaults';
+@import 'modules/global_header_footer';
 @import 'modules/application_nav';
+@import 'modules/homepage';
+@import 'modules/type';
+
+// Button primary
+$umass-302: #003b5c;
+.btn-primary {
+    @include button-variant($umass-302, darken($umass-302, 7.5%), darken($umass-302, 10%), lighten($umass-302,5%), lighten($umass-302, 10%), darken($umass-302,30%));
+}
