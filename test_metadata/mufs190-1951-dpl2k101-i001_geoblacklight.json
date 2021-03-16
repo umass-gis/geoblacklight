@@ -32,12 +32,7 @@
     "dct_accessRights_s": "Public",
     "dct_format_s": "GeoTIFF",
     "gbl_fileSize_s": "90.8",
-    "dct_references_s": [
-      {
-        "http://schema.org/url":"https://credo.library.umass.edu/view/full/mufs190-1951-dpl2k101-i001",
-        "http://schema.org/downloadUrl":"https://credo.library.umass.edu/media/mufs190-1951-dpl2k101-i001.reference.tif",
-        "http://iiif.io/api/image":"https://credo.library.umass.edu/view/zoom/mufs190-1951-dpl2k101-i001"
-      },
+    "dct_references_s": "{\"http://schema.org/url\":\"https://credo.library.umass.edu/view/full/mufs190-1951-dpl2k101-i001\",\"http://schema.org/downloadUrl\":\"https://credo.library.umass.edu/media/mufs190-1951-dpl2k101-i001.reference.tif\",\"http://iiif.io/api/image\":\"https://credo.library.umass.edu/view/zoom/mufs190-1951-dpl2k101-i001\"}",
     "id": "umass-mufs190-1951-dpl2k101-i001",
     "dct_identifier_sm": "mufs190-1951-dpl2k101-i001",
     "gbl_mdModified_dt": "2021-03-12T18:00:00Z",
