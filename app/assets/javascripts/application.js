@@ -13,3 +13,6 @@
 
 // Required by GeoBlacklight
 //= require geoblacklight
+
+// UMass
+//= require modules/umass_header
