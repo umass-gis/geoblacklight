@@ -66,6 +66,7 @@ USE_GEOM_FOR_RELATIONS_ICON: false
 # Web services shown in tool panel
 WEBSERVICES_SHOWN:
   - 'wms'
+  - 'tms'
   - 'wfs'
   - 'iiif'
   - 'feature_layer'
