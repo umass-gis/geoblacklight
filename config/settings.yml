@@ -24,7 +24,7 @@ FIELDS:
   :CREATOR: 'dct_creator_sm'
   :DESCRIPTION: 'dct_description_sm'
   :FILE_FORMAT: 'dct_format_s'
-  :GEOM_TYPE: 'locn_Geometry_s'
+  :GEOM_TYPE: 'locn_geometry_s'
   :GEOMETRY: 'dcat_bbox_geom'
   :IDENTIFIER: 'dct_identifier_sm'
   :ISSUED: 'dct_issued_s'
