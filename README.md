@@ -1,4 +1,4 @@
-# geoblacklight
+# UMass Amherst GeoData
 UMass Amherst's GeoBlacklight instance
 
 ## Installation
