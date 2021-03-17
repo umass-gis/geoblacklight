@@ -1,0 +1,26 @@
+footer {
+  margin-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  background-color: $umass-black;
+  color: $umass-medium-gray;
+  font-size: 0.9rem;
+
+  hr {
+    border-color: $umass-medium-gray;
+  }
+
+  a {
+    color: $umass-light-gray;
+  }
+  a:hover {
+    color: $umass-light-gray;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: 800 !important;
+    color: $umass-light-gray;
+  }
+}

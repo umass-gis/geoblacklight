@@ -3,9 +3,12 @@
   background-color: #ffffff !important;
 
   .application-name {
+    font-weight: 800;
     font-size: 30px;
-    font-family: 'Lora', serif;
-    color: #881c1c;
+    font-family: 'Open Sans', serif;
+    color: #151515;
     text-decoration: none;
+    border-left: 1px solid black;
+    padding: 0.75rem;
   }
 }
