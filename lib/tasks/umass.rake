@@ -80,11 +80,25 @@ namespace :umass do
   end
 
   namespace :index do
-    desc 'Put sample data into solr'
+    desc 'Put all sample data into solr'
     task :seed => :environment do
       docs = Dir['test/fixtures/files/**/*.json'].map { |f| JSON.parse File.read(f) }.flatten
       Blacklight.default_index.connection.add docs
       Blacklight.default_index.connection.commit
     end
+
+    desc 'Put umass sample data into solr'
+    task :umass => :environment do
+      docs = Dir['test/fixtures/files/umass_documents/*.json'].map { |f| JSON.parse File.read(f) }.flatten
+      Blacklight.default_index.connection.add docs
+      Blacklight.default_index.connection.commit
+    end
+
+    desc 'Delete all sample data from solr'
+    task :delete_all => :environment do
+      Blacklight.default_index.connection.delete_by_query '*:*'
+      Blacklight.default_index.connection.commit
+    end
   end
+
 end

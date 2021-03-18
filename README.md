@@ -8,7 +8,7 @@ UMass Amherst's GeoBlacklight instance
 * [Ruby](https://www.ruby-lang.org/en/) 2.7.2
 * [Java](https://www.java.com/en/) 8 or greater (Solr)
 * [Node.js](https://nodejs.org/en/) (yarn)
-* [MySQL](https://dev.mysql.com/downloads/mysql/) v8 
+* [MySQL](https://dev.mysql.com/downloads/mysql/) v8
 
 [GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows.
 
@@ -76,4 +76,18 @@ Stop any instances of GeoBlacklight before running this command.
 
 ```bash
 RAILS_ENV=test bundle exec rake ci
+```
+
+### Rake Tasks for Solr
+
+Delete all data from the Solr index
+
+```bash
+bundle exec rake umass:index:delete_all
+```
+
+Index just the UMass test fixtures
+
+```bash
+bundle exec rake rake umass:index:umass
 ```
