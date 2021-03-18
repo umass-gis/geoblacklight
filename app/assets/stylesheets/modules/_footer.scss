@@ -1,0 +1,30 @@
+footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  background-color: $umass-black;
+  color: $umass-medium-gray;
+  font-size: 0.9rem;
+
+  img.app-footer-logo {
+    margin-top:1rem;
+  }
+
+  hr {
+    border-color: $umass-medium-gray;
+  }
+
+  a {
+    color: $umass-light-gray;
+  }
+  a:hover {
+    color: $umass-light-gray;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: 800 !important;
+    color: $umass-light-gray;
+  }
+}

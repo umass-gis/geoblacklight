@@ -1,11 +1,18 @@
 // Local UMass Modules
-@import 'modules/global_header_footer';
-@import 'modules/application_nav';
+@import 'modules/colors';
+@import 'modules/header';
 @import 'modules/homepage';
+@import 'modules/footer';
 @import 'modules/type';
 
 // Button primary
-$umass-302: #003b5c;
+$umass-maroon: #840128;
 .btn-primary {
-    @include button-variant($umass-302, darken($umass-302, 7.5%), darken($umass-302, 10%), lighten($umass-302,5%), lighten($umass-302, 10%), darken($umass-302,30%));
+    @include button-variant($umass-maroon, darken($umass-maroon, 7.5%), darken($umass-maroon, 10%), lighten($umass-maroon, 5%), lighten($umass-maroon, 10%), darken($umass-maroon,30%));
+}
+
+// Input Focus and Glow
+.form-control:focus {
+  border-color: #A89968;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 136, 86, 0.6);
 }
