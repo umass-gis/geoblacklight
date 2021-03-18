@@ -6,9 +6,9 @@ class HomepageTest < ApplicationSystemTestCase
   end
 
   def test_basic_dom
-    assert page.has_selector?('#umass--global--header') # Global Header
+    assert page.has_selector?('header') # Global Header
     assert page.has_selector?('ul.navbar-nav')          # Navbar
-    assert page.has_selector?('#umass--global--footer') # Global Footer
+    assert page.has_selector?('footer') # Global Footer
   end
 
   def test_homepage_copy
