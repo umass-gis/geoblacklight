@@ -25,7 +25,7 @@
     "dct_issued_s": "1951-10-20",
     "gbl_indexYear_i": 1951,
     "locn_geometry": "ENVELOPE(-71.241869, -71.185347, 41.898254, 41.855455)",
-    "pcd_mmemberOf_sm": "William P. MacConnell Aerial Photograph Collection",
+    "pcdm_memberOf_sm": "William P. MacConnell Aerial Photograph Collection",
     "dct_rights_sm": "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries.",
     "dct_rightsHolder_sm": "Special Collections and University Archives, University of Massachusetts Amherst Libraries",
     "dct_accessRights_s": "Public",

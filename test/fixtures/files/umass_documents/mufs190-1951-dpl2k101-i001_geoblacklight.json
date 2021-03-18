@@ -26,7 +26,7 @@
     "gbl_indexYear_i": 1951,
     "dct_spatial_sm": "Bourne, Town of Bourne, Barnstable County, Massachusetts, United States",
     "locn_geometry": "ENVELOPE(-70.607117, -70.549626, 41.760435, 41.717075)",
-    "pcd_mmemberOf_sm": "William P. MacConnell Aerial Photograph Collection",
+    "pcdm_memberOf_sm": "William P. MacConnell Aerial Photograph Collection",
     "dct_rights_sm": "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries.",
     "dct_rightsHolder_sm": "Special Collections and University Archives, University of Massachusetts Amherst Libraries",
     "dct_accessRights_s": "Public",

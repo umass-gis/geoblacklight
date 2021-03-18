@@ -1,5 +1,5 @@
 {
-  "dct_isPartOf_sm": "NYC Geodatabase (version jan2016)",
+  "pcdm_memberOf_sm": "NYC Geodatabase (version jan2016)",
   "gbl_mdVersion_s": "Aardvark",
   "dct_creator_sm": "GIS Lab, Newman Library, Baruch CUNY",
   "dct_description_sm": "The NYC Geodatabase (nyc_gdb) is a resource designed for basic geographic analysis and thematic mapping within the five boroughs of New York City. It contains geographic features and data compiled from several public sources. Subsets of large features like water, greenspace, and public facilities were created and Census geographies like tracts, ZCTAs, and PUMAs were geoprocessed to create land-based boundaries. Census data from the 2010 Census, American Community Survey (ACS), and ZIP Code Business Patterns are stored in tables that can be easily related to geographic features. Transit and public facility point data were gathered from several city agencies and transformed into spatial data that can be used for reference or analysis for measuring distance, drawing buffers, or counting features within areas. The data is provided in SQLite format.",
