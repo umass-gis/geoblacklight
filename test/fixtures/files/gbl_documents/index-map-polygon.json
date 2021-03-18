@@ -13,7 +13,7 @@
   "dct_title_s": "Index of Digital Elevation Models (DEM), New York",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2018-12-20T00:00:00Z",
-  "dcat_bbox_geom": "ENVELOPE(-79.750232, -71.750494, 44.999963, 40.499893)",
+  "locn_geometry": "ENVELOPE(-79.750232, -71.750494, 44.999963, 40.499893)",
   "gbl_indexYear_im": 1995,
   "schema_provider_s": "Cornell",
   "dct_references_s": "{\"https://openindexmaps.org\":\"https://s3.amazonaws.com/cugir-data/00/81/86/cugir-008186-index.geojson\",\"http://schema.org/downloadUrl\":\"https://s3.amazonaws.com/cugir-data/00/81/86/cugir-008186-index.geojson\",\"http://www.opengis.net/cat/csw/csdgm\":\"https://s3.amazonaws.com/cugir-data/00/81/86/fgdc.xml\",\"http://www.w3.org/1999/xhtml\":\"https://s3.amazonaws.com/cugir-data/00/81/86/fgdc.html\"}",

@@ -9,7 +9,7 @@
   "dct_title_s": "100 Foot Grid Cambridge MA 2004",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2014-12-04T21:33:07Z",
-  "dcat_bbox_geom": "ENVELOPE(-71.163984, -71.052581, 42.408316, 42.34757)",
+  "locn_geometry": "ENVELOPE(-71.163984, -71.052581, 42.408316, 42.34757)",
   "gbl_indexYear_im": 2004,
   "dct_issued_s": "2005",
   "schema_provider_s": "Tufts",

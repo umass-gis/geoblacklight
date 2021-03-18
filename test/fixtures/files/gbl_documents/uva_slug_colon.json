@@ -8,7 +8,7 @@
   "dct_accessRights_s": "Public",
   "dct_title_s": "Norfolk 2005 Police Stations",
   "gbl_mdModified_dt": "2008-11-12T15:29:47Z",
-  "dcat_bbox_geom": "ENVELOPE(-76.346, -76.176, 36.971, 36.82)",
+  "locn_geometry": "ENVELOPE(-76.346, -76.176, 36.971, 36.82)",
   "gbl_indexYear_im": 2005,
   "dct_issued_s": "2008-10-17",
   "schema_provider_s": "UVa",

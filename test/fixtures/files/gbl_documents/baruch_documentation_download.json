@@ -17,7 +17,7 @@
   "dct_title_s": "2015 New York City Subway Complexes and Ridership",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2016-5-2T18:21:5Z",
-  "dcat_bbox_geom": "ENVELOPE(-74.030876, -73.755405, 40.9031249999998, 40.5761269999998)",
+  "locn_geometry": "ENVELOPE(-74.030876, -73.755405, 40.9031249999998, 40.5761269999998)",
   "gbl_indexYear_im": 2015,
   "dct_issued_s": "1/15/2016",
   "schema_provider_s": "Baruch CUNY",

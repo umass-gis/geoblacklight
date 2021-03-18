@@ -14,7 +14,7 @@
   "dct_title_s": "10 Meter Contours: Russian River Basin, California",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2016-04-25T17:13:35Z",
-  "dcat_bbox_geom": "ENVELOPE(-123.387366, -122.52958, 39.398403, 38.302994)",
+  "locn_geometry": "ENVELOPE(-123.387366, -122.52958, 39.398403, 38.302994)",
   "gbl_indexYear_im": 2002,
   "dct_issued_s": "2002",
   "schema_provider_s": "Stanford",

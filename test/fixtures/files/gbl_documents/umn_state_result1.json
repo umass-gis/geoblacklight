@@ -19,7 +19,7 @@
   "dct_accessRights_s": "Public",
   "dct_title_s": "1:100k Digital Raster Graphic - Collars Removed: Minnesota",
   "gbl_mdModified_dt": "2018-08-02T17:47:58Z",
-  "dcat_bbox_geom": "ENVELOPE(-97.612501, -88.842351, 49.464145, 42.906949)",
+  "locn_geometry": "ENVELOPE(-97.612501, -88.842351, 49.464145, 42.906949)",
   "gbl_indexYear_im": 2015,
   "dct_issued_s": "2015-11-18T11:02:15.705119",
   "schema_provider_s": "Minnesota",

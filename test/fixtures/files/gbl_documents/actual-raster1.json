@@ -13,7 +13,7 @@
   "dct_title_s": "1-Meter Shaded Relief Multibeam Bathymetry Image (Color): Elkhorn Slough, California, 2005",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2015-04-16T23:09:17Z",
-  "dcat_bbox_geom": "ENVELOPE(-121.7948738, -121.7389503, 36.8606925, 36.8085911)",
+  "locn_geometry": "ENVELOPE(-121.7948738, -121.7389503, 36.8606925, 36.8085911)",
   "gbl_indexYear_im": 2005,
   "dct_issued_s": "2005",
   "schema_provider_s": "Stanford",

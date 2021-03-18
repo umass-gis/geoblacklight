@@ -13,7 +13,7 @@
   "dct_title_s": "2016 NYC Geodatabase, ArcGIS Version (jan2016)",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2016-5-2T18:21:7Z",
-  "dcat_bbox_geom": "ENVELOPE(-74.255895, -73.700272, 40.9152819999998, 40.4959289999998)",
+  "locn_geometry": "ENVELOPE(-74.255895, -73.700272, 40.9152819999998, 40.4959289999998)",
   "gbl_indexYear_im": 2016,
   "dct_issued_s": "1/15/2016",
   "schema_provider_s": "Baruch CUNY",

@@ -13,7 +13,7 @@
   "dct_title_s": "Dabao Kinb\u014dzu, Maps Index",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2016-10-20T21:07:24Z",
-  "dcat_bbox_geom": "ENVELOPE(125, 126, 7.3333, 6.6666)",
+  "locn_geometry": "ENVELOPE(125, 126, 7.3333, 6.6666)",
   "gbl_indexYear_im": 1944,
   "dct_issued_s": "2016",
   "schema_provider_s": "Stanford",

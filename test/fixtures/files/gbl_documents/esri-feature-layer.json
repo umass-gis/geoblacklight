@@ -27,7 +27,7 @@
   "dct_accessRights_s": "Public",
   "dct_title_s": "Transit - Airports: Maryland",
   "gbl_mdModified_dt": "2018-08-02T17:16:57Z",
-  "dcat_bbox_geom": "ENVELOPE(-79.4539, -75.124, 39.7194, 37.9667)",
+  "locn_geometry": "ENVELOPE(-79.4539, -75.124, 39.7194, 37.9667)",
   "gbl_indexYear_im": 2016,
   "dct_issued_s": "2016-02-16",
   "schema_provider_s": "Maryland",

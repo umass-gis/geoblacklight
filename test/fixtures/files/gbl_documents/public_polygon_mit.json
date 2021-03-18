@@ -9,7 +9,7 @@
   "dct_title_s": "Massachusetts (ZCTA - 5 digit zip code tabulation area, 2000)",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2018-05-15T20:00:25Z",
-  "dcat_bbox_geom": "ENVELOPE(-73.533237, -69.898565, 42.888068, 41.230345)",
+  "locn_geometry": "ENVELOPE(-73.533237, -69.898565, 42.888068, 41.230345)",
   "schema_provider_s": "MIT",
   "dct_references_s": "{\"http://www.opengis.net/def/serviceType/ogc/wms\": \"https://geodata.mit.edu/geoserver/wms\", \"http://www.opengis.net/def/serviceType/ogc/wfs\": \"https://geodata.mit.edu/geoserver/wfs\"}",
   "dct_spatial_sm": [

@@ -20,7 +20,7 @@
   "dct_source_sm": "88cc9b19-3294-4da9-9edd-775c81fb1c59",
   "dct_title_s": "Wabash Topo (27): Indiana, 1929",
   "gbl_mdModified_dt": "2018-07-20T18:08:03Z",
-  "dcat_bbox_geom": "ENVELOPE(-87.324704, -87.174404, 40.310695, 40.233691)",
+  "locn_geometry": "ENVELOPE(-87.324704, -87.174404, 40.310695, 40.233691)",
   "gbl_indexYear_im": 1929,
   "dct_issued_s": "2015-10-31",
   "schema_provider_s": "Purdue",

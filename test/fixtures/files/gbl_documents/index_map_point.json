@@ -11,7 +11,7 @@
   "dct_accessRights_s": "Public",
   "dct_title_s": "New York Aerial Photos (1960s)",
   "dct_type_s": "Dataset",
-  "dcat_bbox_geom": "ENVELOPE(-74.783, -74.733, 40.20, 40.166)",
+  "locn_geometry": "ENVELOPE(-74.783, -74.733, 40.20, 40.166)",
   "dct_issued_s": "c.1960",
   "schema_provider_s": "Cornell",
   "dct_references_s": "{\"https://openindexmaps.org\":\"https://raw.githubusercontent.com/OpenIndexMaps/edu.cornell/master/ny-aerial-photos-1960s.geojson\",\"http://schema.org/downloadUrl\":\"https://raw.githubusercontent.com/OpenIndexMaps/edu.cornell/master/ny-aerial-photos-1960s.geojson\"}",

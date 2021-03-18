@@ -9,7 +9,7 @@
   "dct_title_s": "Saint Petersburg Region, Russia, 1834 (Raster Image)",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2014-05-27T18:09:36Z",
-  "dcat_bbox_geom": "ENVELOPE(30.013108, 30.875309, 60.041712, 59.669749)",
+  "locn_geometry": "ENVELOPE(30.013108, 30.875309, 60.041712, 59.669749)",
   "gbl_indexYear_im": 1834,
   "dct_issued_s": "2000",
   "schema_provider_s": "Harvard",

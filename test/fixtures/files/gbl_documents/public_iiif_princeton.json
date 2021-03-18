@@ -13,7 +13,7 @@
   "dct_title_s": "The provinces of New York and New Jersey, with part of Pensilvania, and the Province of Quebec : drawn by Major Holland, Surveyor General, of the Northern District in America. Corrected and improved, from the original materials, by Governr. Pownall, Member of Parliament, 1776",
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2014-10-09T18:00:18Z",
-  "dcat_bbox_geom": "ENVELOPE(-76.3394, -72.1916, 46.5798, 38.6693)",
+  "locn_geometry": "ENVELOPE(-76.3394, -72.1916, 46.5798, 38.6693)",
   "gbl_indexYear_im": 1778,
   "dct_issued_s": "1778",
   "schema_provider_s": "Princeton",
