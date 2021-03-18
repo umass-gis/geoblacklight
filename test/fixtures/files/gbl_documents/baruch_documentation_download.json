@@ -45,5 +45,5 @@
   ],
   "dcat_servesDataset_s": "sdr:nyu_2451_34502",
   "id": "nyu_2451_34502",
-  "locn_geometry_s": "Point"
+  "gbl_resourceType_sm": "Point"
 }

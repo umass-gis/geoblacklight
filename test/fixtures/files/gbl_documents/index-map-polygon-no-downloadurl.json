@@ -33,5 +33,5 @@
   ],
   "dcat_servesDataset_s": "cugir008186",
   "id": "cugir-008186-no-downloadurl",
-  "locn_geometry_s": "Raster"
+  "gbl_resourceType_sm": "Raster"
 }

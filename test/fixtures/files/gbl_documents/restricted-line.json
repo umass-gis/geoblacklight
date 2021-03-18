@@ -33,5 +33,5 @@
   ],
   "dcat_servesDataset_s": "druid:cg357zz0321",
   "id": "stanford-cg357zz0321",
-  "locn_geometry_s": "Line"
+  "gbl_resourceType_sm": "Line"
 }

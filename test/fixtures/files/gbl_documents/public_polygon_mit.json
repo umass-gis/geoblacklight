@@ -23,5 +23,5 @@
   ],
   "dcat_servesDataset_s": "mit:SDE_DATA_US_MA_E25ZCTA5DCT_2000",
   "id": "mit-f6rqs4ucovjk2",
-  "locn_geometry_s": "Polygon"
+  "gbl_resourceType_sm": "Polygon"
 }

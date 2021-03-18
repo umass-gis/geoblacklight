@@ -32,5 +32,5 @@
   ],
   "dcat_servesDataset_s": "02870w62c",
   "id": "princeton-02870w62c",
-  "locn_geometry_s": "Raster"
+  "gbl_resourceType_sm": "Raster"
 }

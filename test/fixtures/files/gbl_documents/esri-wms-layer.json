@@ -29,5 +29,5 @@
   "dct_temporal_sm": "1972-1997",
   "dcat_servesDataset_s": "0",
   "id": "purdue-urn-f082acb1-b01e-4a08-9126-fd62a23fd9aa",
-  "locn_geometry_s": "Mixed"
+  "gbl_resourceType_sm": "Mixed"
 }

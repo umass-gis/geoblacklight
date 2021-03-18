@@ -30,5 +30,5 @@
   ],
   "dcat_servesDataset_s": "druid:cz128vq0535",
   "id": "stanford-cz128vq0535",
-  "locn_geometry_s": "Polygon"
+  "gbl_resourceType_sm": "Polygon"
 }

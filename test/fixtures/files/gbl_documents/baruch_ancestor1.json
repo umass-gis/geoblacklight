@@ -42,5 +42,5 @@
   ],
   "dcat_servesDataset_s": "sdr:nyu_2451_34635",
   "id": "nyu_2451_34635",
-  "locn_geometry_s": "Mixed"
+  "gbl_resourceType_sm": "Mixed"
 }

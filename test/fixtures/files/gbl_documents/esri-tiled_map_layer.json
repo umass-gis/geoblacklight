@@ -18,5 +18,5 @@
   ],
   "dcat_servesDataset_s": "test-soil-survey_map",
   "id": "nyu-test-soil-survey-map",
-  "locn_geometry_s": "Raster"
+  "gbl_resourceType_sm": "Raster"
 }
