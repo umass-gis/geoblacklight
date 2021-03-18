@@ -6,7 +6,7 @@
     "dct_publisher_sm": "University of Massachusetts at Amherst. Department of Forestry and Wildlife Management",
     "schema_provider_s": "UMass",
     "gbl_resourceClass_sm": "Imagery",
-    "gbl_resourceType_sm": "Aerial photograph",
+    "gbl_resourceType_sm": "Raster",
     "dct_subject_sm": [
       "Environment",
       "Imagery and Base Maps",
