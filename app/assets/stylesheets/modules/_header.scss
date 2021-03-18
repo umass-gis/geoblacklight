@@ -1,0 +1,90 @@
+#topnav {
+  width:100%;
+  background: none;
+  border: 0;
+  height: 96px;
+  margin-bottom: 0;
+  padding: 0px;
+
+  a img {
+    float: left;
+  }
+
+  img.app-logo {
+    margin-top:0.5rem;
+    height: 80px;
+  }
+
+  .site-name {
+    h1 {
+      border-left: 1px solid $black;
+      display:inline;
+      position: relative;
+      top:2.5rem;
+      left:1rem;
+      padding: 0.75rem;
+      font-weight: 800;
+      font-size: 30px;
+      font-family: 'Open Sans', serif;
+      color: #151515;
+      text-decoration: none;
+
+      a {
+        color:$black;
+      }
+    }
+  }
+
+  .topnav-links {
+    float: right;
+    margin-top: 2px;
+  }
+}
+
+#application-nav {
+  background-color: $umass-maroon !important;
+
+  // Keep application navbar links white
+  .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .navbar-nav .nav-link:hover, .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+  }
+
+  // Mobile hamburger
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255, 0.85);
+  }
+
+  .navbar-brand {
+    background: none;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #topnav {
+    text-align:center;
+  }
+
+  #topnav a img {
+    float: none;
+    margin-left: 0px;
+  }
+
+  div.site-name {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar-brand {
+    display: none;
+  }
+}

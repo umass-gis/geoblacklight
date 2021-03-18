@@ -1,11 +1,15 @@
 footer {
   margin-top: 2rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
 
   background-color: $umass-black;
   color: $umass-medium-gray;
   font-size: 0.9rem;
+
+  img.app-footer-logo {
+    margin-top:1rem;
+  }
 
   hr {
     border-color: $umass-medium-gray;

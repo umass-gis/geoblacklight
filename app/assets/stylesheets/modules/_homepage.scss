@@ -1,3 +1,7 @@
-.jumbotron {
-  background-color: #ece9d4;
+.navbar-search, .jumbotron {
+  background-color: $umass-light-gray;
+}
+
+.navbar-search {
+  margin-bottom: 0.5rem;
 }
