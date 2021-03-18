@@ -5,7 +5,7 @@ UMass Amherst's GeoBlacklight instance
 
 ### Dependencies
 
-* [Ruby](https://www.ruby-lang.org/en/) 2.7.2
+* [Ruby](https://www.ruby-lang.org/en/) 2.7.0
 * [Java](https://www.java.com/en/) 8 or greater (Solr)
 * [Node.js](https://nodejs.org/en/) (yarn)
 * [MySQL](https://dev.mysql.com/downloads/mysql/) v8
