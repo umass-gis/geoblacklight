@@ -24,6 +24,7 @@ FIELDS:
   :CREATOR: 'dct_creator_sm'
   :DESCRIPTION: 'dct_description_sm'
   :FILE_FORMAT: 'dct_format_s'
+  :FILE_SIZE: 'gbl_fileSize_s'
   :GEOM_TYPE: 'gbl_resourceType_sm'
   :GEOMETRY: 'locn_geometry'
   :IDENTIFIER: 'dct_identifier_sm'
@@ -34,6 +35,7 @@ FIELDS:
   :PUBLISHER: 'dct_publisher_sm'
   :REFERENCES: 'dct_references_s'
   :RIGHTS: 'dct_accessRights_s'
+  :RIGHTS_STATEMENTS: 'dct_rights_sm'
   :SOURCE: 'dct_source_sm'
   :SPATIAL_COVERAGE: 'dct_spatial_sm'
   :SUBJECT: 'dct_subject_sm'
@@ -42,7 +44,7 @@ FIELDS:
   :TITLE: 'dct_title_s'
   :UNIQUE_KEY: 'id'
   :WXS_IDENTIFIER: 'dcat_servesDataset_s'
-  :YEAR: 'gbl_indexYear_im'
+  :YEAR: 'gbl_indexYear_i'
 
 # Institution deployed at
 INSTITUTION: 'UMass Amherst'
