@@ -42,4 +42,18 @@ class ShowPageTest < ApplicationSystemTestCase
       assert page.has_selector?("div.page-links")            # Pagination
     end
   end
+
+  def test_sidebar_bbox_map
+    # Viewer: IIIF
+    visit '/catalog/umass-mufs190-1951-dpl2k101-i001'
+    within(".page-sidebar") do
+      assert page.has_selector?(".card.location")
+    end
+
+    # Viewer: Map
+    visit '/catalog/2eddde2f-c222-41ca-bd07-2fd74a21f4de'
+    within(".page-sidebar") do
+      assert page.has_no_selector?(".card.location")
+    end
+  end
 end
