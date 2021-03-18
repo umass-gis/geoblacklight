@@ -8,8 +8,16 @@ UMass Amherst's GeoBlacklight instance
 * [Ruby](https://www.ruby-lang.org/en/) 2.7.2
 * [Java](https://www.java.com/en/) 8 or greater (Solr)
 * [Node.js](https://nodejs.org/en/) (yarn)
+* [MySQL](https://dev.mysql.com/downloads/mysql/) v8 
 
 [GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows.
+
+If using Homebrew, install Java via:
+
+```bash
+brew install java
+```
+
 
 ### Clone the Project
 
@@ -29,10 +37,20 @@ cp .example.env.test .env.test
 
 ### Bundle RubyGems
 
-Test with Bundler 2.1.4
+```bash
+bundle install
+```
+
+### Yarn Packages
 
 ```bash
-bundle
+yarn install
+```
+
+### Create the Database
+
+```bash
+bin/rails db:create RAILS_ENV=development
 ```
 
 ### Run the Database Migrations
