@@ -15,3 +15,4 @@
 //= require geoblacklight
 
 // UMass
+//= require analytics

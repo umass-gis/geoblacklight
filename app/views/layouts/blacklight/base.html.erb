@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'analytics' %>
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
   </head>
@@ -32,7 +33,7 @@
       </div>
     </div>
 
-  <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+  <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>" data-analytics-id="<%= Rails.configuration.google_analytics %>">
     <%= content_for(:container_header) %>
 
     <%= render partial: 'shared/flash_msg', layout: 'shared/flash_messages' %>
