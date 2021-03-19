@@ -8,7 +8,9 @@ footer {
   font-size: 0.9rem;
 
   img.app-footer-logo {
-    margin-top:1rem;
+    margin-top:0rem;
+    position:relative;
+    right:1rem;
   }
 
   hr {
@@ -26,5 +28,34 @@ footer {
     text-transform: uppercase;
     font-weight: 800 !important;
     color: $umass-light-gray;
+  }
+
+  ul.list-unstyled {
+    li {
+      a.nav-link {
+        padding-left:0;
+      }
+    }
+  }
+
+  #footer-campus-links {
+    display:inline;
+    li.nav-item {
+      display: inline-block;
+    }
+
+    .nav-link {
+      padding: 0 1rem;
+    }
+
+    .nav-link.first {
+      padding: 0 1rem 0 0;
+    }
+
+    li.nav-item:not(:last-child) .nav-link {
+      border-right: 1px solid $umass-medium-gray;
+    }
+
+    a.nav-link:hover { text-decoration: underline; }
   }
 }
