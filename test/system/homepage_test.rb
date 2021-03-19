@@ -6,13 +6,14 @@ class HomepageTest < ApplicationSystemTestCase
   end
 
   def test_basic_dom
-    assert page.has_selector?('header') # Global Header
+    assert page.has_selector?('header')                 # Header
+    assert page.has_selector?("[data-analytics-id]")    # Google Analytics
     assert page.has_selector?('ul.navbar-nav')          # Navbar
-    assert page.has_selector?('footer') # Global Footer
+    assert page.has_selector?('footer')                 # Footer
   end
 
   def test_homepage_copy
-    within('ul.navbar-nav') do
+    within('#application-nav ul.navbar-nav') do
       assert page.has_link?("About")
       assert page.has_link?("Contact")
       assert page.has_link?("Help")
