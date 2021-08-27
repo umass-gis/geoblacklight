@@ -45,6 +45,7 @@ FIELDS:
   :UNIQUE_KEY: 'id'
   :WXS_IDENTIFIER: 'dcat_servesDataset_s'
   :YEAR: 'gbl_indexYear_i'
+  :ANNOTATION: 'umass_annotated_s'
 
 # Institution deployed at
 INSTITUTION: 'UMass Amherst'

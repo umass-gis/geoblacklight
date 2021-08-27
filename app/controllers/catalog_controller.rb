@@ -97,6 +97,7 @@ class CatalogController < ApplicationController
     config.add_facet_field Settings.FIELDS.RIGHTS, label: 'Access', limit: 8, partial: "icon_facet"
     config.add_facet_field Settings.FIELDS.GEOM_TYPE, label: 'Data type', limit: 8, partial: "icon_facet"
     config.add_facet_field Settings.FIELDS.FILE_FORMAT, :label => 'Format', :limit => 8
+    config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotation', :limit => 8
     config.add_facet_field Settings.FIELDS.SOURCE, show: false
 
     # Have BL send all facet field names to Solr, which has been the default
@@ -144,6 +145,7 @@ class CatalogController < ApplicationController
     config.add_show_field Settings.FIELDS.RIGHTS_STATEMENTS, label: 'Rights', itemprop: 'rights'
     config.add_show_field Settings.FIELDS.PROVENANCE, label: 'Held by', link_to_facet: true
     config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
+    config.add_show_field Settings.FIELDS.ANNOTATION, label: 'Annotation', link_to_facet: true
     config.add_show_field(
       Settings.FIELDS.REFERENCES,
       label: 'More details at',

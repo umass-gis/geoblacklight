@@ -1,3 +1,9 @@
 en:
   blacklight:
     application_name: 'GeoData'
+    search:
+      form:
+        search:
+          label: "Search %{application_name}"
+          placeholder:  "Enter search terms or select 'Go' to browse"
+        submit: 'Go'
