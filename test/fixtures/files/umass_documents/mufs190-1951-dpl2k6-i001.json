@@ -1,0 +1,50 @@
+{
+    "dct_title_s": "1:20k Aerial Photograph (B/W): City of Barnstable Town, MA, 1951 (dpl-2k-6)",
+    "dct_description_sm": "Georeferenced black-and-white aerial photograph captured in 1951 of West Barnstable (City of Barnstable Town, Barnstable County, MA). The photograph was scanned and manually georeferenced in ArcMap 10.8 against 2019 color orthoimagery from the U.S. Geological Survey.",
+    "dct_language_sm": "English",
+    "dct_creator_sm": "MacConnell, William Preston, 1918-",
+    "dct_publisher_sm": "University of Massachusetts at Amherst. Department of Forestry and Wildlife Management",
+    "schema_provider_s": "UMass",
+    "gbl_resourceClass_sm": "Imagery",
+    "gbl_resourceType_sm": "Raster",
+    "dct_subject_sm": [
+        "Environment",
+        "Imagery and Base Maps",
+        "Land Cover",
+        "Planning and Cadastral",
+        "Structure"
+    ],
+    "dcat_theme_sm": [
+        "environment",
+        "imageryBaseMapsEarthCover",
+        "inlandWaters",
+        "planningCadastre",
+        "structure"
+    ],
+    "dct_temporal_sm": "1951-10-22",
+    "dct_issued_s": "1951-10-22",
+    "gbl_indexYear_i": 1951,
+    "umass_annotated_s": "full",
+    "umass_geonames_sm": [
+        "4832322"
+    ],
+    "dct_spatial_sm": [
+        "West Barnstable, MA",
+        "City of Barnstable Town, MA",
+        "Barnstable County, MA"
+    ],
+    "locn_geometry": "ENVELOPE(-70.417570, -70.357382, 41.711760, 41.666855)",
+    "pcdm_memberOf_sm": "William P. MacConnell Aerial Photograph Collection",
+    "dct_rights_sm": "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries.",
+    "dct_rightsHolder_sm": "Special Collections and University Archives, University of Massachusetts Amherst Libraries",
+    "dct_accessRights_s": "Public",
+    "dct_format_s": "GeoTIFF",
+    "gbl_fileSize_s": "90 MB",
+    "dct_references_s": "{\"http://schema.org/url\":\"https://credo.library.umass.edu/view/full/mufs190-1951-dpl2k6-i001\",\"http://schema.org/downloadUrl\":[{\"url\":\"https://credo.library.umass.edu/media/mufs190-1951-dpl2k6-i001.reference.tif\",\"label\":\"GeoTIFF\"},{\"url\":\"https://credo.library.umass.edu/images/resize/full/mufs190-1951-dpl2k6-i001-001.jpg\",\"label\":\"High-Res JPG\"}],\"http://iiif.io/api/image\":\"https://credo.library.umass.edu/iiif/mufs190-1951-dpl2k6-i001-001.tif/info.json\"}",
+    "id": "umass-mufs190-1951-dpl2k6-i001",
+    "dct_identifier_sm": "mufs190-1951-dpl2k6-i001",
+    "gbl_mdModified_dt": "2021-08-27T17:38:46Z",
+    "gbl_mdVersion_s": "Aardvark",
+    "gbl_suppressed_b": false,
+    "gbl_georeferenced_b": true
+}
