@@ -1,33 +1,27 @@
 {
     "dct_title_s": "1:20k Aerial Photograph (B/W): Town of Dighton, MA, 1951 (dpm-1k-101)",
     "dct_description_sm": "Georeferenced black-and-white aerial photograph captured in 1951 of West Dighton (Town of Dighton, Bristol County, MA). The photograph was scanned and manually georeferenced in ArcMap 10.8 against 2019 color orthoimagery from the U.S. Geological Survey.",
-    "dct_language_sm": "English",
+    "dct_language_sm": "eng",
     "dct_creator_sm": "MacConnell, William Preston, 1918-",
     "dct_publisher_sm": "University of Massachusetts at Amherst. Department of Forestry and Wildlife Management",
     "schema_provider_s": "UMass",
     "gbl_resourceClass_sm": "Imagery",
-    "gbl_resourceType_sm": "Raster",
+    "gbl_resourceType_sm": "Aerial photographs",
     "dct_subject_sm": [
         "Environment",
         "Imagery and Base Maps",
-        "Land Cover",
         "Planning and Cadastral",
         "Structure"
     ],
     "dcat_theme_sm": [
-        "environment",
-        "imageryBaseMapsEarthCover",
-        "inlandWaters",
-        "planningCadastre",
-        "structure"
+        "Environment",
+        "Imagery and Base Maps",
+        "Planning and Cadastral",
+        "Structure"
     ],
-    "dct_temporal_sm": "1951-10-20",
+    "dct_temporal_sm": "1951",
     "dct_issued_s": "1951-10-20",
-    "gbl_indexYear_i": 1951,
-    "umass_annotated_s": "full",
-    "umass_geonames_sm": [
-        "4954932"
-    ],
+    "gbl_indexYear_im": 1951,
     "dct_spatial_sm": [
         "West Dighton, MA",
         "Town of Dighton, MA",
@@ -43,8 +37,12 @@
     "dct_references_s": "{\"http://schema.org/url\":\"https://credo.library.umass.edu/view/full/mufs190-1951-dpn1k101-i001\",\"http://schema.org/downloadUrl\":[{\"url\":\"https://credo.library.umass.edu/media/mufs190-1951-dpn1k101-i001.reference.tif\",\"label\":\"GeoTIFF\"},{\"url\":\"https://credo.library.umass.edu/images/resize/full/mufs190-1951-dpn1k101-i001-001.jpg\",\"label\":\"High-Res JPG\"}],\"http://iiif.io/api/image\":\"https://credo.library.umass.edu/iiif/mufs190-1951-dpn1k101-i001-001.tif/info.json\"}",
     "id": "umass-mufs190-1951-dpn1k101-i001",
     "dct_identifier_sm": "mufs190-1951-dpn1k101-i001",
-    "gbl_mdModified_dt": "2021-08-27T17:38:46Z",
+    "gbl_mdModified_dt": "2021-09-10T20:02:16Z",
     "gbl_mdVersion_s": "Aardvark",
     "gbl_suppressed_b": false,
-    "gbl_georeferenced_b": true
+    "gbl_georeferenced_b": true,
+    "umass_annotated_s": "Whole image",
+    "umass_geonames_sm": [
+        "4954932"
+    ]
 }
