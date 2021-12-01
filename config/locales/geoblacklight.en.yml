@@ -26,9 +26,9 @@ en:
       category_heading: 'Find by...'
       map_heading: 'Find by location'
       institution: 'Institution'
-      data_type: 'Data type'
+      data_type: 'Data Type'
       placename: 'Placename'
-      subject: 'Subject'
+      theme: 'Theme'
       version: 'GeoBlacklight version %{version}'
     tools:
       login_to_view: 'Login to View and Download'

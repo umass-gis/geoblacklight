@@ -17,20 +17,21 @@
 
   .site-name {
     h1 {
-      border-left: 1px solid $black;
-      display:inline;
+      border-left: 1px solid $umass-black;
+      display: inline;
       position: relative;
       top:2rem;
       left:1rem;
       padding: 1rem;
-      font-weight: 800;
+      font-weight: normal;
       font-size: 30px;
       font-family: 'Open Sans', serif;
-      color: #151515;
+      font-style: normal;
+      color: $umass-black;
       text-decoration: none;
 
       a {
-        color:$black;
+        color: $umass-black;
       }
     }
   }

@@ -3,44 +3,22 @@
     <div class='col-sm'>
       <%= content_tag :h3, t('geoblacklight.home.category_heading') %>
       <div class='row'>
-        <div class='category-block col-sm'>
-          <div class='category-icon'>
-            <%= geoblacklight_icon('home') %>
-          </div>
-          <%= content_tag :h4, t('geoblacklight.home.institution') %>
-          <%= render_facet_tags [Settings.FIELDS.PROVENANCE] %>
-        </div>
-        <div class='category-block col-sm'>
-          <div class='category-icon'>
-            <%= geoblacklight_icon('arrow-circle-down') %>
-          </div>
-          <%= content_tag :h4, t('geoblacklight.home.data_type') %>
-          <%= render_facet_tags [Settings.FIELDS.GEOM_TYPE] %>
-        </div>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'home', label: 'geoblacklight.home.institution', facet_field: Settings.FIELDS.PROVIDER, response: @response)) %>
+
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'arrow-circle-down', label: 'geoblacklight.home.data_type', facet_field: Settings.FIELDS.RESOURCE_CLASS, response: @response)) %>
       </div>
       <div class='row'>
-        <div class='category-block col-sm'>
-          <div class='category-icon'>
-            <%= geoblacklight_icon('globe') %>
-          </div>
-          <%= content_tag :h4, t('geoblacklight.home.placename') %>
-          <%= render_facet_tags [Settings.FIELDS.SPATIAL_COVERAGE] %>
-        </div>
-        <div class='category-block col-sm'>
-          <div class='category-icon'>
-            <%= geoblacklight_icon('tags') %>
-          </div>
-          <%= content_tag :h4, t('geoblacklight.home.subject') %>
-          <%= render_facet_tags [Settings.FIELDS.SUBJECT] %>
-        </div>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'globe', label: 'geoblacklight.home.placename', facet_field: Settings.FIELDS.SPATIAL_COVERAGE, response: @response)) %>
+
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.ISO_TOPIC_CATEGORY, response: @response)) %>
       </div>
     </div>
     <div class='col-sm'>
       <%= content_tag :h3, t('geoblacklight.home.map_heading') %>
-      <%= content_tag :div, '', id: 'map', aria: { label: t('geoblacklight.map.label') }, data: { map: 'home', 'catalog-path'=> search_catalog_path , 'map-geom' => '{"type":"Polygon","coordinates":[[[-73.58,42.93],[-73.58,41.20],[-69.90,41.20],[-69.90,42.93]]]}', basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
+      <%= content_tag :div, '', id: 'map', aria: { label: t('geoblacklight.map.label') }, data: { map: 'home', 'catalog-path'=> search_catalog_path , 'map-geom' => Settings.HOMEPAGE_MAP_GEOM, basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
     </div>
   </div>
-  <div id="geoblacklight-version" class="text-right sr-only">
+  <div id="geoblacklight-version" class='text-right'>
     <%= t('geoblacklight.home.version', version: Geoblacklight::VERSION ) %>
   </div>
 </div>
