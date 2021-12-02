@@ -7,10 +7,6 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
 
-    # B10 - default advanced config values
-    # config.advanced_search.enabled = true
-    # config.advanced_search ||= Blacklight::OpenStructWithHashAccess.new
-
     # Ensures that JSON representations of Solr Documents can be retrieved using
     # the path /catalog/:id/raw
     # Please see https://github.com/projectblacklight/blacklight/pull/2006/
@@ -36,6 +32,10 @@ class CatalogController < ApplicationController
      :q => "{!raw f=#{Settings.FIELDS.UNIQUE_KEY} v=$id}"
     }
 
+    # GeoBlacklight Defaults
+    # * Adds the "map" split view for catalog#index
+    config.view.split(partials: ['index'])
+    config.view.delete_field('list')
 
     # solr field configuration for search results/index views
     # config.index.show_link = 'title_display'
@@ -291,8 +291,6 @@ class CatalogController < ApplicationController
     # Tools from Blacklight
     config.add_results_collection_tool(:sort_widget)
     config.add_results_collection_tool(:per_page_widget)
-    config.add_results_collection_tool(:view_type_group)
-
     # config.add_show_tools_partial(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
     config.add_show_tools_partial(:citation)
     config.add_show_tools_partial(:email, callback: :email_action, validator: :validate_email_params)
@@ -304,28 +302,6 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :carto, partial: 'carto', if: proc { |_context, _config, options| options[:document] && options[:document].carto_reference.present? }
     config.add_show_tools_partial :arcgis, partial: 'arcgis', if: proc { |_context, _config, options| options[:document] && options[:document].arcgis_urls.present? }
     config.add_show_tools_partial :data_dictionary, partial: 'data_dictionary', if: proc { |_context, _config, options| options[:document] && options[:document].data_dictionary_download.present? }
-
-    # B10
-    # Advanced config values
-    # config.advanced_search[:url_key] ||= 'advanced'
-    # config.advanced_search[:query_parser] ||= 'edismax'
-    # config.advanced_search[:form_solr_parameters] ||= {}
-    # config.advanced_search[:form_solr_parameters]['facet.field'] ||= [Settings.FIELDS.PROVIDER, Settings.FIELDS.RESOURCE_TYPE, Settings.FIELDS.RESOURCE_CLASS]
-    # config.advanced_search[:form_solr_parameters]['facet.query'] ||= ''
-    # config.advanced_search[:form_solr_parameters]['facet.limit'] ||= -1
-    # config.advanced_search[:form_solr_parameters]['facet.sort'] ||= 'index'
-
-    # B10
-    # GeoBlacklight Defaults
-    # * Adds the "map" split view for catalog#index
-    # config.view.split(partials: ['index'])
-    # config.view.delete_field('list')
-
-    # B10
-    # Map views
-    # config.view.mapview.partials = [:index]
-    # config.view['split'].title = "List view"
-    # config.view['mapview'].title = "Map view"
 
     # Configure basemap provider for GeoBlacklight maps (uses https only basemap
     # providers with open licenses)
