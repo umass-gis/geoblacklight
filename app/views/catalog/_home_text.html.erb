@@ -21,4 +21,14 @@
   <div id="geoblacklight-version" class='text-right'>
     <%= t('geoblacklight.home.version', version: Geoblacklight::VERSION ) %>
   </div>
+
+  <!-- code from NYU to add curated collection to home page-->
+  <div class="curated">
+    <div class="row">
+      <div class="col-md-6">
+        <%= construct_curated_collections %>
+      </div>
+    </div>
+  </div>
+
 </div>

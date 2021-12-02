@@ -1,0 +1,83 @@
+/* code from NYU to add curated collection to home page */
+
+.card-block {
+  padding: 10px;
+}
+
+.card-collection {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  border-radius: 0 0 10px 10px;
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+}
+
+.card-collection:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 5000;
+}
+
+.card-description {
+}
+
+.card-img-top {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.card-map {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card-map:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 5000;
+}
+
+.card-title {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.collection-section-title {
+  text-align: left;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.curated {
+  margin-top: 40px;
+}
+
+.curated-card {
+  text-decoration: none;
+  color: #333333;
+}
+
+.curated-collections {
+}
+
+.curated-maps {
+  margin-top: 10px;
+}
+
+.map-link {
+  text-decoration: none;
+}
