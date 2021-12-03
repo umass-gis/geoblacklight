@@ -10,7 +10,7 @@
   "dct_type_s": "Dataset",
   "gbl_mdModified_dt": "2014-05-27T18:09:36Z",
   "locn_geometry": "ENVELOPE(30.013108, 30.875309, 60.041712, 59.669749)",
-  "gbl_indexYear_i": 1834,
+  "gbl_indexYear_im": 1834,
   "dct_issued_s": "2000",
   "schema_provider_s": "Harvard",
   "dct_references_s": "{\"http://schema.org/DownloadAction\":\"http://pelham.lib.harvard.edu:8080/HGL/HGLOpenDelivery\",\"http://www.opengis.net/def/serviceType/ogc/wcs\":\"http://pelham.lib.harvard.edu:8090/geoserver/wcs\",\"http://www.opengis.net/def/serviceType/ogc/wms\":\"http://pelham.lib.harvard.edu:8090/geoserver/wms\",\"http://www.opengis.net/cat/csw/csdgm\":\"https://raw.githubusercontent.com/OpenGeoMetadata/edu.harvard/master/217/121/227/77/fgdc.xml\"}",

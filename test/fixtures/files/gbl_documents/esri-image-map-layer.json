@@ -21,7 +21,7 @@
   "dct_title_s": "Wabash Topo (27): Indiana, 1929",
   "gbl_mdModified_dt": "2018-07-20T18:08:03Z",
   "locn_geometry": "ENVELOPE(-87.324704, -87.174404, 40.310695, 40.233691)",
-  "gbl_indexYear_i": 1929,
+  "gbl_indexYear_im": 1929,
   "dct_issued_s": "2015-10-31",
   "schema_provider_s": "Purdue",
   "dct_references_s": "{\"http://schema.org/url\":\"https://mapsweb.lib.purdue.edu/wabashriver/\",\"http://schema.org/downloadUrl\":\"https://mapsweb.lib.purdue.edu/datasets/Wabash1929/wabash_topo_27.tif.zip\",\"urn:x-esri:serviceType:ArcGIS#ImageMapLayer\":\"https://mapsweb.lib.purdue.edu/arcgis/rest/services/Purdue/wabashtopo/ImageServer\",\"http://www.isotc211.org/schemas/2005/gmd/\":\"http://64.90.181.107/geonetwork/srv/api/records/32653ed6-8d83-4692-8a06-bf13ffe2c018/formatters/xml\"}",

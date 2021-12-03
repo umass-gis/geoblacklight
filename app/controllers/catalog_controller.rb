@@ -92,22 +92,21 @@ class CatalogController < ApplicationController
 
   	#DEFAULT FACETS
   	#to add additional facets, use the keys defined in the settings.yml file
-    config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10
+    config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8
-    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, label: 'Access', limit: 8, partial: "icon_facet"
-    config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, label: 'Resource Class', :limit => 8
-    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, label: 'Resource Type', :limit => 8
+    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, partial: "icon_facet", :sort => 'index'
+    config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Resource Class', :limit => 8, :sort => 'index'
+    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, :label => 'Resource Type', :limit => 8
     config.add_facet_field Settings.FIELDS.FORMAT, :label => 'Format', :limit => 8
-    config.add_facet_field Settings.FIELDS.SUBJECT, :label => 'Subject', :limit => 8
-    config.add_facet_field Settings.FIELDS.ISO_TOPIC_CATEGORY, :label => 'Theme', :limit => 8
+    # config.add_facet_field Settings.FIELDS.SUBJECT, :label => 'Subject', :limit => 8
+    config.add_facet_field Settings.FIELDS.ISO_TOPIC_CATEGORY, :label => 'Theme', :limit =>20, :sort => 'index'
     config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Creator', :limit => 8
-    config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
-    config.add_facet_field Settings.FIELDS.PROVIDER, label: 'Provider', limit: 8, partial: "icon_facet"
+    # config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
+    config.add_facet_field Settings.FIELDS.MEMBER_OF, :label => 'Collection', :limit => 8
+    config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8, partial: "icon_facet"
     config.add_facet_field Settings.FIELDS.GEOREFERENCED, :label => 'Georeferenced', :limit => 3
-    config.add_facet_field Settings.FIELDS.SOURCE, :label => 'Collection', :limit => 8, :show => false
-
-    #CUSTOM FACETS
-    config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotation', :limit => 8
+    # config.add_facet_field Settings.FIELDS.SOURCE, :label => 'Collection', :limit => 8, :show => false
+    config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotated', :limit => 8
 
 
     # Have BL send all facet field names to Solr, which has been the default
@@ -138,17 +137,15 @@ class CatalogController < ApplicationController
       # helper_method: [Symbol] method that can be used to render the value
 
       config.add_show_field Settings.FIELDS.CREATOR, label: 'Creator(s)', itemprop: 'creator'
-      config.add_show_field Settings.FIELDS.DATE_ISSUED, label: 'Date', itemprop: 'dateIssued'
+      config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Year', itemprop: 'temporal'
       config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract
       config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
-      config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Collection', itemprop: 'memberOf'
+      config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Collection', itemprop: 'memberOf', link_to_facet: true
       config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
-      config.add_show_field Settings.FIELDS.SUBJECT, label: 'Subject(s)', itemprop: 'keywords', link_to_facet: true
-      # config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Year', itemprop: 'temporal'
+      config.add_show_field Settings.FIELDS.ISO_TOPIC_CATEGORY, label: 'The,me(s)', itemprop: 'keywords', link_to_facet: true
       config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
       config.add_show_field Settings.FIELDS.PROVIDER, label: 'Provider', link_to_facet: true
       config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
-      config.add_show_field Settings.FIELDS.ANNOTATION, label: 'Annotation'
 
       config.add_show_field(
         Settings.FIELDS.REFERENCES,
