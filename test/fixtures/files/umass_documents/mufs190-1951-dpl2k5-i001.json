@@ -7,17 +7,11 @@
     "schema_provider_s": "UMass",
     "gbl_resourceClass_sm": "Imagery",
     "gbl_resourceType_sm": "Aerial photographs",
-    "dct_subject_sm": [
-        "Environment",
-        "Imagery and Base Maps",
-        "Planning and Cadastral",
-        "Structure"
-    ],
     "dcat_theme_sm": [
-        "Environment",
-        "Imagery and Base Maps",
-        "Planning and Cadastral",
-        "Structure"
+        "Imagery",
+        "Land Cover",
+        "Property",
+        "Transportation"
     ],
     "dct_temporal_sm": "1951",
     "dct_issued_s": "1951-10-22",

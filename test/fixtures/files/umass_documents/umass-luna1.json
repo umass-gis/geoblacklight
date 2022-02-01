@@ -1,0 +1,27 @@
+{
+    "dct_title_s": "LUNA TEST",
+    "dct_description_sm": "This is a test page for a test geotagged image.",
+    "schema_provider_s": "UMass",
+    "gbl_resourceClass_sm": "Imagery",
+    "gbl_resourceType_sm": "Streetview photographs",
+    "dcat_theme_sm": [
+        "Imagery",
+        "Society"
+    ],
+    "dct_temporal_sm": "circa 1960",
+    "gbl_indexYear_im": 1960,
+    "dct_spatial_sm": [
+        "Athens, Greece"
+    ],
+    "dcat_centroid_ss": "23.727539,37.983810",
+    "locn_geometry": "ENVELOPE(23.717528,23.782776,37.992355,37.958451)",
+    "dct_accessRights_s": "Public",
+    "dct_format_s": "JPEG",
+    "dct_references_s": "{\"http://schema.org/url\":\"https://umassamherst.lunaimaging.com//luna/servlet/detail/umass~3~3~1~177237\",\"http://schema.org/downloadUrl\":[{\"url\":\"http://umassamherst.lunaimaging.com/MediaManager/srvr?mediafile=/JP2K/umass~3~3/3286/JH0001.jp2&width=3072&height=2057&x=0&y=0&resolution=5&level=0\",\"label\":\"High-Res JPG\"}],\"http://iiif.io/api/image\":\"https://umassamherst.lunaimaging.com//luna/servlet/iiif/umass~3~3~1~177237/info.json\"}",
+    "id": "umass-luna1",
+    "dct_identifier_sm": "luna1",
+    "gbl_mdModified_dt": "2021-09-10T20:02:16Z",
+    "gbl_mdVersion_s": "Aardvark",
+    "gbl_suppressed_b": false,
+    "gbl_georeferenced_b": false
+}
