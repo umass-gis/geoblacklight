@@ -142,7 +142,7 @@ class CatalogController < ApplicationController
       config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
       config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Collection', itemprop: 'memberOf', link_to_facet: true
       config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
-      config.add_show_field Settings.FIELDS.ISO_TOPIC_CATEGORY, label: 'The,me(s)', itemprop: 'keywords', link_to_facet: true
+      config.add_show_field Settings.FIELDS.ISO_cTOPIC_CATEGORY, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
       config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
       config.add_show_field Settings.FIELDS.PROVIDER, label: 'Provider', link_to_facet: true
       config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
