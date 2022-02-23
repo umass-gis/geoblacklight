@@ -71,3 +71,8 @@ gem 'devise-guests', '~> 0.6'
 
 # ENV
 gem 'dotenv-rails'
+
+# adding capistrano to help in automated deployment
+group :development do
+  gem "capistrano", "~> 3.16", require: false
+end
