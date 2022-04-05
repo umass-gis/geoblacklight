@@ -1,0 +1,43 @@
+{
+    "dct_title_s": "MacConnell Aerial Photo Collection (1951-1952)",
+    "dct_description_sm": "Collection of 1:20,000 black-and-white aerial photographs captured in 1951-1952 of the state of Massachusetts.",
+    "dct_language_sm": "eng",
+    "dct_creator_sm": "MacConnell, William Preston, 1918-",
+    "dct_publisher_sm": "University of Massachusetts at Amherst. Department of Forestry and Wildlife Management",
+    "schema_provider_s": "UMass",
+    "gbl_resourceClass_sm": "Imagery",
+    "gbl_resourceType_sm": "Aerial photographs",
+    "dct_subject_sm": [
+        "Historical aerial imagery",
+        "Black-and-white photos",
+        "Landscape"
+    ],
+    "dcat_theme_sm": [
+        "Imagery",
+        "Land Cover"
+    ],
+    "dcat_keyword_sm": [
+        "maconnell",
+        "maconell",
+        "macconnel",
+        "macconel"
+    ],
+    "dct_temporal_sm": "1951-1952",
+    "dct_issued_s": "1951",
+    "gbl_indexYear_im": 1951,
+    "dct_spatial_sm": [
+        "Massachusetts"
+    ],
+    "locn_geometry": "ENVELOPE(-73.747, -69.7787, 43.0045, 41.1143)",
+    "dcat_bbox": "ENVELOPE(-73.747, -69.7787, 43.0045, 41.1143)",
+    "dct_rights_sm": "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries.",
+    "dct_rightsHolder_sm": "Special Collections and University Archives, University of Massachusetts Amherst Libraries",
+    "dct_accessRights_s": "Public",
+    "dct_references_s": "{\"http://schema.org/url\":\"https://credo.library.umass.edu/view/series/mufs190-s1951\"}",
+    "id": "umass-macconnell-1951",
+    "dct_identifier_sm": "mufs190-s1951",
+    "gbl_mdModified_dt": "2022-04-05T17:44:31Z",
+    "gbl_mdVersion_s": "Aardvark",
+    "gbl_suppressed_b": false,
+    "gbl_georeferenced_b": false
+}
