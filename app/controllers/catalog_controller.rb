@@ -29,7 +29,7 @@ class CatalogController < ApplicationController
     #
     config.default_document_solr_params = {
      :qt => 'document',
-     :q => "{!raw f=#{Settings.FIELDS.UNIQUE_KEY} v=$id}"
+     :q => "{!raw f=#{Settings.FIELDS.ID} v=$id}"
     }
 
     # GeoBlacklight Defaults
@@ -94,16 +94,16 @@ class CatalogController < ApplicationController
   	#to add additional facets, use the keys defined in the settings.yml file
     config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8
-    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, partial: "icon_facet", :sort => 'index'
+    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, item_component: Geoblacklight::IconFacetItemComponent
     config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Resource Class', :limit => 8, :sort => 'index'
     config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, :label => 'Resource Type', :limit => 8
     config.add_facet_field Settings.FIELDS.FORMAT, :label => 'Format', :limit => 8
     # config.add_facet_field Settings.FIELDS.SUBJECT, :label => 'Subject', :limit => 8
-    config.add_facet_field Settings.FIELDS.ISO_TOPIC_CATEGORY, :label => 'Theme', :limit =>20, :sort => 'index'
+    config.add_facet_field Settings.FIELDS.THEME, :label => 'Theme', :limit =>20, :sort => 'index'
     config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Creator', :limit => 8
     # config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
     config.add_facet_field Settings.FIELDS.MEMBER_OF, :label => 'Collection', :limit => 8
-    config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8, partial: "icon_facet"
+    config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8, item_component: Geoblacklight::IconFacetItemComponent
     config.add_facet_field Settings.FIELDS.GEOREFERENCED, :label => 'Georeferenced', :limit => 3
     # config.add_facet_field Settings.FIELDS.SOURCE, :label => 'Collection', :limit => 8, :show => false
     config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotated', :limit => 8
@@ -142,7 +142,7 @@ class CatalogController < ApplicationController
       config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
       config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Collection', itemprop: 'memberOf', link_to_facet: true
       config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
-      config.add_show_field Settings.FIELDS.ISO_TOPIC_CATEGORY, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
+      config.add_show_field Settings.FIELDS.THEME, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
       config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
       config.add_show_field Settings.FIELDS.PROVIDER, label: 'Provider', link_to_facet: true
       config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
@@ -173,7 +173,7 @@ class CatalogController < ApplicationController
       # config.add_show_field Settings.FIELDS.INDEX_YEAR, label: 'Year', itemprop: 'year'
       # config.add_show_field Settings.FIELDS.IS_PART_OF, label: 'Is Part Of', itemprop: 'is_part_of'
       # config.add_show_field Settings.FIELDS.IS_REPLACED_BY, label: 'Is Replaced By', itemprop: 'is_replaced_by'
-      # config.add_show_field Settings.FIELDS.ISO_TOPIC_CATEGORY, label: 'Theme', itemprop: 'theme'
+      # config.add_show_field Settings.FIELDS.THEME, label: 'Theme', itemprop: 'theme'
       # config.add_show_field Settings.FIELDS.KEYWORD, label: 'Keyword(s)', itemprop: 'keyword'
       # config.add_show_field Settings.FIELDS.LANGUAGE, label: 'Language', itemprop: 'language'
       # config.add_show_field Settings.FIELDS.LICENSE, label: 'License', itemprop: 'license'
@@ -191,7 +191,7 @@ class CatalogController < ApplicationController
       # config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
       # config.add_show_field Settings.FIELDS.RIGHTS_HOLDER, label: 'Rights Holder', itemprop: 'rights_holder'
       # config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial_coverage'
-      # config.add_show_field Settings.FIELDS.SPATIAL_EXTENT, label: 'Spatial Extent', itemprop: 'geometry'
+      # config.add_show_field Settings.FIELDS.GEOMETRY, label: 'Geometry', itemprop: 'geometry'
       # config.add_show_field Settings.FIELDS.SUBJECT, label: 'Subject', itemprop: 'subject'
       # config.add_show_field Settings.FIELDS.SUPPRESSED, label: 'Suppressed', itemprop: 'suppresed'
       # config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Temporal Coverage', itemprop: 'temporal'
@@ -294,7 +294,8 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial(:sms, if: :render_sms_action?, callback: :sms_action, validator: :validate_sms_params)
 
     # Custom tools for GeoBlacklight
-    config.add_show_tools_partial :web_services, if: proc { |_context, _config, options| options[:document] && (Settings.WEBSERVICES_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
+    # This line was recommended to be deleted per the GBL upgrade guide
+    # config.add_show_tools_partial :web_services, if: proc { |_context, _config, options| options[:document] && (Settings.WEBSERVICES_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
     config.add_show_tools_partial :metadata, if: proc { |_context, _config, options| options[:document] && (Settings.METADATA_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
     config.add_show_tools_partial :carto, partial: 'carto', if: proc { |_context, _config, options| options[:document] && options[:document].carto_reference.present? }
     config.add_show_tools_partial :arcgis, partial: 'arcgis', if: proc { |_context, _config, options| options[:document] && options[:document].arcgis_urls.present? }
@@ -320,6 +321,14 @@ class CatalogController < ApplicationController
     config.autocomplete_path = 'suggest'
   end
 
+  def web_services
+    @response, @documents = action_documents
 
-
+    respond_to do |format|
+      format.html do
+        return render layout: false if request.xhr?
+        # Otherwise draw the full page
+      end
+    end
+  end
 end

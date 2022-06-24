@@ -10,7 +10,7 @@
       <div class='row'>
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'globe', label: 'geoblacklight.home.placename', facet_field: Settings.FIELDS.SPATIAL_COVERAGE, response: @response)) %>
 
-        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.ISO_TOPIC_CATEGORY, response: @response)) %>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.THEME, response: @response)) %>
       </div>
     </div>
     <div class='col-sm'>

@@ -56,7 +56,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'blacklight', '~> 7.0'
-gem 'geoblacklight', '~> 4.0.0.pre.alpha.3'
+gem 'geoblacklight', '~> 4.0.0.pre.rc2'
 gem 'sprockets', '< 4.0'
 
 group :development, :test do
