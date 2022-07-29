@@ -25,6 +25,25 @@ OVERLAP_RATIO_BOOST: '2'
 # HOMEPAGE_MAP_GEOM: null
 HOMEPAGE_MAP_GEOM: '{"type":"Polygon","coordinates":[[[-73.747,43.0045],[-73.747,41.1143],[-69.7787,41.1143],[-69.7787,43.0045]]]}'
 
+# Non-search-field GeoBlacklight application permitted params
+GBL_PARAMS:
+  - :bbox
+  - :email
+  - :file
+  - :format
+  - :id
+  - :logo
+  - :provider
+  - :type
+  - :BBOX
+  - :HEIGHT
+  - :LAYERS
+  - :QUERY_LAYERS
+  - :URL
+  - :WIDTH
+  - :X
+  - :Y
+
 # Solr field mappings
 FIELDS:
   :ACCESS_RIGHTS: 'dct_accessRights_s'
@@ -61,7 +80,7 @@ FIELDS:
   :RIGHTS_HOLDER: 'dct_rightsHolder_sm'
   :SOURCE: 'dct_source_sm'
   :SPATIAL_COVERAGE: 'dct_spatial_sm'
-  :SPATIAL_EXTENT: 'locn_geometry'
+  :GEOMETRY: 'locn_geometry'
   :SUBJECT: 'dct_subject_sm'
   :SUPPRESSED: 'gbl_suppressed_b'
   :TEMPORAL_COVERAGE: 'dct_temporal_sm'

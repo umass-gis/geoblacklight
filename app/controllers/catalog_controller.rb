@@ -94,7 +94,7 @@ class CatalogController < ApplicationController
   	#to add additional facets, use the keys defined in the settings.yml file
     config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8
-    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, partial: "icon_facet", :sort => 'index'
+    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, :sort => 'index'
     config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Resource Class', :limit => 8, :sort => 'index'
     config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, :label => 'Resource Type', :limit => 8
     config.add_facet_field Settings.FIELDS.FORMAT, :label => 'Format', :limit => 8
@@ -103,10 +103,19 @@ class CatalogController < ApplicationController
     config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Creator', :limit => 8
     # config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
     config.add_facet_field Settings.FIELDS.MEMBER_OF, :label => 'Collection', :limit => 8
-    config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8, partial: "icon_facet"
+    config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8
     config.add_facet_field Settings.FIELDS.GEOREFERENCED, :label => 'Georeferenced', :limit => 3
     # config.add_facet_field Settings.FIELDS.SOURCE, :label => 'Collection', :limit => 8, :show => false
     config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotated', :limit => 8
+
+    # GEOBLACKLIGHT APPLICATION FACETS
+
+    # Map-Based "Search Here" Feature
+    # item_presenter       - Defines how the facet appears in the GBL UI
+    # filter_query_builder - Defines the query generated for Solr
+    # filter_class         - Defines how to add/remove facet from query
+    # label                - Defines the label used in contstraints container
+    config.add_facet_field Settings.FIELDS.GEOMETRY, item_presenter: Geoblacklight::BboxItemPresenter, filter_class: Geoblacklight::BboxFilterField, filter_query_builder: Geoblacklight::BboxFilterQuery, within_boost: Settings.BBOX_WITHIN_BOOST, overlap_boost: Settings.OVERLAP_RATIO_BOOST, overlap_field: Settings.FIELDS.OVERLAP_FIELD, label: 'Bounding Box'
 
 
     # Have BL send all facet field names to Solr, which has been the default
