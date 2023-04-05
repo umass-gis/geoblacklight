@@ -10,9 +10,6 @@ ARCGIS_BASE_URL: 'https://www.arcgis.com/home/webmap/viewer.html'
 # Download path can be configured using this setting
 #DOWNLOAD_PATH: "./tmp/cache/downloads"
 
-# DEPRECATED Main Solr geometry field used for spatial search and bounding box. Should be type 'rpt'
-GEOMETRY_FIELD: 'solr_geom'
-
 # The bq boost value for spatial search matches within a bounding box
 BBOX_WITHIN_BOOST: '10'
 
@@ -25,11 +22,30 @@ OVERLAP_RATIO_BOOST: '2'
 # HOMEPAGE_MAP_GEOM: null
 HOMEPAGE_MAP_GEOM: '{"type":"Polygon","coordinates":[[[-73.747,43.0045],[-73.747,41.1143],[-69.7787,41.1143],[-69.7787,43.0045]]]}'
 
+# Non-search-field GeoBlacklight application permitted params
+GBL_PARAMS:
+  - :bbox
+  - :email
+  - :file
+  - :format
+  - :id
+  - :logo
+  - :provider
+  - :type
+  - :BBOX
+  - :HEIGHT
+  - :LAYERS
+  - :QUERY_LAYERS
+  - :URL
+  - :WIDTH
+  - :X
+  - :Y
+
 # Solr field mappings
 FIELDS:
   :ACCESS_RIGHTS: 'dct_accessRights_s'
   :ALTERNATIVE_TITLE: 'dct_alternative_sm'
-  :CENTROID: 'dcat_centroid_ss'
+  :CENTROID: 'dcat_centroid'
   :CREATOR: 'dct_creator_sm'
   :DATE_ISSUED: 'dct_issued_s'
   :DATE_RANGE: 'gbl_dateRange_drsim'
@@ -70,6 +86,7 @@ FIELDS:
   :VERSION: 'dct_isVersionOf_sm'
   :WXS_IDENTIFIER: 'gbl_wxsIdentifier_s'
   :ANNOTATION: 'umass_annotated_s'
+  :GEONAME_ID: 'umass_geonameID_s'
 
 
 # Institution deployed at

@@ -4,7 +4,7 @@
     "princeton-child4"
   ],
   "dct_description_sm": [
-    "Child record for testing the suppressed_b property. ",
+    "Child record for testing the gbl_suppressed_b property. ",
     "Title taken from sheet 1 of 1927 map. \"Feb. 1885.\" Includes location map and key. Oriented with the north to the upper left."
   ],
   "dct_language_sm": [
@@ -28,7 +28,8 @@
     "GBL Fixture records"
   ],
   "locn_geometry": "ENVELOPE(-74.68,-74.63,40.37,40.33)",
-  "dcat_centroid_ss": "40.349999999999994,-74.655",
+  "dcat_bbox": "ENVELOPE(-74.68,-74.63,40.37,40.33)",
+  "dcat_centroid": "40.349999999999994,-74.655",
   "dct_source_sm": [
     "princeton-1r66j405w"
   ],
