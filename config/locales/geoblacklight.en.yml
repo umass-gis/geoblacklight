@@ -23,7 +23,7 @@ en:
       export_geotiff_link: 'GeoTIFF'
     home:
       headline: 'Explore and discover...'
-      search_heading: 'Find the maps and data you need'
+      search_heading: 'UMass Amherst Portal for Geospatial Data'
       category_heading: 'Find by...'
       map_heading: 'Find by location'
       institution: 'Institution'

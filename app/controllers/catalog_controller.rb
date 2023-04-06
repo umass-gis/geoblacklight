@@ -48,11 +48,11 @@ class CatalogController < ApplicationController
     # To move metadata above the map viewer,
     # remove the lines deleting and re-adding the :show partial
     config.show.display_type_field = 'format'
-    config.show.partials.delete(:show)
+    # config.show.partials.delete(:show)
     config.show.partials << 'show_default_viewer_container'
     config.show.partials << 'show_default_attribute_table'
     config.show.partials << 'show_default_viewer_information'
-    config.show.partials << :show
+    # config.show.partials << :show
 
     ##
     # Configure the index document presenter.
@@ -108,7 +108,6 @@ class CatalogController < ApplicationController
     # config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
     config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8, item_component: Geoblacklight::IconFacetItemComponent
     config.add_facet_field Settings.FIELDS.GEOREFERENCED, :label => 'Georeferenced', :limit => 3
-    # config.add_facet_field Settings.FIELDS.SOURCE, :label => 'Collection', :limit => 8, :show => false
     config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotated', :limit => 8
 
     # GEOBLACKLIGHT APPLICATION FACETS
