@@ -127,12 +127,12 @@ RELATIONSHIPS_SHOWN:
   MEMBER_OF_ANCESTORS:
     field: pcdm_memberOf_sm
     query_type: ancestors
-    icon: nil
+    icon: parent-item
     label: geoblacklight.relations.member_of_ancestors
   MEMBER_OF_DESCENDANTS:
     field: pcdm_memberOf_sm
     query_type: descendants
-    icon: nil
+    icon: child-item
     label: geoblacklight.relations.member_of_descendants
   PART_OF_ANCESTORS:
     field: dct_isPartOf_sm
