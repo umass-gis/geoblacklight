@@ -72,7 +72,8 @@ en:
     relations:
       ancestor: 'Source Datasets'
       descendant: 'Derived Datasets'
-      member_of: 'Belongs to collection...'
+      member_of_ancestors: 'Belongs to collection...'
+      member_of_descendants: 'Collection records...'
       part_of: 'Is part of...'
       part_of_descendants: 'Has part...'
       relation: 'Related Records'
