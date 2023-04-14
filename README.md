@@ -1,5 +1,5 @@
-# UMass Amherst Portal for Geospatial Data (UMAP GeoData)
-UMass Amherst's [GeoBlacklight](https://geoblacklight.org) instance.
+# UMAP GeoData
+The UMass Amherst Portal for Geospatial Data is our [GeoBlacklight](https://geoblacklight.org) instance.
 
 ### Release Version
 UMAP GeoData v1.0.0 / GeoBlacklight v4.0.0
