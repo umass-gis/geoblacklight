@@ -1,14 +1,22 @@
-# UMass Amherst GeoData
-UMass Amherst's GeoBlacklight instance
+# UMass Amherst Portal for Geospatial Data (UMAP GeoData)
+UMass Amherst's [GeoBlacklight](https://geoblacklight.org) instance.
+
+### Release Version
+UMAP GeoData v1.0.0 / GeoBlacklight v4.0.0
 
 ## Installation
 
 ### Dependencies
 
-* [Ruby](https://www.ruby-lang.org/en/) 2.7.0
+View the full GeoBlacklight release and technology dependency matrix here: [Releases](https://geoblacklight.org/docs/overview/releases/).
+
+* [Ruby](https://www.ruby-lang.org/en/) 3.2.0
+* [Rails](https://rubyonrails.org) 7.0.4
 * [Java](https://www.java.com/en/) 8 or greater (Solr)
 * [Node.js](https://nodejs.org/en/) (yarn)
 * [MySQL](https://dev.mysql.com/downloads/mysql/) v8
+
+### Setup
 
 [GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows.
 
@@ -17,7 +25,6 @@ If using Homebrew, install Java via:
 ```bash
 brew install java
 ```
-
 
 ### Clone the Project
 
