@@ -1,6 +1,6 @@
 <nav id="application-nav" class="navbar navbar-expand-md navbar-dark bg-dark topbar" role="navigation">
   <div class="<%= container_classes %>">
-    <%= link_to "GeoData", root_path, class: 'navbar-brand' %>
+    <%= link_to "UMAP GeoData", root_path, class: 'navbar-brand' %>
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#user-util-collapse" aria-controls="user-util-collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,8 +20,8 @@
   </div>
 <% else %>
   <div class='geobl-homepage-masthead jumbotron'>
-    <div class='d-flex justify-content-center'>
-      <%= content_tag :h3, t('geoblacklight.home.search_heading'), class: 'text-center' %>
+    <div class='d-flex justify-content-center', style="padding-bottom: 10px">
+      <%= content_tag :h2, t('geoblacklight.home.search_heading'), class: 'text-center' %>
     </div>
     <div class='row justify-content-md-center'>
       <div class='col-md-6 col-sm-12'>

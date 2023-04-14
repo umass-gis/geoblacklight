@@ -1,6 +1,6 @@
 en:
   blacklight:
-    application_name: 'GeoData'
+    application_name: 'UMAP GeoData'
     search:
       form:
         search:
