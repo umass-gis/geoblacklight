@@ -29,7 +29,7 @@ class CatalogController < ApplicationController
     #
     config.default_document_solr_params = {
      :qt => 'document',
-     :q => "{!raw f=#{Settings.FIELDS.UNIQUE_KEY} v=$id}"
+     :q => "{!raw f=#{Settings.FIELDS.ID} v=$id}"
     }
 
     # GeoBlacklight Defaults
@@ -44,11 +44,15 @@ class CatalogController < ApplicationController
     config.index.title_field = Settings.FIELDS.TITLE
 
     # solr field configuration for document/show views
-
+    # This sets the metadata to display below the map viewer.
+    # To move metadata above the map viewer,
+    # remove the lines deleting and re-adding the :show partial
     config.show.display_type_field = 'format'
+    # config.show.partials.delete(:show)
     config.show.partials << 'show_default_viewer_container'
     config.show.partials << 'show_default_attribute_table'
     config.show.partials << 'show_default_viewer_information'
+    # config.show.partials << :show
 
     ##
     # Configure the index document presenter.
@@ -92,112 +96,117 @@ class CatalogController < ApplicationController
 
   	#DEFAULT FACETS
   	#to add additional facets, use the keys defined in the settings.yml file
+    config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Author', :limit => 8
+    config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
     config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8
-    config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, partial: "icon_facet", :sort => 'index'
-    config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Resource Class', :limit => 8, :sort => 'index'
-    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, :label => 'Resource Type', :limit => 8
-    config.add_facet_field Settings.FIELDS.FORMAT, :label => 'Format', :limit => 8
-    # config.add_facet_field Settings.FIELDS.SUBJECT, :label => 'Subject', :limit => 8
-    config.add_facet_field Settings.FIELDS.ISO_TOPIC_CATEGORY, :label => 'Theme', :limit =>20, :sort => 'index'
-    config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Creator', :limit => 8
-    # config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
-    config.add_facet_field Settings.FIELDS.MEMBER_OF, :label => 'Collection', :limit => 8
-    config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Provider', :limit => 8, partial: "icon_facet"
+    config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Category', :limit => 8, :sort => 'index'
+    config.add_facet_field Settings.FIELDS.THEME, :label => 'Theme', :limit =>20, :sort => 'index'
+    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, :label => 'Data Type', :limit => 8
+    config.add_facet_field Settings.FIELDS.FORMAT, :label => 'Data Format', :limit => 8
     config.add_facet_field Settings.FIELDS.GEOREFERENCED, :label => 'Georeferenced', :limit => 3
-    # config.add_facet_field Settings.FIELDS.SOURCE, :label => 'Collection', :limit => 8, :show => false
-    config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotated', :limit => 8
+    # config.add_facet_field Settings.FIELDS.PROVIDER, :label => 'Institution', :limit => 8, item_component: Geoblacklight::IconFacetItemComponent
+    # config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, :label => 'Access', :limit => 8, item_component: Geoblacklight::IconFacetItemComponent
+    # config.add_facet_field Settings.FIELDS.SUBJECT, :label => 'Subject', :limit => 8
+    # config.add_facet_field Settings.FIELDS.ANNOTATION, :label => 'Annotated', :limit => 8
 
+    # GEOBLACKLIGHT APPLICATION FACETS
+
+    # Map-Based "Search Here" Feature
+    # item_presenter       - Defines how the facet appears in the GBL UI
+    # filter_query_builder - Defines the query generated for Solr
+    # filter_class         - Defines how to add/remove facet from query
+    # label                - Defines the label used in contstraints container
+    config.add_facet_field Settings.FIELDS.GEOMETRY, item_presenter: Geoblacklight::BboxItemPresenter, filter_class: Geoblacklight::BboxFilterField, filter_query_builder: Geoblacklight::BboxFilterQuery, within_boost: Settings.BBOX_WITHIN_BOOST, overlap_boost: Settings.OVERLAP_RATIO_BOOST, overlap_field: Settings.FIELDS.OVERLAP_FIELD, label: 'Bounding Box'
+
+    # Item Relationship Facets
+    # * Not displayed to end user (show: false)
+    # * Must be present for relationship "Browse all 4 records" links to work
+    # * Label value becomes the search contraint filter name
+    config.add_facet_field Settings.FIELDS.MEMBER_OF, label: 'Member Of', show: false
+    config.add_facet_field Settings.FIELDS.IS_PART_OF, label: 'Is Part Of', show: false
+    config.add_facet_field Settings.FIELDS.RELATION, label: 'Related', show: false
+    config.add_facet_field Settings.FIELDS.REPLACES, label: 'Replaces', show: false
+    config.add_facet_field Settings.FIELDS.IS_REPLACED_BY, label: 'Is Replaced By', show: false
+    config.add_facet_field Settings.FIELDS.SOURCE, label: 'Source', show: false
+    config.add_facet_field Settings.FIELDS.VERSION, label: 'Is Version Of', show: false
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
     config.add_facet_fields_to_solr_request!
 
-    #SEARCH RESULTS FIELDS
+    # SEARCH RESULTS FIELDS
 
-      # solr fields to be displayed in the index (search results) view
-      #   The ordering of the field names is the order of the display
-      # config.add_index_field Settings.FIELDS.PROVIDER, :label => 'Institution:'
-      # config.add_index_field Settings.FIELDS.RIGHTS, :label => 'Access:'
-      # # config.add_index_field 'Area', :label => 'Area:'
-      # config.add_index_field Settings.FIELDS.SUBJECT, :label => 'Keywords:'
-      config.add_index_field Settings.FIELDS.INDEX_YEAR
-      config.add_index_field Settings.FIELDS.CREATOR
-      config.add_index_field Settings.FIELDS.DESCRIPTION, helper_method: :snippit
-      #config.add_index_field Settings.FIELDS.PUBLISHER
+    # solr fields to be displayed in the index (search results) view
+    #   The ordering of the field names is the order of the display
+    # config.add_index_field Settings.FIELDS.PROVIDER, :label => 'Institution:'
+    # config.add_index_field Settings.FIELDS.RIGHTS, :label => 'Access:'
+    # # config.add_index_field 'Area', :label => 'Area:'
+    # config.add_index_field Settings.FIELDS.SUBJECT, :label => 'Keywords:'
+    config.add_index_field Settings.FIELDS.INDEX_YEAR
+    config.add_index_field Settings.FIELDS.CREATOR
+    config.add_index_field Settings.FIELDS.DESCRIPTION, helper_method: :snippit
+    config.add_index_field Settings.FIELDS.PUBLISHER
 
+    # ITEM VIEW FIELDS
 
-    #ITEM VIEW FIELDS
+    # solr fields to be displayed in the show (single result) view
+    #  The ordering of the field names is the order of the display
+    # item_prop: [String] property given to span with Schema.org item property
+    # link_to_search: [Boolean] that can be passed to link to a facet search
+    # helper_method: [Symbol] method that can be used to render the value
 
-      # solr fields to be displayed in the show (single result) view
-      #  The ordering of the field names is the order of the display
-      # item_prop: [String] property given to span with Schema.org item property
-      # link_to_search: [Boolean] that can be passed to link to a facet search
-      # helper_method: [Symbol] method that can be used to render the value
+    # DEFAULT FIELDS
+    # The following fields all feature string values. If there is a value present in the metadata, they fields will show up on the item show page.
+    # The labels and order can be customed. Comment out fields to hide them.
 
-      config.add_show_field Settings.FIELDS.CREATOR, label: 'Creator(s)', itemprop: 'creator'
-      config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Year', itemprop: 'temporal'
-      config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract
-      config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
-      config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Collection', itemprop: 'memberOf', link_to_facet: true
-      config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
-      config.add_show_field Settings.FIELDS.ISO_TOPIC_CATEGORY, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
-      config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
-      config.add_show_field Settings.FIELDS.PROVIDER, label: 'Provider', link_to_facet: true
-      config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
+    config.add_show_field Settings.FIELDS.CREATOR, label: 'Author(s)', itemprop: 'creator', link_to_facet: true
+    config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract
+    config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
+    config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Year', itemprop: 'temporal'
+    config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
+    config.add_show_field Settings.FIELDS.THEME, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
+    config.add_show_field Settings.FIELDS.PROVIDER, label: 'Held by', link_to_facet: true
+    config.add_show_field Settings.FIELDS.ACCESS_RIGHTS, label: 'Access', itemprop: 'accessRights'
+    config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
+    config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
 
-      config.add_show_field(
-        Settings.FIELDS.REFERENCES,
-        label: 'More details at',
-        accessor: [:external_url],
-        if: proc { |_, _, doc| doc.external_url },
-        helper_method: :render_references_url
-      )
+    config.add_show_field(
+      Settings.FIELDS.REFERENCES,
+      label: 'More details at',
+      accessor: [:external_url],
+      if: proc { |_, _, doc| doc.external_url },
+      helper_method: :render_references_url
+    )
 
-      # OPTIONAL FIELDS
-      #optional fields to add to the item view display
+    # ADDITIONAL FIELDS
+    # The following fields are not user friendly and are not set to appear on the item show page. They contain non-literal values, codes, URIs, or are otherwise designed to power features in the interface.
+    # These values might need a translations to be readable by users.
 
-      # config.add_show_field Settings.FIELDS.ACCESS_RIGHTS, label: 'Access Rights', itemprop: 'access_rights'
-      # config.add_show_field Settings.FIELDS.ALTERNATIVE_TITLE, label: 'Alternative Title', itemprop: 'alt_title'
-      # config.add_show_field Settings.FIELDS.CENTROID, label: 'Centroid', itemprop: 'centroid'
-      # config.add_show_field Settings.FIELDS.CREATOR, label: 'Creator(s)', itemprop: 'creator'
-      # config.add_show_field Settings.FIELDS.DATE_ISSUED, label: 'Date Issued', itemprop: 'issued'
-      # config.add_show_field Settings.FIELDS.DATE_RANGE, label: 'Date Range', itemprop: 'date_range'
-      # config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract
-      # config.add_show_field Settings.FIELDS.FORMAT, label: 'Format', itemprop: 'format'
-      # config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File Size', itemprop: 'file_size'
-      # config.add_show_field Settings.FIELDS.GEOREFERENCED, label: 'Georeferenced', itemprop: 'georeferenced'
-      # config.add_show_field Settings.FIELDS.ID, label: 'ID', itemprop: 'id'
-      # config.add_show_field Settings.FIELDS.IDENTIFIER, label: 'Identifier', itemprop: 'identifier'
-      # config.add_show_field Settings.FIELDS.INDEX_YEAR, label: 'Year', itemprop: 'year'
-      # config.add_show_field Settings.FIELDS.IS_PART_OF, label: 'Is Part Of', itemprop: 'is_part_of'
-      # config.add_show_field Settings.FIELDS.IS_REPLACED_BY, label: 'Is Replaced By', itemprop: 'is_replaced_by'
-      # config.add_show_field Settings.FIELDS.ISO_TOPIC_CATEGORY, label: 'Theme', itemprop: 'theme'
-      # config.add_show_field Settings.FIELDS.KEYWORD, label: 'Keyword(s)', itemprop: 'keyword'
-      # config.add_show_field Settings.FIELDS.LANGUAGE, label: 'Language', itemprop: 'language'
-      # config.add_show_field Settings.FIELDS.LICENSE, label: 'License', itemprop: 'license'
-      # config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Member Of', itemprop: 'member_of'
-      # config.add_show_field Settings.FIELDS.METADATA_VERSION, label: 'Metadata Version', itemprop: 'metadata_version'
-      # config.add_show_field Settings.FIELDS.MODIFIED, label: 'Date Modified', itemprop: 'modified'
-      # config.add_show_field Settings.FIELDS.OVERLAP_FIELD, label: 'Overlap BBox', itemprop: 'overlap_field'
-      # config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
-      # config.add_show_field Settings.FIELDS.PROVIDER, label: 'Provider', itemprop: 'provider'
-      # config.add_show_field Settings.FIELDS.REFERENCES, label: 'References', itemprop: 'references'
-      # config.add_show_field Settings.FIELDS.RELATION, label: 'Relation', itemprop: 'relation'
-      # config.add_show_field Settings.FIELDS.REPLACES, label: 'Replaces', itemprop: 'replaces'
-      # config.add_show_field Settings.FIELDS.RESOURCE_CLASS, label: 'Resource Class', itemprop: 'class'
-      # config.add_show_field Settings.FIELDS.RESOURCE_TYPE, label: 'Resource Type', itemprop: 'type'
-      # config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
-      # config.add_show_field Settings.FIELDS.RIGHTS_HOLDER, label: 'Rights Holder', itemprop: 'rights_holder'
-      # config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial_coverage'
-      # config.add_show_field Settings.FIELDS.SPATIAL_EXTENT, label: 'Spatial Extent', itemprop: 'geometry'
-      # config.add_show_field Settings.FIELDS.SUBJECT, label: 'Subject', itemprop: 'subject'
-      # config.add_show_field Settings.FIELDS.SUPPRESSED, label: 'Suppressed', itemprop: 'suppresed'
-      # config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Temporal Coverage', itemprop: 'temporal'
-      # config.add_show_field Settings.FIELDS.TITLE, label: 'Title', itemprop: 'title'
-      # config.add_show_field Settings.FIELDS.VERSION, label: 'Version', itemprop: 'version'
-      # config.add_show_field Settings.FIELDS.WXS_IDENTIFIER, label: 'Web Service Layer', itemprop: 'wxs_identifier'
+    # config.add_show_field Settings.FIELDS.LANGUAGE, label: 'Language', itemprop: 'language'
+    # config.add_show_field Settings.FIELDS.KEYWORD, label: 'Keyword(s)', itemprop: 'keyword'
+
+    # config.add_show_field Settings.FIELDS.INDEX_YEAR, label: 'Year', itemprop: 'year'
+    # config.add_show_field Settings.FIELDS.DATE_RANGE, label: 'Date Range', itemprop: 'date_range'
+
+    # config.add_show_field Settings.FIELDS.CENTROID, label: 'Centroid', itemprop: 'centroid'
+    # config.add_show_field Settings.FIELDS.OVERLAP_FIELD, label: 'Overlap BBox', itemprop: 'overlap_field'
+
+    # config.add_show_field Settings.FIELDS.RELATION, label: 'Relation', itemprop: 'relation'
+    # config.add_show_field Settings.FIELDS.MEMBER_OF, label: 'Member Of', itemprop: 'member_of'
+    # config.add_show_field Settings.FIELDS.IS_PART_OF, label: 'Is Part Of', itemprop: 'is_part_of'
+    # config.add_show_field Settings.FIELDS.VERSION, label: 'Version', itemprop: 'version'
+    # config.add_show_field Settings.FIELDS.REPLACES, label: 'Replaces', itemprop: 'replaces'
+    # config.add_show_field Settings.FIELDS.IS_REPLACED_BY, label: 'Is Replaced By', itemprop: 'is_replaced_by'
+
+    # config.add_show_field Settings.FIELDS.WXS_IDENTIFIER, label: 'Web Service Layer', itemprop: 'wxs_identifier'
+    # config.add_show_field Settings.FIELDS.ID, label: 'ID', itemprop: 'id'
+    # config.add_show_field Settings.FIELDS.IDENTIFIER, label: 'Identifier', itemprop: 'identifier'
+
+    # config.add_show_field Settings.FIELDS.MODIFIED, label: 'Date Modified', itemprop: 'modified'
+    # config.add_show_field Settings.FIELDS.METADATA_VERSION, label: 'Metadata Version', itemprop: 'metadata_version'
+    # config.add_show_field Settings.FIELDS.SUPPRESSED, label: 'Suppressed', itemprop: 'suppresed'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -294,7 +303,6 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial(:sms, if: :render_sms_action?, callback: :sms_action, validator: :validate_sms_params)
 
     # Custom tools for GeoBlacklight
-    config.add_show_tools_partial :web_services, if: proc { |_context, _config, options| options[:document] && (Settings.WEBSERVICES_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
     config.add_show_tools_partial :metadata, if: proc { |_context, _config, options| options[:document] && (Settings.METADATA_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
     config.add_show_tools_partial :carto, partial: 'carto', if: proc { |_context, _config, options| options[:document] && options[:document].carto_reference.present? }
     config.add_show_tools_partial :arcgis, partial: 'arcgis', if: proc { |_context, _config, options| options[:document] && options[:document].arcgis_urls.present? }
@@ -320,6 +328,14 @@ class CatalogController < ApplicationController
     config.autocomplete_path = 'suggest'
   end
 
+  def web_services
+    @response, @documents = action_documents
 
-
+    respond_to do |format|
+      format.html do
+        return render layout: false if request.xhr?
+        # Otherwise draw the full page
+      end
+    end
+  end
 end
