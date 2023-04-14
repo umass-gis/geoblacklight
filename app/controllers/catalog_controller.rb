@@ -4,6 +4,8 @@ require 'blacklight/catalog'
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
 
   configure_blacklight do |config|
 
@@ -98,7 +100,15 @@ class CatalogController < ApplicationController
   	#to add additional facets, use the keys defined in the settings.yml file
     config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Author', :limit => 8
     config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
-    config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
+    # Blacklight Range Limit facet
+    config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', range: {
+      num_segments: 6,
+      assumed_boundaries: [1750, Time.now.year],
+      segments: true,
+      maxlength: 4
+      }
+    # Default year facet
+    # config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8
     config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Category', :limit => 8, :sort => 'index'
     config.add_facet_field Settings.FIELDS.THEME, :label => 'Theme', :limit =>20, :sort => 'index'

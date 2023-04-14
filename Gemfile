@@ -71,3 +71,6 @@ gem 'devise-guests', '~> 0.6'
 
 # ENV
 gem 'dotenv-rails'
+
+# Blacklight Range Limit
+gem 'blacklight_range_limit'
