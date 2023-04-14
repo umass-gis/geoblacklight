@@ -15,8 +15,7 @@ class HomepageTest < ApplicationSystemTestCase
   def test_homepage_copy
     within('#application-nav ul.navbar-nav') do
       assert page.has_link?("About")
-      assert page.has_link?("Contact")
-      assert page.has_link?("Help")
+      assert page.has_link?("Get Help")
     end
   end
 

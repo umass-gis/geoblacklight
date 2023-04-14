@@ -5,7 +5,7 @@ en:
       retrieved_from: 'Retrieved from %{document_url}'
     download:
       download: 'Download'
-      download_link: '%{download_format}'
+      download_link: 'Original %{download_format}'
       success: 'Your file %{title} is ready for download'
       hgl_success: 'You should receive an email when your download is ready.'
       hgl_request: 'Request Layer'
@@ -16,13 +16,14 @@ en:
       error: 'Sorry, the requested file could not be downloaded'
       error_with_url: 'Sorry, the requested file could not be downloaded. Try downloading it directly from: %{link}'
       export_formats: 'Export Formats'
-      export_link: 'Export'
+      export_link: 'Export %{download_format}'
       export_shapefile_link: 'Shapefile'
       export_kmz_link: 'KMZ'
       export_geojson_link: 'GeoJSON'
+      export_geotiff_link: 'GeoTIFF'
     home:
       headline: 'Explore and discover...'
-      search_heading: 'Find the maps and data you need'
+      search_heading: 'UMass Amherst Portal for Geospatial Data'
       category_heading: 'Find by...'
       map_heading: 'Find by location'
       institution: 'Institution'
@@ -65,9 +66,21 @@ en:
       services: 'Web services'
       services_close: 'Close'
       tms: 'Tile Map Service'
+      tilejson: 'TileJSON Document'
+      xyz: 'XYZ Tiles'
+      wmts: 'Web Map Tile Service'
     relations:
       ancestor: 'Source Datasets'
       descendant: 'Derived Datasets'
+      member_of_ancestors: 'Belongs to collection...'
+      member_of_descendants: 'Collection records...'
+      part_of: 'Is part of...'
+      part_of_descendants: 'Has part...'
+      relation: 'Related Records'
+      replaces: 'Item replaces...'
+      replaced_by: 'Item replaced by...'
+      source: 'Source Datasets'
+      version_of: 'Version of...'
       browse_all: "Browse all %{count} records..."
     metadata:
       toggle_summary: 'Toggle summary'
@@ -122,6 +135,7 @@ en:
       cornell: Cornell University
       dvd-rom: DVD-Rom
       esri-globe: Esri Global
+      george-mason: George Mason University
       harvard: Harvard University
       illinois: University of Illinois
       indiana: Indiana University
