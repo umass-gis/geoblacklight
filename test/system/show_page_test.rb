@@ -23,7 +23,7 @@ class ShowPageTest < ApplicationSystemTestCase
     within("section.page-sidebar") do
       assert page.has_selector?("div.show-tools")           # Tools
       assert page.has_no_link?("Bookmark")
-      assert page.has_selector?("div.downloads")            # Downloads
+      assert page.has_selector?("div.sidebar-buttons")      # Sidebar buttons
     end
   end
 
