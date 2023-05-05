@@ -5,7 +5,7 @@ class ShowPageTest < ApplicationSystemTestCase
   end
 
   def test_basic_dom
-    visit "/catalog/umass-mufs190-1951-dpn1k100-i001"
+    visit "/catalog/umass-mufs190-1952-dpu8k81-i001"
 
     within("section.show-document") do
       assert page.has_selector?("div#document")
@@ -45,7 +45,7 @@ class ShowPageTest < ApplicationSystemTestCase
 
   def test_sidebar_bbox_map
     # Viewer: IIIF
-    visit '/catalog/umass-mufs190-1951-dpl2k101-i001'
+    visit '/catalog/umass-mufs190-1952-dpu8k81-i001'
     within(".page-sidebar") do
       assert page.has_selector?(".card.location")
     end
