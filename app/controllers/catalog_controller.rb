@@ -169,7 +169,7 @@ class CatalogController < ApplicationController
     config.add_show_field Settings.FIELDS.THEME, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
     config.add_show_field Settings.FIELDS.PROVIDER, label: 'Held by', link_to_facet: true
     config.add_show_field Settings.FIELDS.ACCESS_RIGHTS, label: 'Access', itemprop: 'accessRights'
-    config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
+    config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights', helper_method: :render_html_description
     config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
 
     config.add_show_field(
