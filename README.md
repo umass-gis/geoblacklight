@@ -49,31 +49,32 @@ Workflow to setup an M1 MacBook:
 ### Configure GeoBlacklight
 
 1. Clone the project:
+
     ```
     cd <your project directory>
     git clone git@github.com:/umass-gis/geoblacklight.git
     ```
 
-1. Configure your mysql credentials:
-  1. Duplicate the .example files in the project and remove the .example string from each of their filename.
+1. Duplicate the .example files in the project and remove the .example string from each of their filename:
+    
     ```
     cp .example.env.development .env.development  
     cp .example.env.test .env.test
     ```
-  1. Update the MYSQL_USER and MYSQL_PASSWORD credentials. These variables are called by `database.yml` when establishing a connection to the database.
+    Then, update the MYSQL_USER and MYSQL_PASSWORD credentials in these files. These variables are called by `database.yml` when establishing a connection to the database.
 
 1. Navigate to the project directory and install the **ruby gems** with `bundle install`.
 
 1. Install the **yarn packages** with `yarn install`.
 
 1. Create and migrate the databases:
-  1. Development environment
 
+    Development environment:
     ```
     bundle exec rails db:create
     bundle exec rails db:migrate
     ```
-  1. Test environment
+    Test environment:
     ```
     RAILS_ENV=test bundle exec rails db:create
     RAILS_ENV=test bundle exec rails db:migrate
