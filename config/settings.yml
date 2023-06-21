@@ -284,3 +284,8 @@ HELP_TEXT:
       - 'wms'
       - 'tms'
       - 'oembed'
+
+# Show sidebar static map for items with the following viewer protocols
+SIDEBAR_STATIC_MAP:
+  - 'iiif'
+  - 'iiif_manifest'
