@@ -1,6 +1,7 @@
 en:
   geoblacklight:
     bbox_label: 'Bounding Box'
+    location: 'Location'
     citation:
       retrieved_from: 'Retrieved from %{document_url}'
     download:
@@ -128,6 +129,8 @@ en:
           content: A Web Map Service displays a geospatial dataset as map images.
   blacklight:
     icon:
+      american-geographical-society-library-uwm-libraries: American Geographical Society Library - UWM Libraries
+      arizona: The University of Arizona
       arrow-circle-down: Arrow within a circle, pointing down
       baruch-cuny: Baruch College
       berkeley: University of California, Berkeley
@@ -152,6 +155,7 @@ en:
       multilinestring: Multi-line string
       multipoint: Multi-point
       multipolygon: Multi-polygon
+      nebraska: University of Nebraska
       nyu: New York University
       ohio-state: The Ohio State University
       penn-state: Penn State University
@@ -159,6 +163,7 @@ en:
       public: Public content
       purdue: Purdue University
       restricted: Restricted content
+      rutgers: Rutgers University
       sms: SMS
       stanford: Stanford University
       texas: The University of Texas at Austin
