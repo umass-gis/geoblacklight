@@ -50,10 +50,10 @@ class CatalogController < ApplicationController
     config.show.display_type_field = 'format'
     config.show.partials.delete(:show)
     config.show.partials << 'show_default_display_note'
-    config.show.partials << :show
     config.show.partials << 'show_default_viewer_container'
     config.show.partials << 'show_default_attribute_table'
     config.show.partials << 'show_default_viewer_information'
+    config.show.partials << :show
 
     ##
     # Configure the index document presenter.
