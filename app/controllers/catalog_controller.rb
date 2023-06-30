@@ -163,7 +163,7 @@ class CatalogController < ApplicationController
     # The labels and order can be customed. Comment out fields to hide them.
 
     config.add_show_field Settings.FIELDS.CREATOR, label: 'Author(s)', itemprop: 'creator', link_to_facet: true
-    config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract
+    config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract, helper_method: :render_html_description
     config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
     config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Year', itemprop: 'temporal'
     config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
