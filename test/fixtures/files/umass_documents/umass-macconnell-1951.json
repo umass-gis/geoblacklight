@@ -1,7 +1,10 @@
 {
     "dct_title_s": "MacConnell Aerial Photo Collection (1951-1952)",
     "dct_description_sm": [
-      "Collection of 1:20,000 black-and-white aerial photographs captured in 1951-1952 of the state of Massachusetts."
+      "Collection of 1:20,000 black-and-white aerial photographs captured in 1951-1952 of the state of Massachusetts. This is also a test for clickable URLs in the description field: <a href=\"https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89\">https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89</a>."
+    ],
+    "gbl_displayNote_sm": [
+        "Info: This collection is currently in the process of being georeferenced and made available on UMAP GeoData. For now, you can use this searchable web map to locate individual photos: <a href=\"https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89\">https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89</a>."
     ],
     "dct_language_sm": [
         "eng"
