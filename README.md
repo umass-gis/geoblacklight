@@ -2,7 +2,7 @@
 UMAP GeoData is the University of Massachusetts Amherst's [GeoBlacklight](https://geoblacklight.org) instance, managed and hosted by the University Libraries.
 
 ### Current Release Version
-UMAP GeoData v1.0.0 / GeoBlacklight v4.0.
+UMAP GeoData v1.1.1 / GeoBlacklight v4.1.
 
 ---
 ### Dependencies
