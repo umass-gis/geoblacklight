@@ -9,7 +9,7 @@ UMAP GeoData v1.1.1 / GeoBlacklight v4.1.
 
 View the full GeoBlacklight release and technology dependency matrix here: [Releases](https://geoblacklight.org/docs/overview/releases/).
 
-* [Ruby](https://www.ruby-lang.org/en/) 3.2.0
+* [Ruby](https://www.ruby-lang.org/en/) 3.2.2
 * [Rails](https://rubyonrails.org) 7.0.4
 * [Java](https://www.java.com/en/) 8 or greater (Solr)
 * [Node.js](https://nodejs.org/en/) (yarn)
