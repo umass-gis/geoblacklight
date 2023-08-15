@@ -1,7 +1,7 @@
 {
     "dct_title_s": "MacConnell Aerial Photo Collection (1951-1952)",
     "dct_description_sm": [
-      "Collection of 1:20,000 black-and-white aerial photographs captured in 1951-1952 of the state of Massachusetts. This is also a test for clickable URLs in the description field: <a href=\"https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89\">https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89</a>."
+      "Collection of 1:20,000 black-and-white aerial photographs captured in 1951-1952 of the state of Massachusetts. For now, you can use this searchable web map to locate individual photos: https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89."
     ],
     "gbl_displayNote_sm": [
         "Info: This collection is currently in the process of being georeferenced and made available on UMAP GeoData. For now, you can use this searchable web map to locate individual photos: <a href=\"https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89\">https://www.arcgis.com/apps/mapviewer/index.html?webmap=50545e378c7d407b883d730dd9de2c89</a>."
@@ -26,7 +26,8 @@
     "dct_subject_sm": [
         "Historical aerial imagery",
         "Black-and-white photos",
-        "Landscape"
+        "Landscape",
+        "Index map"
     ],
     "dcat_theme_sm": [
         "Imagery",
@@ -58,12 +59,12 @@
         "Special Collections and University Archives, University of Massachusetts Amherst Libraries"
     ],
     "dct_accessRights_s": "Public",
-    "dct_references_s": "{\"http://schema.org/url\":\"https://credo.library.umass.edu/view/series/mufs190-s1951\"}",
+    "dct_references_s": "{\"https://openindexmaps.org\": \"https://raw.githubusercontent.com/umass-gis/openindexmaps/main/umass-macconnell-1951-barnstable-1.geojson\",\"http://schema.org/url\":\"https://credo.library.umass.edu/view/series/mufs190-s1951\"}",
     "id": "umass-macconnell-1951",
     "dct_identifier_sm": [
         "mufs190-s1951"
     ],
-    "gbl_mdModified_dt": "2023-05-05T17:00:00Z",
+    "gbl_mdModified_dt": "2023-08-15T10:00:00Z",
     "gbl_mdVersion_s": "Aardvark",
     "gbl_suppressed_b": false,
     "gbl_georeferenced_b": false
