@@ -39,7 +39,8 @@ Workflow to setup an M1 MacBook:
 
 1. Install **node.js** with `brew install node`. This should also install **npm**.
 
-1. Follow the latest [documentation](https://yarnpkg.com/getting-started/install) to install **yarn**.
+1. Follow the latest [documentation](https://yarnpkg.com/getting-started/install) to install **yarn**
+    a. You may need to install **corepack* first if the first step in the above documentation fails.  `brew install corepack`
 
 1. Install **java** with `brew install java`, then follow the suggested commands to establish a symlink.
 
