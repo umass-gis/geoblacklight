@@ -1,0 +1,70 @@
+{
+    "dct_title_s": "Abundance Data for Invasive Plant Species in the Contiguous US",
+    "dct_alternative_sm": "Data for 'Shifting hotspots: Climate change projected to drive contractions and expansions of invasive plant abundance ranges'",
+    "dct_description_sm": [
+        "Data for 'Shifting hotspots: Climate change projected to drive contractions and expansions of invasive plant abundance ranges.' Abundance data for 175 invasive plant species across the lower 48 United States, taken from the USDA PLANTS Database. Each abundance record includes a unique ID, the dataset from which the datapoint was derived from, decimal longitude, decimal latitude, the species code, percentage cover, and cover type."
+    ],
+    "dct_language_sm": [
+        "eng"
+    ],
+    "dct_creator_sm": [
+        "Annette Evans",
+        "Evelyn M. Beaury",
+        "Peder S. Engelstad",
+        "Nathan B. Teich",
+        "Bethany A. Bradley"
+    ],
+    "dct_publisher_sm": [
+        "University of Massachusetts Amherst"
+    ],
+    "schema_provider_s": "UMass",
+    "gbl_resourceClass_sm": [
+        "Datasets"
+    ],
+    "gbl_resourceType_sm": [
+        "Point data"
+    ],
+    "dct_subject_sm": [
+        "Climate change",
+        "Habitat",
+        "Invasive species",
+        "Plant taxa"
+    ],
+    "dcat_theme_sm": [
+        "Biology",
+        "Climate",
+        "Environment"
+    ],
+    "dcat_keyword_sm": [
+    ],
+    "dct_temporal_sm": [
+    ],
+    "dct_issued_s": "2022",
+    "gbl_indexYear_im": [
+    ],
+    "dct_spatial_sm": [
+        "United States"
+    ],
+    "locn_geometry": "ENVELOPE(-124.68721,-66.964659,49.3892854,25.0799164)",
+    "dcat_bbox": "ENVELOPE(-124.68721,-66.964659,49.3892854,25.0799164)",
+    "dcat_centroid": "37.2346009,-95.825935",
+    "pcdm_memberOf_sm": [
+        "umass-sw-data01"
+    ],
+    "dct_rights_sm": [
+    ],
+    "dct_rightsHolder_sm": [
+    ],
+    "dct_accessRights_s": "Public",
+    "dct_format_s": "Tabular data",
+    "gbl_fileSize_s": "29 MB",
+    "dct_references_s": "{\"http://schema.org/url\":\"https://doi.org/10.7275/xrp1-rf69\",\"http://schema.org/downloadUrl\":[{\"url\":\"https://scholarworks.umass.edu/context/data/article/1168/type/native/viewcontent\",\"label\":\"CSV\"},{\"url\":\"https://scholarworks.umass.edu/cgi/viewcontent.cgi?filename=0&article=1168&context=data&type=additional\",\"label\":\"ReadMe\"},{\"url\":\"https://scholarworks.umass.edu/cgi/viewcontent.cgi?filename=1&article=1168&context=data&type=additional\",\"label\":\"Dataset Information\"}]}",
+    "id": "umass-sw-data-158",
+    "dct_identifier_sm": [
+        "https://doi.org/10.7275/xrp1-rf69"
+    ],
+    "gbl_mdModified_dt": "2023-11-12T14:00:00Z",
+    "gbl_mdVersion_s": "Aardvark",
+    "gbl_suppressed_b": false,
+    "gbl_georeferenced_b": false
+}

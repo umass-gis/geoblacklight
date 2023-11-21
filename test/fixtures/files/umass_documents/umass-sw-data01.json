@@ -1,0 +1,50 @@
+{
+    "dct_title_s": "UMass Amherst Libraries Data and Datasets",
+    "dct_description_sm": [
+      "Spatial datasets deposited in ScholarWorks@UMassAmherst, the institutional repository at the University of Massachusetts Amherst."
+    ],
+    "dct_language_sm": [
+        "eng"
+    ],
+    "schema_provider_s": "UMass",
+    "gbl_resourceClass_sm": [
+        "Collections",
+        "Datasets"
+    ],
+    "gbl_resourceType_sm": [
+        "Point data",
+        "Polygon data",
+        "Line data",
+        "Raster data",
+        "Table data"
+    ],
+    "dct_subject_sm": [
+    ],
+    "dct_temporal_sm": [
+        "18th century to today"
+    ],
+    "gbl_indexYear_im": [
+    ],
+    "dct_spatial_sm": [
+        "United States"
+    ],
+    "locn_geometry": "ENVELOPE(-124.6872101, -66.9646599, 49.3892854, 25.0799164)",
+    "dcat_bbox": "ENVELOPE(-124.6872101, -66.9646599, 49.3892854, 25.0799164)",
+    "dcat_centroid": "37.2346009,-95.825935",
+    "dct_rights_sm": [
+        "The Data & Datasets Repository is an open access repository in ScholarWorks@UMassAmherst. Holdings are freely available. End users may download and use posted materials in any manner not prohibited by copyright or other applicable law and subject to the ScholarWorks Terms of Use. For more information, see <a href=\"https://scholarworks.umass.edu/data/policies.html\">https://scholarworks.umass.edu/data/policies.html</a>."
+    ],
+    "dct_rightsHolder_sm": [
+        "University of Massachusetts Amherst Libraries"
+    ],
+    "dct_accessRights_s": "Public",
+    "dct_references_s": "{\"http://schema.org/url\":\"https://scholarworks.umass.edu/data/\"}",
+    "id": "umass-sw-data01",
+    "dct_identifier_sm": [
+        "sw-data01"
+    ],
+    "gbl_mdModified_dt": "2023-11-10T15:00:00Z",
+    "gbl_mdVersion_s": "Aardvark",
+    "gbl_suppressed_b": false,
+    "gbl_georeferenced_b": false
+  }

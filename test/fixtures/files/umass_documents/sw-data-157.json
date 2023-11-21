@@ -1,0 +1,73 @@
+{
+    "dct_title_s": "Abundance Suitable Habitat for Invasive Plant Species in the Contiguous US, 2022 and 2C warming scenario",
+    "dct_alternative_sm": "Shifting hotspots: Climate change projected to drive contractions and expansions of invasive plant abundance ranges",
+    "dct_description_sm": [
+        "Raster data showing current and future abundance suitable habitat for invasive plant species in the contiguous United States. Each GeoTIFF file represents the current or future range prediction maps of habitat suitable for supporting abundant populations (greater than or equal to 5% cover) of 1 of 144 invasive plant taxa. Future climatic conditions are modeled under a +2oC warming scenario. See associated publication for model fitting and ensemble details."
+    ],
+    "dct_language_sm": [
+        "eng"
+    ],
+    "dct_creator_sm": [
+        "Annette Evans",
+        "Evelyn M. Beaury",
+        "Peder S. Engelstad",
+        "Nathan B. Teich",
+        "Bethany A. Bradley"
+    ],
+    "dct_publisher_sm": [
+        "University of Massachusetts Amherst"
+    ],
+    "schema_provider_s": "UMass",
+    "gbl_resourceClass_sm": [
+        "Datasets"
+    ],
+    "gbl_resourceType_sm": [
+        "Raster data"
+    ],
+    "dct_subject_sm": [
+        "Climate change",
+        "Habitat",
+        "Invasive species",
+        "Plant taxa"
+    ],
+    "dcat_theme_sm": [
+        "Biology",
+        "Climate",
+        "Environment"
+    ],
+    "dcat_keyword_sm": [
+    ],
+    "dct_temporal_sm": [
+        "2022",
+        "2C warming scenario"
+    ],
+    "dct_issued_s": "2022",
+    "gbl_indexYear_im": [
+        2022
+    ],
+    "dct_spatial_sm": [
+        "United States"
+    ],
+    "locn_geometry": "ENVELOPE(-124.68721,-66.964659,49.3892854,25.0799164)",
+    "dcat_bbox": "ENVELOPE(-124.68721,-66.964659,49.3892854,25.0799164)",
+    "dcat_centroid": "37.2346009,-95.825935",
+    "pcdm_memberOf_sm": [
+        "umass-sw-data01"
+    ],
+    "dct_rights_sm": [
+    ],
+    "dct_rightsHolder_sm": [
+    ],
+    "dct_accessRights_s": "Public",
+    "dct_format_s": "GeoTIFF",
+    "gbl_fileSize_s": "181.5 MB",
+    "dct_references_s": "{\"http://schema.org/url\":\"https://doi.org/10.7275/f172-4c95\",\"http://schema.org/downloadUrl\":[{\"url\":\"https://scholarworks.umass.edu/context/data/article/1167/type/native/viewcontent\",\"label\":\"GeoTIFFs\"},{\"url\":\"https://scholarworks.umass.edu/cgi/viewcontent.cgi?filename=1&article=1167&context=data&type=additional\",\"label\":\"ReadMe\"}]}",
+    "id": "umass-sw-data-157",
+    "dct_identifier_sm": [
+        "https://doi.org/10.7275/f172-4c95"
+    ],
+    "gbl_mdModified_dt": "2023-11-12T14:00:00Z",
+    "gbl_mdVersion_s": "Aardvark",
+    "gbl_suppressed_b": false,
+    "gbl_georeferenced_b": true
+}
