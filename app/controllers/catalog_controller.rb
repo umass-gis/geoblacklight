@@ -51,9 +51,12 @@ class CatalogController < ApplicationController
     config.show.partials.delete(:show)
     config.show.partials << 'show_default_display_note'
     config.show.partials << 'show_default_viewer_container'
+    config.show.partials.insert(1, :blacklight_allmaps)
     config.show.partials << 'show_default_attribute_table'
     config.show.partials << 'show_default_viewer_information'
     config.show.partials << :show
+
+
 
     ##
     # Configure the index document presenter.
@@ -308,7 +311,10 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :carto, partial: 'carto', if: proc { |_context, _config, options| options[:document] && options[:document].carto_reference.present? }
     config.add_show_tools_partial :arcgis, partial: 'arcgis', if: proc { |_context, _config, options| options[:document] && options[:document].arcgis_urls.present? }
     config.add_show_tools_partial :data_dictionary, partial: 'data_dictionary', if: proc { |_context, _config, options| options[:document] && options[:document].data_dictionary_download.present? }
-
+    #Allmaps files
+    config.default_solr_unique_key = "id"
+    config.default_georeferenced_field = "gbl_georeferenced_b"
+    config.default_iiif_manifest_field = "iiif_manifest_url_ssi"
     # Configure basemap provider for GeoBlacklight maps (uses https only basemap
     # providers with open licenses)
     # Valid basemaps include:
