@@ -18,4 +18,9 @@ class SolrDocument
   # and Blacklight::Document::SemanticFields#to_semantic_values
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
+
+  # iiif Access Helper method
+  def iiif_manifest_url
+    self['iiif_manifest_url_ssi']
+  end
 end
