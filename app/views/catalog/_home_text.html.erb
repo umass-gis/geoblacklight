@@ -12,11 +12,14 @@
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'arrow-circle-down', label: 'geoblacklight.home.data_type', facet_field: Settings.FIELDS.RESOURCE_TYPE, response: @response)) %>
       </div>
     </div>
-    <div class='col-sm'>
-      <%= content_tag :h3, t('geoblacklight.home.map_heading') %>
-      <%= content_tag :div, '', id: 'map', aria: { label: t('geoblacklight.map.label') }, data: { map: 'home', 'catalog-path'=> search_catalog_path , 'map-geom' => Settings.HOMEPAGE_MAP_GEOM, basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
+     <div id="allmaps-viewer"></div>
+        <script>
+          const viewer = new AllmapsViewer({
+            element: document.getElementById('allmaps-viewer'),
+            iiifManifestUrl: '<%= @document['iiif_manifest_url_ssi'] %>'
+          });
+        </script>
     </div>
-  </div>
   <div id="geoblacklight-version" class='text-right sr-only'>
     <%= t('geoblacklight.home.version', version: Geoblacklight::VERSION ) %>
   </div>
