@@ -1,8 +1,9 @@
 //= require jquery
 //= require jquery3
 //= require rails-ujs
+//= require @allmaps/visualization
 
-//
+
 // Required by Blacklight
 //= require popper
 // Twitter Typeahead for autocomplete
