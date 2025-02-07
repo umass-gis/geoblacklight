@@ -83,6 +83,9 @@
     <!--Binary data type. The data should be sent/retrieved in as Base64 encoded Strings -->
     <fieldtype name="binary" class="solr.BinaryField"/>
 
+    <!-- iiif data type-->
+    <fieldType name="iiif_manifest_rul_ssi" type="string" indexed ="true" stored ="true" />
+
     <!-- A text field with defaults appropriate for English: it
          tokenizes with StandardTokenizer, removes English stop words
          (stopwords_en.txt), down cases, protects words from protwords.txt, and

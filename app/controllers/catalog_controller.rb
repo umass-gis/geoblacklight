@@ -51,7 +51,6 @@ class CatalogController < ApplicationController
     config.show.partials.delete(:show)
     config.show.partials << 'show_default_display_note'
     config.show.partials << 'show_default_viewer_container'
-    config.show.partials.insert(1, :blacklight_allmaps)
     config.show.partials << 'show_default_attribute_table'
     config.show.partials << 'show_default_viewer_information'
     config.show.partials << :show
@@ -59,7 +58,7 @@ class CatalogController < ApplicationController
 
 
     ##
-    # Configure the index document presenter.
+    # Configure the index document presenter. 
     config.index.document_presenter_class = Geoblacklight::DocumentPresenter
 
     # solr fields that will be treated as facets by the blacklight application
@@ -314,7 +313,6 @@ class CatalogController < ApplicationController
     #Allmaps files
     config.default_solr_unique_key = "id"
     config.default_georeferenced_field = "gbl_georeferenced_b"
-    config.default_iiif_manifest_field = "iiif_manifest_url_ssi"
     # Configure basemap provider for GeoBlacklight maps (uses https only basemap
     # providers with open licenses)
     # Valid basemaps include:

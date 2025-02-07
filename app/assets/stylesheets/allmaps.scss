@@ -1,0 +1,15 @@
+// Local UMass Modules
+@import 'modules/colors';
+@import 'modules/header';
+@import 'modules/homepage';
+@import 'modules/footer';
+@import 'modules/type';
+
+// allmaps style
+#allmaps-viewer {
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  border: 1px solid #ddd; // Optional border
+  background-color: #f8f9fa; // Light gray background
+}
