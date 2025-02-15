@@ -16,6 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+
+    <%= vite_client_tag %>
+    <% if openlayers_container? %>
+      <%= vite_javascript_tag 'ol' %>
+    <% elsif iiif_manifest_container? %>
+      <%= vite_javascript_tag 'clover' %>
+    <% end %>
+
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
     <%= render partial: 'shared/analytics' %>
