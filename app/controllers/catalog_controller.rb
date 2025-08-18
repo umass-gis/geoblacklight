@@ -50,11 +50,12 @@ class CatalogController < ApplicationController
     # To move metadata above the map viewer,
     # remove the lines deleting and re-adding the :show partial
     config.show.display_type_field = 'format'
-    # config.show.partials.delete(:show)
+    config.show.partials.delete(:show)
+    config.show.partials << 'show_default_display_note'
     config.show.partials << 'show_default_viewer_container'
     config.show.partials << 'show_default_attribute_table'
     config.show.partials << 'show_default_viewer_information'
-    # config.show.partials << :show
+    config.show.partials << :show
 
     ##
     # Configure the index document presenter.
@@ -172,14 +173,14 @@ class CatalogController < ApplicationController
     # The labels and order can be customed. Comment out fields to hide them.
 
     config.add_show_field Settings.FIELDS.CREATOR, label: 'Author(s)', itemprop: 'creator', link_to_facet: true
-    config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract
+    config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract, helper_method: :render_html_description
     config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
     config.add_show_field Settings.FIELDS.TEMPORAL_COVERAGE, label: 'Year', itemprop: 'temporal'
     config.add_show_field Settings.FIELDS.SPATIAL_COVERAGE, label: 'Place(s)', itemprop: 'spatial', link_to_facet: true
     config.add_show_field Settings.FIELDS.THEME, label: 'Theme(s)', itemprop: 'keywords', link_to_facet: true
     config.add_show_field Settings.FIELDS.PROVIDER, label: 'Held by', link_to_facet: true
     config.add_show_field Settings.FIELDS.ACCESS_RIGHTS, label: 'Access', itemprop: 'accessRights'
-    config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights'
+    config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights', helper_method: :render_html_description
     config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
 
     config.add_show_field(

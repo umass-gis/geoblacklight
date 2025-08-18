@@ -1,19 +1,33 @@
 {
-    "dct_title_s": "MacConnell Aerial Photo Collection (1951-1952)",
-    "dct_description_sm": "Collection of 1:20,000 black-and-white aerial photographs captured in 1951-1952 of the state of Massachusetts.",
-    "dct_language_sm": "eng",
-    "dct_creator_sm": "MacConnell, William Preston, 1918-",
-    "dct_publisher_sm": "University of Massachusetts at Amherst. Department of Forestry and Wildlife Management",
+    "dct_title_s": "MacConnell Aerial Photo Collection, 1951-1952",
+    "dct_description_sm": [
+      "Collection of 1:20,000 georeferenced black-and-white aerial photographs of Massachusetts taken in 1951-1952. The flights were commissioned by the U.S. Department of Agriculture and flown by Robinson Aerial Surveys, Inc., Newark, NJ. This collection was analyzed as part of a statewide land-use study directed by William P. MacConnell and carried out by the Massachusetts Cooperative Wildlife Research Unit, with support from the UMass Amherst Department of Forestry and Wildlife Management, the Massachusetts Division of Fisheries and Game, the U.S. Fish and Wildlife Service, the UMass Amherst Department of Natural Resources, and the Wildlife Management Institute. The team’s land use categorizations are inked directly onto many of the photos."
+    ],
+    "gbl_displayNote_sm": [
+        "Info: This collection is  in the process of being georeferenced. Points in the map below represent the aerial photos we have finished processing. You can view the full index in <a href=\"https://umass-amherst.maps.arcgis.com/apps/instant/media/index.html?appid=7122ccffbb8d467990ea72ee65b61827\">ArcGIS Online</a>."
+    ],
+    "dct_language_sm": [
+        "eng"
+    ],
+    "dct_creator_sm": [
+        "Massachusetts Cooperative Wildlife Research Unit"
+    ],
+    "dct_publisher_sm": [
+        "U.S. Department of Agriculture"
+    ],
     "schema_provider_s": "UMass",
     "gbl_resourceClass_sm": [
-      "Collections",
-      "Imagery"
+        "Collections",
+        "Imagery"
     ],
-    "gbl_resourceType_sm": "Aerial photographs",
+    "gbl_resourceType_sm": [
+        "Aerial photographs"
+    ],
     "dct_subject_sm": [
         "Historical aerial imagery",
         "Black-and-white photos",
-        "Landscape"
+        "Landscape",
+        "Index map"
     ],
     "dcat_theme_sm": [
         "Imagery",
@@ -25,22 +39,33 @@
         "macconnel",
         "macconel"
     ],
-    "dct_temporal_sm": "1951-1952",
+    "dct_temporal_sm": [
+        "1951-1952"
+    ],
     "dct_issued_s": "1951",
-    "gbl_indexYear_im": 1951,
+    "gbl_indexYear_im": [
+        1951,
+        1952
+    ],
     "dct_spatial_sm": [
         "Massachusetts"
     ],
     "locn_geometry": "ENVELOPE(-73.747, -69.7787, 43.0045, 41.1143)",
     "dcat_bbox": "ENVELOPE(-73.747, -69.7787, 43.0045, 41.1143)",
-    "dct_rights_sm": "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries.",
-    "dct_rightsHolder_sm": "Special Collections and University Archives, University of Massachusetts Amherst Libraries",
+    "dct_rights_sm": [
+        "Requests to publish, redistribute, or replicate this material should be addressed to Special Collections and University Archives, University of Massachusetts Amherst Libraries. For more information, see <a href=\"http://scua.library.umass.edu/services-at-scua/permissions/\">http://scua.library.umass.edu/services-at-scua/permissions/</a>."
+    ],
+    "dct_rightsHolder_sm": [
+        "Special Collections and University Archives, University of Massachusetts Amherst Libraries"
+    ],
     "dct_accessRights_s": "Public",
-    "dct_references_s": "{\"http://schema.org/url\":\"https://credo.library.umass.edu/view/series/mufs190-s1951\"}",
+    "dct_references_s": "{\"https://openindexmaps.org\": \"https://raw.githubusercontent.com/umass-gis/openindexmaps/main/umass-macconnell-1951-20240828.geojson\",\"http://schema.org/url\":\"https://credo.library.umass.edu/view/series/mufs190-s1951\"}",
     "id": "umass-macconnell-1951",
-    "dct_identifier_sm": "mufs190-s1951",
-    "gbl_mdModified_dt": "2022-04-05T17:44:31Z",
+    "dct_identifier_sm": [
+        "mufs190-s1951"
+    ],
+    "gbl_mdModified_dt": "2024-08-29T10:00:00Z",
     "gbl_mdVersion_s": "Aardvark",
     "gbl_suppressed_b": false,
     "gbl_georeferenced_b": false
-}
+  }

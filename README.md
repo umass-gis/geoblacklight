@@ -1,16 +1,15 @@
-# UMass Amherst Portal for Geospatial Data (UMAP GeoData)
-UMass Amherst's [GeoBlacklight](https://geoblacklight.org) instance.
+# UMass Amherst Portal for Geospatial Data
+UMAP GeoData is the University of Massachusetts Amherst's [GeoBlacklight](https://geoblacklight.org) instance, managed and hosted by the University Libraries.
 
-### Release Version
-UMAP GeoData v1.0.0 / GeoBlacklight v4.0.0
+### Current Release Version
+UMAP GeoData v1.1.1 / GeoBlacklight v4.1.
 
-## Installation
-
+---
 ### Dependencies
 
 View the full GeoBlacklight release and technology dependency matrix here: [Releases](https://geoblacklight.org/docs/overview/releases/).
 
-* [Ruby](https://www.ruby-lang.org/en/) 3.2.0
+* [Ruby](https://www.ruby-lang.org/en/) 3.2.2
 * [Rails](https://rubyonrails.org) 7.0.4
 * [Java](https://www.java.com/en/) 8 or greater (Solr)
 * [Node.js](https://nodejs.org/en/) (yarn)
@@ -18,53 +17,68 @@ View the full GeoBlacklight release and technology dependency matrix here: [Rele
 
 ### Setup
 
-[GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows.
+[GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows. It goes through the general process to get up and running, but it doesn’t cover everything, and it may be preferable to install each dependency following separate tutorials.
 
-If using Homebrew, install Java via:
+Workflow to setup an M1 MacBook:
 
-```bash
-brew install java
-```
+1. Follow the latest [documentation](https://brew.sh/) to install Homebrew.
 
-### Clone the Project
+1. It's recommended to install Ruby on Rails with a version manager, like **rbenv**:
 
-```bash
-cd <your project directory>
-git clone git@github.com:/umass-gis/geoblacklight.git
-```
+    ```
+    brew install rbenv
+    ```
+    Then, ensure the version manager is loaded in your shell. For Macs using zsh, use `nano ~/.zshrc` to open the file and add the following lines of code:
+    ```
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+    ```
+    Save, then restart with `source ~/.zshrc`.
 
-### Configuration
+1. Install **ruby**, **bundler**, and **rails** (see this tutorial by [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos#step-2-installing-ruby)).
 
-Duplicate the .example files in the project and remove the .example string from each of their filename. Configure each file as necessary, or keep the default values.
+1. Install **node.js** with `brew install node`. This should also install **npm**.
 
-```bash
-cp .example.env.development .env.development  
-cp .example.env.test .env.test
-```
+1. Follow the latest [documentation](https://yarnpkg.com/getting-started/install) to install **yarn**.  (You may need to install **corepack**  if the first step in the yarn documentation fails.  `brew install corepack` )
 
-### Bundle RubyGems
+1. Install **java** with `brew install java`, then follow the suggested commands to establish a symlink.
 
-```bash
-bundle install
-```
+1. Install **mysql** with `brew install mysql`, then start the database with `brew services start mysql`. Optionally, run the suggested commands to secure the database.
 
-### Yarn Packages
 
-```bash
-yarn install
-```
+### Configure GeoBlacklight
 
-### Create the Database
+1. Clone the project:
 
-```bash
-bin/rails db:create RAILS_ENV=development
-```
+    ```
+    cd <your project directory>
+    git clone git@github.com:/umass-gis/geoblacklight.git
+    ```
 
-### Run the Database Migrations
+1. Duplicate the .example files in the project and remove the .example string from each of their filename:
+    
+    ```
+    cp .example.env.development .env.development  
+    cp .example.env.test .env.test
+    ```
+    Then, update the MYSQL_USER and MYSQL_PASSWORD credentials in these files. These variables are called by `database.yml` when establishing a connection to the database.
 
-```bash
-bin/rails db:migrate RAILS_ENV=development
-```
+1. Navigate to the project directory and install the **ruby gems** with `bundle install`.
+
+1. Install the **yarn packages** with `yarn install`.
+
+1. Create and migrate the databases:
+
+    Development environment:
+    ```
+    bundle exec rails db:create
+    bundle exec rails db:migrate
+    ```
+    Test environment:
+    ```
+    RAILS_ENV=test bundle exec rails db:create
+    RAILS_ENV=test bundle exec rails db:migrate
+    ```
 
 ### Run the Application
 
@@ -85,7 +99,7 @@ Stop any instances of GeoBlacklight before running this command.
 RAILS_ENV=test bundle exec rake ci
 ```
 
-### Rake Tasks for Solr
+### Run the Rake Tasks for Solr
 
 Delete all data from the Solr index
 
