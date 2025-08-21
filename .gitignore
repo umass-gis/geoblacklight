@@ -66,6 +66,19 @@ node_modules/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+yarn.lock
+
+# Ignore IDE files
+.idea
+
+# Vite Ruby
+/public/vite*
+/public/geoblacklight-vite*
+node_modules
+dist
+# Vite uses dotenv and suggests to ignore local-only env files. See
+# https://vitejs.dev/guide/env-and-mode.html#env-files
+*.local
 
 # Ignore uploaded files in development
 /storage/*
@@ -75,11 +88,3 @@ yarn-debug.log*
 # TODO Comment out these rules if environment variables can be committed
 .env
 .env.*
-
-# Vite Ruby
-/public/vite*
-node_modules
-# Vite uses dotenv and suggests to ignore local-only env files. See
-# https://vitejs.dev/guide/env-and-mode.html#env-files
-*.local
-
