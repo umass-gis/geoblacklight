@@ -2,26 +2,21 @@ en:
   geoblacklight:
     bbox_label: 'Bounding Box'
     location: 'Location'
-    citation:
-      retrieved_from: 'Retrieved from %{document_url}'
+    clipboard:
+      citation: Citation copied to clipboard
+      web_service: Web service copied to clipboard
     download:
       download: 'Download'
       download_link: 'Original %{download_format}'
       success: 'Your file %{title} is ready for download'
-      hgl_success: 'You should receive an email when your download is ready.'
-      hgl_request: 'Request Layer'
-      hgl_request_button: 'Request'
-      hgl_close: 'Close'
-      hgl_instructions: 'Please enter your email address. You will receive a link to download the layer when it is ready.' ## new variable
-      hgl_email: 'Email'
-      error: 'Sorry, the requested file could not be downloaded'
-      error_with_url: 'Sorry, the requested file could not be downloaded. Try downloading it directly from: %{link}'
+      error: 'Sorry, the requested file could not be downloaded.'
       export_formats: 'Export Formats'
       export_link: 'Export %{download_format}'
       export_shapefile_link: 'Shapefile'
       export_kmz_link: 'KMZ'
       export_geojson_link: 'GeoJSON'
       export_geotiff_link: 'GeoTIFF'
+      export_csv_link: 'CSV'
     home:
       headline: 'Explore and discover...'
       search_heading: 'UMass Amherst Portal for Geospatial Data'
@@ -34,7 +29,6 @@ en:
       version: 'GeoBlacklight version %{version}'
     tools:
       login_to_view: 'Login to View and Download'
-      open_carto: 'Open in Carto'
       open_arcgis: 'Open in ArcGIS Online'
     formats:
       arcgrid: 'ArcGRID'
@@ -43,6 +37,7 @@ en:
       kmz: 'KMZ'
       shapefile: 'Shapefile'
       jpg: 'JPG'
+      csv: 'CSV'
       esri_geodatabase: 'ESRI Geodatabase'
       sqlite_database: 'SQLite Database'
     map:
@@ -65,11 +60,12 @@ en:
       image_map_layer: 'ArcGIS Image Map Layer'
       data_dictionary: 'Documentation'
       services: 'Web services'
-      services_close: 'Close'
       tms: 'Tile Map Service'
       tilejson: 'TileJSON Document'
       xyz: 'XYZ Tiles'
       wmts: 'Web Map Tile Service'
+      pmtiles: 'PMTiles Layer'
+      cog: 'COG Layer'
     relations:
       member_of_ancestors: 'Belongs to collection...'
       member_of_descendants: 'Collection records...'
@@ -85,6 +81,8 @@ en:
       version_of_descendants: 'Has version...'
       browse_all_no_count: "Browse all records..."
       browse_all: "Browse all %{count} records..."
+    modal:
+      copy-citation: "Copy Citation"
     metadata:
       toggle_summary: 'Toggle summary'
       view_metadata: 'View Metadata'
@@ -97,6 +95,9 @@ en:
       click_map: 'Click on map to inspect values'
     help_text:
       viewer_protocol:
+        cog:
+          title: COG Layer
+          content: A Cloud Optimized GeoTIFF
         dynamic_map_layer:
           title: ArcGIS Dynamic Map Layer
           content: An ArcGIS Dynamic Map Layer represents vector data (points, lines, and polygons). Map image layers are dynamically rendered image tiles.
@@ -118,15 +119,27 @@ en:
         oembed:
           title: Embedded Content
           content: This content is embedded through a third-party viewer.
+        pmtiles:
+          title: PMTiles Layer
+          content: A PMTiles layer is a single-file archive format for tiled data.
         tiled_map_layer:
           title: ArcGIS Tiled Map Layer
           content: An ArcGIS Tiled Map Layer Service displays set of web-accessible tiles that reside on a server.
+        tilejson:
+          title: TileJSON
+          content: A JSON format used for describing tilesets.
         tms:
-          title: Tile Map Service
+          title: Tile Map Service (TMS)
           content: A Tile Map Service displays georeferenced map tiles as an image on a map.
         wms:
           title: Web Map Service (WMS)
           content: A Web Map Service displays a geospatial dataset as map images.
+        wmts:
+          title: Web Map Tile Service (WMTS)
+          content: A Web Map Tile Service displays maps over the web using cached image tiles.
+        xyz:
+          title: XYZ Tiles
+          content: Also known as slippy map tiles, is a method of expressing map tile mosaics, indexed by (x,y) offsets and zoom levels (z).
   blacklight:
     icon:
       american-geographical-society-library-uwm-libraries: American Geographical Society Library - UWM Libraries
@@ -135,40 +148,31 @@ en:
       baruch-cuny: Baruch College
       berkeley: University of California, Berkeley
       cd-rom: CD-Rom
-      chicago: The University of Chicago
       columbia: Columbia University
       cornell: Cornell University
       dvd-rom: DVD-Rom
       esri-globe: Esri Global
       george-mason: George Mason University
       harvard: Harvard University
-      illinois: University of Illinois
+      iiif-drag-drop: Drag icon to any IIIF viewer
       indiana: Indiana University
-      iowa: University of Iowa
       lewis-clark: Lewis & Clark
-      maryland: University of Maryland
       massgis: MassGIS
-      michigan-state: Michigan State University
-      michigan: University of Michigan
-      minnesota: University of Minnesota
       mit: Massachusetts Institute of Technology
       multilinestring: Multi-line string
       multipoint: Multi-point
       multipolygon: Multi-polygon
-      nebraska: University of Nebraska
+      northwestern-university: Northwestern University
       nyu: New York University
-      ohio-state: The Ohio State University
-      penn-state: Penn State University
       princeton: Princeton University
       public: Public content
-      purdue: Purdue University
       restricted: Restricted content
       rutgers: Rutgers University
       sms: SMS
       stanford: Stanford University
       texas: The University of Texas at Austin
       tufts: Tufts University
+      triangle-exclamation-solid: Warning
       ucla: University of California, Los Angeles
       umass: University of Massachusetts Amherst
       uva: University of Virginia
-      wisconsin: University of Wisconsin

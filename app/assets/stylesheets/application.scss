@@ -1,5 +1,10 @@
-@import 'customizations';
-@import 'bootstrap';
-@import 'blacklight';
-@import 'geoblacklight';
-@import 'umass';
+/* Main application styles entrypoint */
+
+// Leaflet, OpenLayers, GeoBlacklight (includes Blacklight and Bootstrap)
+@import "leaflet/dist/leaflet.css";
+@import "leaflet-fullscreen/dist/leaflet.fullscreen.css";
+@import "ol/ol.css";
+@import "geoblacklight.scss";
+
+// Your styles here!
+@import "umass.scss";

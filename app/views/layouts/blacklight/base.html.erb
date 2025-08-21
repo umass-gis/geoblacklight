@@ -10,22 +10,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title><%= render_page_title %></title>
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+    </script>
     <%= opensearch_description_tag application_name, opensearch_catalog_url(format: 'xml') %>
+
     <%= favicon_link_tag %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+    
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
     <%= render partial: 'shared/analytics' %>
   </head>
   <body class="<%= render_body_class %>">
-    <nav id="skip-link" role="navigation" aria-label="<%= t('blacklight.skip_links.label') %>">
-      <%= link_to t('blacklight.skip_links.search_field'), '#search_field', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
-      <%= link_to t('blacklight.skip_links.main_content'), '#main-container', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
+    <%= render blacklight_config.skip_link_component.new do %>
       <%= content_for(:skip_links) %>
-    </nav>
+    <% end %>
 
     <div id="umass-wrap">
       <div id="umass-content">
@@ -46,7 +49,6 @@
 
     <%= render partial: 'shared/footer' %>
     <%= render partial: 'shared/modal' %>
-
     <%= render partial: "shared/umass_footer" %>
   </body>
 <% end %>

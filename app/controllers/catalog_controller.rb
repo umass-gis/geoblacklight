@@ -1,12 +1,7 @@
-# -*- encoding : utf-8 -*-
-require 'blacklight/catalog'
-
 class CatalogController < ApplicationController
-
   include Blacklight::Catalog
 
   configure_blacklight do |config|
-
     # Ensures that JSON representations of Solr Documents can be retrieved using
     # the path /catalog/:id/raw
     # Please see https://github.com/projectblacklight/blacklight/pull/2006/
@@ -40,7 +35,7 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     # config.index.show_link = 'title_display'
     # config.index.record_display_type = 'format'
-
+    config.index.document_component = Geoblacklight::SearchResultComponent
     config.index.title_field = Settings.FIELDS.TITLE
 
     # solr field configuration for document/show views
@@ -48,6 +43,11 @@ class CatalogController < ApplicationController
     # To move metadata above the map viewer,
     # remove the lines deleting and re-adding the :show partial
     config.show.display_type_field = 'format'
+    config.show.document_component = Geoblacklight::DocumentComponent
+    config.show.sidebar_component = Geoblacklight::Document::SidebarComponent
+    config.header_component = Geoblacklight::HeaderComponent
+
+    # UMASS CUSTOMIZATION - additional code
     config.show.partials.delete(:show)
     config.show.partials << 'show_default_display_note'
     config.show.partials << 'show_default_viewer_container'
@@ -55,9 +55,9 @@ class CatalogController < ApplicationController
     config.show.partials << 'show_default_viewer_information'
     config.show.partials << :show
 
-    ##
+    # UMASS CUSTOMIZATION - additional code, maybe unneeded in v5.1
     # Configure the index document presenter.
-    config.index.document_presenter_class = Geoblacklight::DocumentPresenter
+    # config.index.document_presenter_class = Geoblacklight::DocumentPresenter
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -161,7 +161,7 @@ class CatalogController < ApplicationController
     # DEFAULT FIELDS
     # The following fields all feature string values. If there is a value present in the metadata, they fields will show up on the item show page.
     # The labels and order can be customed. Comment out fields to hide them.
-
+    # UMASS CUSTOMIZATION - see the GeoBlacklight repo for core code
     config.add_show_field Settings.FIELDS.CREATOR, label: 'Author(s)', itemprop: 'creator', link_to_facet: true
     config.add_show_field Settings.FIELDS.DESCRIPTION, label: 'Description', itemprop: 'description', helper_method: :render_value_as_truncate_abstract, helper_method: :render_html_description
     config.add_show_field Settings.FIELDS.PUBLISHER, label: 'Publisher', itemprop: 'publisher'
@@ -172,7 +172,6 @@ class CatalogController < ApplicationController
     config.add_show_field Settings.FIELDS.ACCESS_RIGHTS, label: 'Access', itemprop: 'accessRights'
     config.add_show_field Settings.FIELDS.RIGHTS, label: 'Rights', itemprop: 'rights', helper_method: :render_html_description
     config.add_show_field Settings.FIELDS.FILE_SIZE, label: 'File size'
-
     config.add_show_field(
       Settings.FIELDS.REFERENCES,
       label: 'More details at',
@@ -305,9 +304,8 @@ class CatalogController < ApplicationController
 
     # Custom tools for GeoBlacklight
     config.add_show_tools_partial :metadata, if: proc { |_context, _config, options| options[:document] && (Settings.METADATA_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
-    config.add_show_tools_partial :carto, partial: 'carto', if: proc { |_context, _config, options| options[:document] && options[:document].carto_reference.present? }
-    config.add_show_tools_partial :arcgis, partial: 'arcgis', if: proc { |_context, _config, options| options[:document] && options[:document].arcgis_urls.present? }
-    config.add_show_tools_partial :data_dictionary, partial: 'data_dictionary', if: proc { |_context, _config, options| options[:document] && options[:document].data_dictionary_download.present? }
+    config.add_show_tools_partial :arcgis, component: Geoblacklight::ArcgisComponent, if: proc { |_context, _config, options| options[:document] && options[:document].arcgis_urls.present? }
+    config.add_show_tools_partial :data_dictionary, component: Geoblacklight::DataDictionaryDownloadComponent, if: proc { |_context, _config, options| options[:document] && options[:document].data_dictionary_download.present? }
 
     # Configure basemap provider for GeoBlacklight maps (uses https only basemap
     # providers with open licenses)
@@ -330,7 +328,7 @@ class CatalogController < ApplicationController
   end
 
   def web_services
-    @response, @documents = action_documents
+    @docs = action_documents
 
     respond_to do |format|
       format.html do
