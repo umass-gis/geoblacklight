@@ -3,7 +3,7 @@
     <div class='col-sm'>
       <%= content_tag :h3, t('geoblacklight.home.category_heading') %>
       <div class='row'>
-        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'home', label: 'zgeoblacklight.home.category', facet_field: Settings.FIELDS.RESOURCE_CLASS, response: @response)) %>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'home', label: 'geoblacklight.home.category', facet_field: Settings.FIELDS.RESOURCE_CLASS, response: @response)) %>
 
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.THEME, response: @response)) %>
       </div>
