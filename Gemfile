@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.7'
+ruby '3.3.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 7.1'
+gem 'rails', '~> 8'
 # Use MySQL as the database for Active Record
 gem 'mysql2', '~> 0.5'
 # Use Puma as the app server
@@ -56,7 +56,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'blacklight', '~> 7.0'
-gem 'geoblacklight', '~> 4.4.2'
+gem 'geoblacklight', '~> 4.5'
 gem 'sprockets', '< 4.0'
 gem 'vite_rails', '~> 3.0'
 
