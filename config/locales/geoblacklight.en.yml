@@ -17,8 +17,7 @@ en:
       hgl_close: 'Close'
       hgl_instructions: 'Please enter your email address. You will receive a link to download the layer when it is ready.' ## new variable
       hgl_email: 'Email'
-      error: 'Sorry, the requested file could not be downloaded'
-      error_with_url: 'Sorry, the requested file could not be downloaded. Try downloading it directly from: %{link}'
+      error: 'Sorry, the requested file could not be downloaded.'
       export_formats: 'Export Formats'
       export_link: 'Export %{download_format}'
       export_shapefile_link: 'Shapefile'
@@ -73,6 +72,8 @@ en:
       tilejson: 'TileJSON Document'
       xyz: 'XYZ Tiles'
       wmts: 'Web Map Tile Service'
+      pmtiles: 'PMTiles Layer'
+      cog: 'COG Layer'
     relations:
       member_of_ancestors: 'Belongs to collection...'
       member_of_descendants: 'Collection records...'
@@ -100,6 +101,9 @@ en:
       click_map: 'Click on map to inspect values'
     help_text:
       viewer_protocol:
+        cog:
+          title: COG Layer
+          content: A Cloud Optimized GeoTIFF
         dynamic_map_layer:
           title: ArcGIS Dynamic Map Layer
           content: An ArcGIS Dynamic Map Layer represents vector data (points, lines, and polygons). Map image layers are dynamically rendered image tiles.
@@ -121,6 +125,9 @@ en:
         oembed:
           title: Embedded Content
           content: This content is embedded through a third-party viewer.
+        pmtiles:
+          title: PMTiles Layer
+          content: A PMTiles layer is a single-file archive format for tiled data.
         tiled_map_layer:
           title: ArcGIS Tiled Map Layer
           content: An ArcGIS Tiled Map Layer Service displays set of web-accessible tiles that reside on a server.
@@ -158,7 +165,8 @@ en:
       multilinestring: Multi-line string
       multipoint: Multi-point
       multipolygon: Multi-polygon
-      nebraska: University of Nebraska
+      nebraska: University of Nebraska-Lincoln
+      northwestern-university: Northwestern University
       nyu: New York University
       ohio-state: The Ohio State University
       penn-state: Penn State University

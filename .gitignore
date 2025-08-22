@@ -1,15 +1,37 @@
+*.gem
 *.rbc
+.bundle
+.config
+.yardoc
+InstalledFiles
+_yardoc
+coverage
+doc/
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+jetty
+.internal_test_app
+.tool-versions
+
+# Additional things from v3.3.0 code
 capybara-*.html
 .rspec
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-[0-9]*
 /public/system
-/coverage/
 /spec/tmp
 *.orig
 rerun.txt
 pickle-email-*.html
+
+# Ignore byebug history
+.byebug_history
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -29,10 +51,6 @@ config/master.key
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
 
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
-.env
-
 ## Environment normalization:
 /.bundle
 /vendor/bundle
@@ -51,9 +69,6 @@ bower.json
 # Ignore pow environment settings
 .powenv
 
-# Ignore Byebug command history file.
-.byebug_history
-
 # Ignore node_modules
 node_modules/
 
@@ -62,20 +77,26 @@ node_modules/
 /public/packs-test
 /public/assets
 
-# Ignore yarn files
+# Setup local GeoBlacklight JavaScript ignores
+/node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
 yarn.lock
+package-lock.json
 
 # Ignore IDE files
 .idea
+
+# Ignore DS_Store
+.DS_Store
 
 # Vite Ruby
 /public/vite*
 /public/geoblacklight-vite*
 node_modules
 dist
+
 # Vite uses dotenv and suggests to ignore local-only env files. See
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
@@ -88,3 +109,11 @@ dist
 # TODO Comment out these rules if environment variables can be committed
 .env
 .env.*
+
+# Vite Ruby
+/public/vite*
+node_modules
+# Vite uses dotenv and suggests to ignore local-only env files. See
+# https://vitejs.dev/guide/env-and-mode.html#env-files
+*.local
+
