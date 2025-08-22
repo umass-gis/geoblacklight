@@ -122,6 +122,8 @@ WEBSERVICES_SHOWN:
   - 'tiled_map_layer'
   - 'dynamic_map_layer'
   - 'image_map_layer'
+  - 'cog'
+  - 'pmtiles'
 
 # Display Notes to display / Non-prefixed default bootstrap class is alert-secondary
 DISPLAY_NOTES_SHOWN:
@@ -235,8 +237,8 @@ LEAFLET:
     INDEX:
       DEFAULT: &default
         color: "#7FCDBB"
-        weight: "1"
-        radius: "4"
+        weight: 1
+        radius: 4
       UNAVAILABLE:
         <<: *default
         color: "#EDF8B1"
@@ -284,6 +286,8 @@ HELP_TEXT:
       - 'wms'
       - 'tms'
       - 'oembed'
+      - 'pmtiles'
+      - 'cog'
 
 # Show sidebar static map for items with the following viewer protocols
 SIDEBAR_STATIC_MAP:

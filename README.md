@@ -2,18 +2,18 @@
 UMAP GeoData is the University of Massachusetts Amherst's [GeoBlacklight](https://geoblacklight.org) instance, managed and hosted by the University Libraries.
 
 ### Current Release Version
-UMAP GeoData v1.1.1 / GeoBlacklight v4.1.
+UMAP GeoData v1.2 / GeoBlacklight v4.5
 
 ---
 ### Dependencies
 
 View the full GeoBlacklight release and technology dependency matrix here: [Releases](https://geoblacklight.org/docs/overview/releases/).
 
-* [Ruby](https://www.ruby-lang.org/en/) 3.2.2
-* [Rails](https://rubyonrails.org) 7.0.4
-* [Java](https://www.java.com/en/) 8 or greater (Solr)
+* [Ruby](https://www.ruby-lang.org/en/) 3.3.9
+* [Rails](https://rubyonrails.org) 8.0.2.1
+* [Apache Solr](https://solr.apache.org/) 9.2.1
 * [Node.js](https://nodejs.org/en/) (yarn)
-* [MySQL](https://dev.mysql.com/downloads/mysql/) v8
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 9.2.0
 
 ### Setup
 
