@@ -72,18 +72,13 @@ bower.json
 # Ignore node_modules
 node_modules/
 
+# Ignore npm generated lock files
+package-lock.json
+
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test
 /public/assets
-
-# Setup local GeoBlacklight JavaScript ignores
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-yarn.lock
-package-lock.json
 
 # Ignore IDE files
 .idea
@@ -91,11 +86,10 @@ package-lock.json
 # Ignore DS_Store
 .DS_Store
 
-# Vite Ruby
+# Ignore Vite Ruby
 /public/vite*
 /public/geoblacklight-vite*
-node_modules
-dist
+dist/
 
 # Vite uses dotenv and suggests to ignore local-only env files. See
 # https://vitejs.dev/guide/env-and-mode.html#env-files
@@ -109,11 +103,3 @@ dist
 # TODO Comment out these rules if environment variables can be committed
 .env
 .env.*
-
-# Vite Ruby
-/public/vite*
-node_modules
-# Vite uses dotenv and suggests to ignore local-only env files. See
-# https://vitejs.dev/guide/env-and-mode.html#env-files
-*.local
-
