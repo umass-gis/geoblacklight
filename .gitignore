@@ -72,9 +72,6 @@ bower.json
 # Ignore node_modules
 node_modules/
 
-# Ignore npm generated lock files
-package-lock.json
-
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test
