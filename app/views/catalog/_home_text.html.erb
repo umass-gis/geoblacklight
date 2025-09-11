@@ -3,21 +3,17 @@
     <div class='col-sm'>
       <%= content_tag :h3, t('geoblacklight.home.category_heading') %>
       <div class='row'>
-        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'home', label: 'zgeoblacklight.home.category', facet_field: Settings.FIELDS.RESOURCE_CLASS, response: @response)) %>
-
-        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.THEME, response: @response)) %>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'home', label: 'geoblacklight.home.resource_class', facet_field: Settings.FIELDS.RESOURCE_CLASS, response: @response)) %>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'arrow-circle-down', label: 'geoblacklight.home.resource_type', facet_field: Settings.FIELDS.RESOURCE_TYPE, response: @response)) %>
       </div>
       <div class='row'>
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'globe', label: 'geoblacklight.home.place', facet_field: Settings.FIELDS.SPATIAL_COVERAGE, response: @response)) %>
-        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'arrow-circle-down', label: 'geoblacklight.home.data_type', facet_field: Settings.FIELDS.RESOURCE_TYPE, response: @response)) %>
+        <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.THEME, response: @response)) %>
       </div>
     </div>
     <div class='col-sm'>
       <%= content_tag :h3, t('geoblacklight.home.map_heading') %>
       <%= content_tag :div, '', id: 'map', aria: { label: t('geoblacklight.map.label') }, data: { map: 'home', 'catalog-path'=> search_catalog_path , 'map-geom' => Settings.HOMEPAGE_MAP_GEOM, basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
     </div>
-  </div>
-  <div id="geoblacklight-version" class='text-right sr-only'>
-    <%= t('geoblacklight.home.version', version: Geoblacklight::VERSION ) %>
   </div>
 </div>
