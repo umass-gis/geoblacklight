@@ -5,6 +5,7 @@ class CatalogController < ApplicationController
   include BlacklightRangeLimit::ControllerOverride
 
 
+
   configure_blacklight do |config|
     # Ensures that JSON representations of Solr Documents can be retrieved using
     # the path /catalog/:id/raw
@@ -103,8 +104,14 @@ class CatalogController < ApplicationController
       num_segments: 6,
       assumed_boundaries: [1750, Time.now.year],
       segments: true,
-      maxlength: 4
-      }
+      chart_js: true,
+      textual_facets: true,
+      textual_facets_collapsible: true,
+      show_missing_link: false,
+      chart_segment_border_color: "rgba(0,0,0, 0.5)",
+      chart_segment_bg_color: "#ccddcc",
+      chart_aspect_ratio: "2"
+     }
     # Default year facet
     # config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8

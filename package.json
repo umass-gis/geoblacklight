@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "@geoblacklight/frontend": "^4.4.6",
-    "@hotwired/turbo-rails": "^8.0.16"
+    "@hotwired/turbo-rails": "^8.0.16",
+    "blacklight-range-limit": "^9.0.0",
+    "chart.js": "^4.5.0"
   },
   "devDependencies": {
     "sass-embedded": "^1.90.0",
