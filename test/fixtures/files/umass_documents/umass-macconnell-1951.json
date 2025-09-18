@@ -61,7 +61,6 @@
     ],
     "dct_accessRights_s": "Public",
     "dct_references_s": "{\"https://openindexmaps.org\": \"https://raw.githubusercontent.com/OpenIndexMaps/edu.umass/main/umass-macconnell-1951-index.geojson\",\"http://schema.org/url\":\"https://credo.library.umass.edu/view/series/mufs190-s1951\"}",
-    
     "id": "umass-macconnell-1951",
     "dct_identifier_sm": [
         "mufs190-s1951"
