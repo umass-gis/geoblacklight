@@ -88,7 +88,7 @@ FIELDS:
   :WXS_IDENTIFIER: 'gbl_wxsIdentifier_s'
   :ANNOTATION: 'umass_annotated_s'
   :GEONAME_ID: 'umass_geonameID_s'
-
+  :IIIF_MANIFEST_URL: ""
 
 # Institution deployed at
 INSTITUTION: 'UMass Amherst'
