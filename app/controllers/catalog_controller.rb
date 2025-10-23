@@ -2,6 +2,9 @@
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
+
 
   configure_blacklight do |config|
     # Ensures that JSON representations of Solr Documents can be retrieved using
@@ -96,7 +99,21 @@ class CatalogController < ApplicationController
   	#to add additional facets, use the keys defined in the settings.yml file
     config.add_facet_field Settings.FIELDS.CREATOR, :label => 'Author', :limit => 8
     config.add_facet_field Settings.FIELDS.PUBLISHER, :label => 'Publisher', :limit => 8
-    config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
+    # Blacklight Range Limit facet
+    config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', range: {
+      num_segments: 6,
+      assumed_boundaries: [1750, Time.now.year],
+      segments: true,
+      chart_js: false,
+      textual_facets: true,
+      textual_facets_collapsible: false,
+      show_missing_link: false,
+      chart_segment_border_color: "rgba(0,0,0, 0.5)",
+      chart_segment_bg_color: "#ccddcc",
+      chart_aspect_ratio: "2"
+     }
+    # Default year facet
+    # config.add_facet_field Settings.FIELDS.INDEX_YEAR, :label => 'Year', :limit => 10, :sort => 'index'
     config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, :label => 'Place', :limit => 8
     config.add_facet_field Settings.FIELDS.THEME, :label => 'Theme', :limit =>20, :sort => 'index'
     config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, :label => 'Resource Class', :limit => 8, :sort => 'index'
