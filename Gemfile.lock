@@ -101,7 +101,6 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.16.1, < 2)
     builder (3.3.0)
-    byebug (12.0.0)
     capybara (3.40.0)
       addressable
       matrix
@@ -123,6 +122,9 @@ GEM
     connection_pool (2.5.3)
     crass (1.0.6)
     date (3.4.1)
+    debug (1.11.1)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     deep_merge (1.2.2)
     deprecation (1.1.0)
       activesupport
@@ -472,9 +474,9 @@ DEPENDENCIES
   blacklight_range_limit
   bootsnap (>= 1.4.4)
   bootstrap (~> 4.6)
-  byebug
   capybara (>= 3.26)
   capybara-screenshot
+  debug
   devise
   devise-guests (~> 0.6)
   dotenv-rails
