@@ -6,7 +6,7 @@
 @import 'modules/type';
 
 // Button primary
-$umass-maroon: #840128;
+$umass-maroon: #881c1c;
 .btn-primary {
     @include button-variant($umass-maroon, darken($umass-maroon, 7.5%), darken($umass-maroon, 10%), lighten($umass-maroon, 5%), lighten($umass-maroon, 10%), darken($umass-maroon,30%));
 }
