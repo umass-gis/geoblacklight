@@ -1,43 +1,66 @@
 <footer>
   <div class="container">
-    <div class="row">
-      <div class="col-md-5">
-        <%= image_tag('UMass_logo_white.png', alt: 'UMass Amherst', class: 'app-footer-logo', height: '150px') %>
-      </div>
-      <div class="col-md-3 mt-4">
-        <h3 class="h6">UMAP GeoData</h3>
-        <ul class="list-unstyled">
-          <li><%= link_to('About', 'https://gis.library.umass.edu/data/geodata/', {class: 'nav-link'}) %></li>
-          <li><%=link_to('Get Help', 'https://gis.library.umass.edu/learning-gis/get-help/', {class: 'nav-link'})%></li>
-          <li><%=link_to('View on GitHub', 'https://github.com/umass-gis/geoblacklight', {class: 'nav-link'})%></li>
-        </ul>
-      </div>
-      <div class="col-md-4 mt-4">
-        <h3 class="h6">Libraries</h3>
-        <ul class="list-unstyled">
-          <li><%=link_to('Homepage', 'https://www.library.umass.edu/', {class: 'nav-link'})%></li>
-          <li><%=link_to('Find Your Librarian', 'https://www.library.umass.edu/about-the-libraries/liaisons/', {class: 'nav-link'})%></li>
-          <li><%=link_to('All Databases A-Z', 'http://guides.library.umass.edu/az.php', {class: 'nav-link'})%></li>
-        </ul>
-      </div>
-    </div>
-    <hr/>
-    <div class="row">
-      <div class="col-md-5">
-        © <%= Date.today.year %> <a href="https://www.umass.edu/" id="umass--global--footer-home">University of Massachusetts Amherst</a>
+
+    <!-- Stack until large screens -->
+    <div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
+
+      <!-- Left: Wordmark -->
+      <div class="text-center mb-3 mb-lg-0">
+        <a href="https://www.umass.edu/" id="umass--global--footer-home">
+          <%= image_tag('UMass_logo_white_2026.png',
+              alt: 'University of Massachusetts Amherst',
+              class: 'app-footer-logo',
+              height: '60px') %>
+        </a>
       </div>
 
-      <div class="col-md-7">
-        <ul id="footer-campus-links" class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link first" href="https://www.umass.edu/gateway/site-policies" id="umass--global--footer-policies">Site&nbsp;Policies</a>
+      <!-- Right: Text + Links -->
+      <div class="footer-right w-100 text-center text-lg-end ">
+
+        <!-- Copyright Line -->
+        <div class="footer-copyright d-flex flex-md-row justify-content-center justify-content-lg-end mb-2">
+          © <%= Date.today.year %>&nbsp;
+          <a href="https://www.umass.edu/">
+            University of Massachusetts Amherst
+          </a>
+        </div>
+
+        <!-- Utility Links -->
+
+        <ul class="footer-links list-unstyled d-flex flex-column flex-md-row justify-content-center justify-content-lg-end">
+          <li>
+            <a href="https://www.umass.edu/gateway/site-policies"
+               id="umass--global--footer-policies">
+              Site Policies
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.umass.edu/accessibility/" id="umass--global--footer-accessibility">Accessibility</a>
+          <li>
+            <a href="https://www.umass.edu/policy/information-privacy-policy"
+              id="umass--global--footer-privacy">
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a href="https://www.umass.edu/policy/affirmative-action-non-discrimination-and-title-ix-non-discrimination-policy"
+              id="umass--global--footer-non-discrimination-notice">
+              Non-discrimiation notice
+            </a>
+          </li>
+          <li>
+            <a href="https://www.umass.edu/accessibility/"
+               id="umass--global--footer-accessibility">
+              Accessibility
+            </a>
+          </li>
+          <li>
+            <a href="https://www.umass.edu/policy/acceptable-use-information-technology-resources/"
+              id="umass--global--footer-terms-of-use">
+              Terms of use
+            </a>
           </li>
         </ul>
-      </div>
 
+      </div>
     </div>
- </div>
+  </div>
 </footer>

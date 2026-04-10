@@ -1,10 +1,10 @@
 footer {
   margin-top: 2rem;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 
-  background-color: $umass-black;
-  color: $umass-medium-gray;
+  background-color: $umass-maroon;
+  color: $umass-white;
   font-size: 0.9rem;
 
   img.app-footer-logo {
@@ -14,20 +14,14 @@ footer {
   }
 
   hr {
-    border-color: $umass-medium-gray;
+    border-color: $umass-white;
   }
 
   a {
-    color: $umass-light-gray;
+    color: $umass-white;
   }
   a:hover {
-    color: $umass-light-gray;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    font-weight: 800 !important;
-    color: $umass-light-gray;
+    color: $umass-white;
   }
 
   ul.list-unstyled {
@@ -38,24 +32,13 @@ footer {
     }
   }
 
-  #footer-campus-links {
-    display:inline;
-    li.nav-item {
-      display: inline-block;
+  // Add dot separater to utility links on desktop
+  @media (min-width: 768px) {
+    .footer-links li + li::before {
+      content: "·";
+      margin-left: 0.4rem;
+      margin-right: 0.2rem;
+      color: #ffffff;
     }
-
-    .nav-link {
-      padding: 0 1rem;
-    }
-
-    .nav-link.first {
-      padding: 0 1rem 0 0;
-    }
-
-    li.nav-item:not(:last-child) .nav-link {
-      border-right: 1px solid $umass-medium-gray;
-    }
-
-    a.nav-link:hover { text-decoration: underline; }
   }
 }
