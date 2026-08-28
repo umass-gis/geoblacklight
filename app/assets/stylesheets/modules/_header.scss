@@ -12,6 +12,16 @@
   text-decoration: underline;
 }
 
+.search-bar-wrapper {
+  background-color: $umass-light-gray;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+
+}
+.navbar-search {
+  background-color: $umass-white;
+}
+
 .umass-app-title a {
   top: 2rem;
   left: 1rem;

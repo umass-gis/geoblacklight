@@ -21,3 +21,8 @@ $umass-maroon: #840028;
 .card.location {
   margin-bottom: 20px;
 }
+
+// Remove the padding constraint from the form container
+form.search-query-form {
+  padding-right: 0px !important;
+}
