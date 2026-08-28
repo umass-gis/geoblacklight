@@ -5,5 +5,5 @@ en:
       form:
         search:
           label: "Search %{application_name}"
-          placeholder:  "Enter search terms or select 'Go' to browse"
-        submit: 'Go'
+          placeholder:  "Enter search terms or click 'Go' to browse"
+        submit: 'Go '
