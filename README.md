@@ -17,9 +17,7 @@ View the full GeoBlacklight release and technology dependency matrix on [geoblac
 
 ### Setup
 
-[GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows. It goes through the general process to get up and running, but it doesn’t cover everything, and it may be preferable to install each dependency following separate tutorials.
-
-Workflow to setup a MacBook with an Apple silicon chip (MX):
+This is the workflow to setup a MacBook with an Apple silicon chip (M#). [GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows. It goes through the general process to get up and running, but it doesn’t cover everything, and it may be preferable to install each dependency following separate tutorials.
 
 1. Follow the latest [documentation](https://brew.sh/) to install **Homebrew**.
 
@@ -62,9 +60,15 @@ Workflow to setup a MacBook with an Apple silicon chip (MX):
    ```
    
 1. Install **java**:
-    1. First, check what version of openjdk is supported by the version of solr called in [solr_wrapper.yml](https://github.com/umass-gis/geoblacklight/blob/main/.solr_wrapper.yml).
-    1. Use homebrew to install 
-
+   1. First, check what version of openjdk is supported by the version of solr called in [solr_wrapper.yml](https://github.com/umass-gis/geoblacklight/blob/main/.solr_wrapper.yml).
+   1. Use homebrew to install, adding the version
+       ```
+       brew install openjdk@[version]
+       ```
+   1. Establish a symlink:
+      ```
+      sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+      ```
 `brew install java`, then follow the suggested commands to establish a symlink.
 
 1. Install **mysql** with `brew install mysql`, then start the database with `brew services start mysql`. Optionally, run the suggested commands to secure the database.
