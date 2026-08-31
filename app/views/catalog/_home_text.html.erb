@@ -6,7 +6,7 @@
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'home', label: 'geoblacklight.home.resource_class', facet_field: Settings.FIELDS.RESOURCE_CLASS, response: @response)) %>
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'arrow-circle-down', label: 'geoblacklight.home.resource_type', facet_field: Settings.FIELDS.RESOURCE_TYPE, response: @response)) %>
       </div>
-      <div class='row'>
+      <div class='row mb-4'>
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'globe', label: 'geoblacklight.home.place', facet_field: Settings.FIELDS.SPATIAL_COVERAGE, response: @response)) %>
         <%= render(Geoblacklight::HomepageFeatureFacetComponent.new(icon: 'tags', label: 'geoblacklight.home.theme', facet_field: Settings.FIELDS.THEME, response: @response)) %>
       </div>
@@ -14,6 +14,12 @@
     <div class='col-sm'>
       <%= content_tag :h3, t('geoblacklight.home.map_heading') %>
       <%= content_tag :div, '', id: 'map', aria: { label: t('geoblacklight.map.label') }, data: { map: 'home', 'catalog-path'=> search_catalog_path , 'map-geom' => Settings.HOMEPAGE_MAP_GEOM, basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
-    </div>
+      
+      <section aria-labelledby="about-heading" class="home-about">
+        <h2 id="about-heading" class="h4 mt-2 mb-3">About UMAP GeoData</h2>
+        <p>UMAP GeoData is a portal for discovering geospatial content held by the <a href="https://www.library.umass.edu/">University of Massachusetts Amherst Libraries</a>, including datasets, aerial photos, and scanned maps. All content is publicly available. For assistance, check out our <a href="https://gis.library.umass.edu/learning-gis/get-help/">help page</a>!</p>
+      </section>
+
+      </div>
   </div>
 </div>

@@ -1,7 +1,9 @@
-.navbar-search, .jumbotron {
+.jumbotron {
   background-color: $umass-light-gray;
 }
 
-.navbar-search {
-  margin-bottom: 0.5rem;
+.home-about {
+  margin-top: 30px; /* Adds space above about section */
+  background-color: $umass-light-gray;
+  padding: 20px;
 }

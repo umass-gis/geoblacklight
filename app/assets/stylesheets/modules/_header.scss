@@ -1,94 +1,57 @@
-#topnav {
-  width:100%;
-  background: none;
-  border: 0;
-  height: 96px;
-  margin-bottom: 0;
-  padding: 0px;
-
-  a img {
-    float: left;
-  }
-
-  img.app-logo {
-    margin-top:0.5rem;
-    height: 80px;
-  }
-
-  .site-name {
-    h1 {
-      border-left: 1px solid $umass-black;
-      display: inline;
-      position: relative;
-      top:2rem;
-      left:1rem;
-      padding: 1rem;
-      font-weight: bold;
-      font-size: 30px;
-      font-family: 'Open Sans', serif;
-      font-style: normal;
-      color: $umass-black;
-      text-decoration: none;
-
-      a {
-        color: $umass-black;
-      }
-    }
-  }
-
-  .topnav-links {
-    float: right;
-    margin-top: 2px;
-  }
-}
-
-#application-nav {
+.umass-navbar {
   background-color: $umass-maroon !important;
-
-  // Keep application navbar links white
-  .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.95);
-  }
-
-  .navbar-nav .nav-link:hover, .navbar-nav .nav-link:hover {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: underline;
-  }
-
-  // Mobile hamburger
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-
-  .navbar-toggler {
-    border-color: rgba(255,255,255, 0.85);
-  }
-
-  .navbar-brand {
-    background: none;
-    font-weight: 800;
-    font-size: 30px;
-    font-family: 'Open Sans', serif;
-  }
 }
 
-@include media-breakpoint-down(sm) {
-  #topnav {
-    text-align:center;
-  }
-
-  #topnav a img {
-    float: none;
-    margin-left: 0px;
-  }
-
-  div.site-name {
-    display: none;
-  }
+// Keep application navbar links white
+.navbar-dark .navbar-nav .nav-link {
+  color: $umass-white;
 }
 
-@include media-breakpoint-up(md) {
-  .navbar-brand {
-    display: none;
-  }
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+  color: $umass-white;
+  text-decoration: underline;
+}
+
+.search-bar-wrapper {
+  background-color: $umass-light-gray;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+}
+.navbar-search {
+  background-color: $umass-white;
+}
+
+.umass-app-title a {
+  top: 2rem;
+  left: 1rem;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: 'Lora', serif;
+  font-style: normal;
+  color: $umass-white;
+
+}
+
+.logo-wrapper {
+  height: 60px;
+  width: 60px;
+}
+
+.navbar-brand {
+  // margin-top: 1rem;
+  // margin-right: 1rem;
+  // margin-bottom: 1rem;
+  background: image-url("UMass_M.png") no-repeat top left;
+  background-size: contain;
+  overflow: hidden;
+  text-indent: 100%;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  position: relative;
 }

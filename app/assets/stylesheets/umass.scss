@@ -6,7 +6,7 @@
 @import 'modules/type';
 
 // Button primary
-$umass-maroon: #881c1c;
+$umass-maroon: #840028;
 .btn-primary {
     @include button-variant($umass-maroon, darken($umass-maroon, 7.5%), darken($umass-maroon, 10%), lighten($umass-maroon, 5%), lighten($umass-maroon, 10%), darken($umass-maroon,30%));
 }
@@ -20,4 +20,9 @@ $umass-maroon: #881c1c;
 // Add margin to bottom of Locator box
 .card.location {
   margin-bottom: 20px;
+}
+
+// Remove the padding constraint from the form container
+form.search-query-form {
+  padding-right: 0px !important;
 }
