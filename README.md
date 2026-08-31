@@ -2,46 +2,70 @@
 UMAP GeoData is the University of Massachusetts Amherst's [GeoBlacklight](https://geoblacklight.org) instance, managed and hosted by the University Libraries.
 
 ### Current Release Version
-UMAP GeoData v1.2 / GeoBlacklight v4.5
+UMAP GeoData v1.2.x / GeoBlacklight v4.5
 
 ---
 ### Dependencies
 
-View the full GeoBlacklight release and technology dependency matrix here: [Releases](https://geoblacklight.org/docs/overview/releases/).
+View the full GeoBlacklight release and technology dependency matrix on [geoblacklight.org](https://geoblacklight.org/).
 
 * [Ruby](https://www.ruby-lang.org/en/) 3.3.9
-* [Rails](https://rubyonrails.org) 8.0.2.1
+* [Rails](https://rubyonrails.org) 8.0.5.1
 * [Apache Solr](https://solr.apache.org/) 9.2.1
-* [Node.js](https://nodejs.org/en/) (yarn)
-* [MySQL](https://dev.mysql.com/downloads/mysql/) 9.2.0
+* [Node.js](https://nodejs.org/en/) (npm)
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 9.7.1
 
 ### Setup
 
 [GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows. It goes through the general process to get up and running, but it doesn’t cover everything, and it may be preferable to install each dependency following separate tutorials.
 
-Workflow to setup an M1 MacBook:
+Workflow to setup a MacBook with an Apple silicon chip (MX):
 
-1. Follow the latest [documentation](https://brew.sh/) to install Homebrew.
+1. Follow the latest [documentation](https://brew.sh/) to install **Homebrew**.
 
-1. It's recommended to install Ruby on Rails with a version manager, like **rbenv**:
+1. Install **Ruby dependencies**:
 
-    ```
-    brew install rbenv
-    ```
-    Then, ensure the version manager is loaded in your shell. For Macs using zsh, use `nano ~/.zshrc` to open the file and add the following lines of code:
-    ```
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-    ```
-    Save, then restart with `source ~/.zshrc`.
+   ```
+   brew install openssl@3 libyaml gmp rust
+   ```
 
-1. Install **ruby**, **bundler**, and **rails** (see this tutorial by [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos#step-2-installing-ruby)).
+1. It's recommended to install Ruby on Rails with a version manager, like **mise**, which will handle Ruby, Java, node, and more.
 
-1. Install **node.js** with `brew install node`. This should also install **npm**.
+    1. Run the following code to install:
+        ```
+        curl https://mise.run | sh
+        ```
+    1. Then, ensure the version manager is loaded in your shell:
+        ```
+        echo 'eval "$(~/.local/bin/mise activate)"' >> ~/.zshrc
+        source ~/.zshrc
+        ```
 
-1. Follow the latest [documentation](https://yarnpkg.com/getting-started/install) to install **yarn**.  (You may need to install **corepack**  if the first step in the yarn documentation fails.  `brew install corepack` )
+1. Install **Ruby** and **Bundler**, substituting the Ruby version specified above:
 
-1. Install **java** with `brew install java`, then follow the suggested commands to establish a symlink.
+   ```
+   mise use --global ruby@[version]
+   gem update --system
+   ```
+
+1. Install **Node.js**, substituting the version you want – as of this release, the current version is 24.18.0. This should also install the package manager **npm**:
+
+   ```
+   mise use --global node@[version]
+   node -v
+   ```
+
+1. Install **Rails**, substituting the Rails version specified above:
+
+   ```
+   gem install rails -v [version]
+   ```
+   
+1. Install **java**:
+    1. First, check what version of openjdk is supported by the version of solr called in [solr_wrapper.yml](https://github.com/umass-gis/geoblacklight/blob/main/.solr_wrapper.yml).
+    1. Use homebrew to install 
+
+`brew install java`, then follow the suggested commands to establish a symlink.
 
 1. Install **mysql** with `brew install mysql`, then start the database with `brew services start mysql`. Optionally, run the suggested commands to secure the database.
 
