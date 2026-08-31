@@ -4,7 +4,6 @@ UMAP GeoData is the University of Massachusetts Amherst's [GeoBlacklight](https:
 ### Current Release Version
 UMAP GeoData v1.2.x / GeoBlacklight v4.5
 
----
 ### Dependencies
 
 View the full GeoBlacklight release and technology dependency matrix on [geoblacklight.org](https://geoblacklight.org/).
@@ -15,9 +14,11 @@ View the full GeoBlacklight release and technology dependency matrix on [geoblac
 * [Node.js](https://nodejs.org/en/) (npm)
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 9.7.1
 
-### Setup
+## How to install and run UMAP GeoData
+This is the workflow to setup a MacBook with an Apple silicon (M) chip.
 
-This is the workflow to setup a MacBook with an Apple silicon chip (M#). [GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows. It goes through the general process to get up and running, but it doesn’t cover everything, and it may be preferable to install each dependency following separate tutorials.
+### Install dependencies
+[GoRails](https://gorails.com/setup) has great Ruby on Rails setup instructions for macOS, Ubuntu, and Windows. It goes through the general process to get up and running, but it doesn’t cover everything, and it may be preferable to install each dependency following separate tutorials.
 
 1. Follow the latest [documentation](https://brew.sh/) to install **Homebrew**.
 
@@ -67,11 +68,32 @@ This is the workflow to setup a MacBook with an Apple silicon chip (M#). [GoRail
        ```
    1. Establish a symlink:
       ```
-      sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+      sudo ln -sfn /opt/homebrew/opt/openjdk@[version]/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-[version].jdk
       ```
-`brew install java`, then follow the suggested commands to establish a symlink.
+   1. If you have multiple versions of openjdk installed, you will need to set the default version in the .zshrc file. Open the file with `nano .zshrc` then add the following to the bottom of the file:
+      ```
+      export JAVA_HOME=`/usr/libexec/java_home -v [version]`
+      ```
+      Save the file with `ctrl + o` and close with `ctrl + x`.
 
-1. Install **mysql** with `brew install mysql`, then start the database with `brew services start mysql`. Optionally, run the suggested commands to secure the database.
+
+### Set up the relational database
+UMass is using **MySQL**, although PostgreSQL is the recommended RDBMS starting with GeoBlacklight v5.
+
+1. Install **MySQL**:
+   ```
+   brew install mysql
+   ```
+1. Start the database:
+   ```
+   brew services start mysql
+   ```
+1. Optionally, secure the database:
+   ```
+   mysql_secure_installation
+   ```
+
+1. If you create a password, add it to the local file .env.development.  
 
 
 ### Configure GeoBlacklight
@@ -91,9 +113,10 @@ This is the workflow to setup a MacBook with an Apple silicon chip (M#). [GoRail
     ```
     Then, update the MYSQL_USER and MYSQL_PASSWORD credentials in these files. These variables are called by `database.yml` when establishing a connection to the database.
 
-1. Navigate to the project directory and install the **ruby gems** with `bundle install`.
-
-1. Install the **yarn packages** with `yarn install`.
+1. Navigate to the project directory and install the **ruby gems**:
+   ```
+   bundle install
+   ```
 
 1. Create and migrate the databases:
 
@@ -112,7 +135,7 @@ This is the workflow to setup a MacBook with an Apple silicon chip (M#). [GoRail
 
 The rake task below will spin up Solr, index the test fixture documents, and start the default Rails web server.
 
-```bash
+```
 bundle exec rake umass:server
 ```
 
@@ -123,7 +146,7 @@ bundle exec rake umass:server
 
 Stop any instances of GeoBlacklight before running this command.
 
-```bash
+```
 RAILS_ENV=test bundle exec rake ci
 ```
 
