@@ -1,14 +1,22 @@
 {
   "dependencies": {
-    "@geoblacklight/frontend": "^5.2.0",
-    "@hotwired/turbo-rails": "^8.0.16",
+    "@geoblacklight/frontend": "5.3.0",
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.5.0",
+    "blacklight-frontend": "8.13.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "nodemon": "^3.1.14",
+    "postcss": "^8.5.15",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.101.0",
     "blacklight-range-limit": "^9.0.0",
     "chart.js": "^4.5.0"
   },
-  "devDependencies": {
-    "sass-embedded": "^1.90.0",
-    "vite": "^8.2.2",
-    "vite-plugin-rails": "^0.5.0",
-    "vite-plugin-ruby": "^5.1.1"
+  "scripts": {
+    "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
+    "build:css": "yarn build:css:compile && yarn build:css:prefix",
+    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
   }
 }
