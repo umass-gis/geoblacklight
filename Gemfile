@@ -11,8 +11,6 @@ gem 'mysql2', '~> 0.5.7'
 gem 'puma', '~> 7.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -55,18 +53,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[ windows jruby ]
-gem 'blacklight', '~> 7.0'
-gem 'geoblacklight', '~> 4.6'
-gem 'sprockets', '< 4.0'
-gem 'vite_rails', '~> 3.0'
+gem 'geoblacklight', '~> 5.3'
 
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
 end
-gem 'rsolr', '>= 1.0', '< 3'
-gem 'bootstrap', '~> 4.6'
+
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
-gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
 
@@ -75,3 +68,10 @@ gem 'dotenv-rails'
 
 # Blacklight Range Limit
 gem 'blacklight_range_limit'
+
+# GeoBlacklight v5
+gem 'bootstrap', '~> 5.3'
+gem 'cssbundling-rails'
+gem 'importmap-rails'
+gem 'propshaft'
+gem 'rsolr', '>= 1.0', '< 3'
