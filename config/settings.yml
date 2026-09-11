@@ -5,7 +5,7 @@ APPLICATION_LOGO_URL: 'http://geoblacklight.org/images/geoblacklight-logo.png'
 CARTO_ONECLICK_LINK: 'http://oneclick.carto.com/'
 
 # ArcGIS Online Base URL
-ARCGIS_BASE_URL: 'https://www.arcgis.com/home/webmap/viewer.html'
+ARCGIS_BASE_URL: 'https://www.arcgis.com/apps/mapviewer/index.html'
 
 # Download path can be configured using this setting
 #DOWNLOAD_PATH: "./tmp/cache/downloads"
@@ -101,7 +101,7 @@ METADATA_SHOWN:
   - 'html'
 
 # (For external Download) timeout and open_timeout parameters for Faraday
-TIMEOUT_DOWNLOAD: 16
+TIMEOUT_DOWNLOAD: 180
 
 # (For WMS inspection) timeout and open_timeout parameters for Faraday
 TIMEOUT_WMS: 4
@@ -124,6 +124,14 @@ WEBSERVICES_SHOWN:
   - 'image_map_layer'
   - 'cog'
   - 'pmtiles'
+
+# Download formats for vector data
+DOWNLOAD_FORMATS:
+  VECTOR:
+    - "Shapefile"
+    - "KMZ"
+    - "GeoJSON"
+    - "CSV"
 
 # Display Notes to display / Non-prefixed default bootstrap class is alert-secondary
 DISPLAY_NOTES_SHOWN:

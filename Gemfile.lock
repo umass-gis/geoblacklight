@@ -176,7 +176,7 @@ GEM
       rsolr
       sanitize
       thor
-    geoblacklight (4.5.0)
+    geoblacklight (4.7.0)
       blacklight (>= 7.41, < 8.0)
       coderay
       config
@@ -185,7 +185,7 @@ GEM
       geo_combine (~> 0.9)
       handlebars_assets
       mime-types
-      rails (>= 7, < 8.1)
+      rails (>= 7, < 8.2)
       rgeo-geojson
       sprockets-rails (~> 3.0)
       vite_rails (~> 3.0)
@@ -489,7 +489,7 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.6)
   dotenv-rails
-  geoblacklight (~> 4.5)
+  geoblacklight (~> 4.6)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)

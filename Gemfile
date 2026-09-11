@@ -56,7 +56,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'blacklight', '~> 7.0'
-gem 'geoblacklight', '~> 4.5'
+gem 'geoblacklight', '~> 4.6'
 gem 'sprockets', '< 4.0'
 gem 'vite_rails', '~> 3.0'
 
