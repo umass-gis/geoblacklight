@@ -161,5 +161,5 @@ bundle exec rake umass:index:delete_all
 Index just the UMass test fixtures
 
 ```bash
-bundle exec rake rake umass:index:umass
+bundle exec rake umass:index:umass
 ```
