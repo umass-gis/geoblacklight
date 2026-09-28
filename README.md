@@ -10,7 +10,7 @@ View the full GeoBlacklight release and technology dependency matrix on [geoblac
 
 * [Ruby](https://www.ruby-lang.org/en/) 3.3.9
 * [Rails](https://rubyonrails.org) 8.0.5.1
-* [Apache Solr](https://solr.apache.org/) 9.2.1
+* [Apache Solr](https://solr.apache.org/) 9.10.1
 * [Node.js](https://nodejs.org/en/) (npm)
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 9.7.1
 
