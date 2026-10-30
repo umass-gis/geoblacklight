@@ -1,4 +1,6 @@
 import { Application } from "@hotwired/stimulus";
+import "blacklight-range-limit"
+import Chart from "chart.js"
 
 const application = Application.start();
 
