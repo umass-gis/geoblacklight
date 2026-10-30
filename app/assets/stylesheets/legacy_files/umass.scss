@@ -10,19 +10,3 @@ $umass-maroon: #840028;
 .btn-primary {
     @include button-variant($umass-maroon, darken($umass-maroon, 7.5%), darken($umass-maroon, 10%), lighten($umass-maroon, 5%), lighten($umass-maroon, 10%), darken($umass-maroon,30%));
 }
-
-// Input Focus and Glow
-.form-control:focus {
-  border-color: #A89968;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 136, 86, 0.6);
-}
-
-// Add margin to bottom of Locator box
-.card.location {
-  margin-bottom: 20px;
-}
-
-// Remove the padding constraint from the form container
-form.search-query-form {
-  padding-right: 0px !important;
-}

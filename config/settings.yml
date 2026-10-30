@@ -1,9 +1,3 @@
-# Configurable Logo Used for CartoDB export
-APPLICATION_LOGO_URL: 'http://geoblacklight.org/images/geoblacklight-logo.png'
-
-# Carto OneClick Service https://carto.com/engine/open-in-carto/
-CARTO_ONECLICK_LINK: 'http://oneclick.carto.com/'
-
 # ArcGIS Online Base URL
 ARCGIS_BASE_URL: 'https://www.arcgis.com/apps/mapviewer/index.html'
 
@@ -125,14 +119,6 @@ WEBSERVICES_SHOWN:
   - 'cog'
   - 'pmtiles'
 
-# Download formats for vector data
-DOWNLOAD_FORMATS:
-  VECTOR:
-    - "Shapefile"
-    - "KMZ"
-    - "GeoJSON"
-    - "CSV"
-
 # Display Notes to display / Non-prefixed default bootstrap class is alert-secondary
 DISPLAY_NOTES_SHOWN:
   danger:
@@ -227,6 +213,14 @@ RELATIONSHIPS_SHOWN:
     label: geoblacklight.relations.version_of_descendants
     query_type: descendants
 
+# Download formats for vector data
+DOWNLOAD_FORMATS:
+  VECTOR:
+    - "Shapefile"
+    - "KMZ"
+    - "GeoJSON"
+    - "CSV"
+
 # WMS Parameters
 WMS_PARAMS:
   :SERVICE: 'WMS'
@@ -235,11 +229,47 @@ WMS_PARAMS:
   :STYLES: ''
   :SRS: 'EPSG:4326'
   :EXCEPTIONS: 'application/json'
-  :INFO_FORMAT: 'text/html'
+  :INFO_FORMAT: 'application/json'
 
 # Settings for leaflet
 LEAFLET:
   MAP:
+  # Basemap definitions, keyed by the name config.basemap_provider selects.
+  # Anything set here is merged over the basemap GeoBlacklight ships with, so
+  # you can change just the url and keep the rest of the definition.
+  #
+  # CARTO now watermarks raster tiles requested without an API key, which
+  # affects the positron, positronLite and darkMatter basemaps. Request a free
+  # key at https://carto.com/basemaps/apikey/ and pass it as a key parameter:
+  # BASEMAPS:
+  #   positron:
+  #     url: 'https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png?key=YOUR_KEY'
+  #   darkMatter:
+  #     url: 'https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png?key=YOUR_KEY'
+  #
+  # You can also define a basemap of your own here and select it with
+  # config.basemap_provider = 'myBasemap' in your CatalogController:
+  #   myBasemap:
+  #     url: 'https://tiles.example.edu/{z}/{x}/{y}.png'
+  #     attribution: 'Tiles courtesy of Example University'
+  #     maxZoom: 18
+  BOUNDSOVERLAY:
+    INDEX:
+      color: '#3388ff'
+    SHOW:
+      color: '#3388ff'
+    STATIC_MAP:
+      color: '#3388ff'
+  SELECTED_COLOR: "#2C7FB8"
+  SLEEP:
+    SLEEP: true # set to false to disable
+    MARGIN_DISTANCE: 100 # set to zero / false if you want to disable this check
+    SLEEPTIME: 750
+    WAKETIME: 750
+    HOVERTOWAKE: false
+    MESSAGE: 'Click to Wake'
+    BACKGROUND: 'rgba(214, 214, 214, .7)'
+  SIDEBAR: false # set to true to display attribute table as sidebar on map
   LAYERS:
     DETECT_RETINA: true
     INDEX:
@@ -253,51 +283,41 @@ LEAFLET:
       SELECTED:
         <<: *default
         color: "#2C7FB8"
-  VIEWERS:
-    DYNAMICMAPLAYER:
-      CONTROLS:
-        - 'Opacity'
-        - 'Fullscreen'
-    FEATURELAYER:
-      CONTROLS:
-        - 'Opacity'
-        - 'Fullscreen'
-    IIIF:
-      CONTROLS:
-        - 'Fullscreen'
-    IMAGEMAPLAYER:
-      CONTROLS:
-        - 'Opacity'
-        - 'Fullscreen'
-    INDEXMAP:
-      CONTROLS:
-        - 'Fullscreen'
-    TILEDMAPLAYER:
-      CONTROLS:
-        - 'Opacity'
-        - 'Fullscreen'
-    WMS:
-      CONTROLS:
-        - 'Opacity'
-        - 'Fullscreen'
 
 # Toggle the help text feature that offers users context
 HELP_TEXT:
   viewer_protocol:
+      - 'cog'
       - 'dynamic_map_layer'
       - 'feature_layer'
       - 'iiif'
       - 'iiif_manifest'
       - 'image_map_layer'
       - 'index_map'
-      - 'tiled_map_layer'
-      - 'wms'
-      - 'tms'
       - 'oembed'
       - 'pmtiles'
-      - 'cog'
+      - 'tiled_map_layer'
+      - 'tilejson'
+      - 'tms'
+      - 'wms'
+      - 'wmts'
+      - 'xyz'
 
 # Show sidebar static map for items with the following viewer protocols
 SIDEBAR_STATIC_MAP:
   - 'iiif'
   - 'iiif_manifest'
+
+ICON_MAPPING:
+  chicago: university-of-chicago
+  illinois: university-of-illinois-urbana-champaign
+  iowa: university-of-iowa
+  maryland: university-of-maryland
+  michigan-state: michigan-state-university
+  michigan: university-of-michigan
+  minnesota: university-of-minnesota
+  nebraska: university-of-nebraska-lincoln
+  ohio-state: the-ohio-state-university
+  penn-state: pennsylvania-state-university
+  purdue: purdue-university
+  wisconsin: university-of-wisconsin-madison
