@@ -9,8 +9,6 @@ gem 'rails', '~> 8.0'
 gem 'mysql2', '~> 0.5.7'
 # Use Puma as the app server
 gem 'puma', '~> 7.2'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -75,3 +73,5 @@ gem 'cssbundling-rails'
 gem 'importmap-rails'
 gem 'propshaft'
 gem 'rsolr', '>= 1.0', '< 3'
+gem 'stimulus-rails'
+gem 'turbo-rails'
