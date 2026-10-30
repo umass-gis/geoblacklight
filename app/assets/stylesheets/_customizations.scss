@@ -1,7 +1,7 @@
 // Local Application Customizations
 
 // Set Header Logo
-$logo-image: image_url('UMass_libraries_logo.png') !default;
+$logo-image: url('/UMass_M.png') !default;
 
 .navbar-brand {  /* The main logo image for the Blacklight instance */
   @if $logo-image {
